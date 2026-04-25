@@ -26,7 +26,11 @@ interface Sermon {
   scripture: string;
   date: string;
   youtubeId: string;
+  description?: string;
 }
+
+const CHANNEL_ID = "UCV_ngO2hpet078gqzKptM9g";
+const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY as string;
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 const serviceTimes: ServiceTime[] = [
@@ -89,12 +93,13 @@ const events: Event[] = [
   },
 ];
 
-const sermon: Sermon = {
-  title: "Add Your Latest Sermon Title",
-  preacher: "Pastor — Add Name",
-  scripture: "Add scripture reference",
-  date: "Add date",
-  youtubeId: "YOUR_YOUTUBE_VIDEO_ID",
+const initialSermon: Sermon = {
+  title: "Join Us Live",
+  preacher: "Pastor — Abiodun Oluwatosin",
+  scripture: "Various Scriptures",
+  date: "Latest Message",
+  youtubeId: "",
+  description: "Experience the transformative power of God's Word through our latest message."
 };
 
 const pillars = [
@@ -141,6 +146,46 @@ function FadeSection({ children, delay = 0, className = "" }: { children: ReactN
 export default function Home() {
   const [emailInput, setEmailInput] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+
+  const [latestSermon, setLatestSermon] = useState<Sermon>(initialSermon);
+
+  useEffect(() => {
+    async function fetchLatestSermon() {
+      try {
+        const channelRes = await fetch(
+          `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${CHANNEL_ID}&key=${API_KEY}`
+        );
+        const channelData = await channelRes.json();
+        const uploadsPlaylistId = channelData.items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
+
+        if (uploadsPlaylistId) {
+          const playlistRes = await fetch(
+            `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=1&key=${API_KEY}`
+          );
+          const playlistData = await playlistRes.json();
+          const item = playlistData.items?.[0];
+
+          if (item) {
+            setLatestSermon({
+              title: item.snippet.title,
+              preacher: "Pastor — Abiodun Oluwatosin",
+              scripture: "RCCG House of Grace",
+              date: new Date(item.snippet.publishedAt).toLocaleDateString("en-NG", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              }),
+              youtubeId: item.snippet.resourceId.videoId,
+              description: item.snippet.description?.slice(0, 160) + "..."
+            });
+          }
+        }
+      } catch (err) {
+        console.error("Failed to fetch latest sermon", err);
+      }
+    }
+    fetchLatestSermon();
+  }, []);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -269,16 +314,16 @@ export default function Home() {
         </FadeSection>
         <FadeSection delay={120}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="relative aspect-video rounded-3xl overflow-hidden border border-zinc-800 bg-zinc-900">
-              {sermon.youtubeId === "YOUR_YOUTUBE_VIDEO_ID" ? (
+            <div className="relative aspect-video rounded-3xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl">
+              {!latestSermon.youtubeId ? (
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-green-400/50">
                   <div className="w-16 h-16 rounded-full border border-green-600/30 flex items-center justify-center text-2xl">▶</div>
-                  <span className="text-xs tracking-widest uppercase font-bold text-gray-500">Find ID at @rccghouseofgrace5858</span>
+                  <span className="text-xs tracking-widest uppercase font-bold text-gray-500">Loading Latest Message...</span>
                 </div>
               ) : (
                 <iframe
-                  src={`https://www.youtube.com/embed/${sermon.youtubeId}`}
-                  title={sermon.title}
+                  src={`https://www.youtube.com/embed/${latestSermon.youtubeId}`}
+                  title={latestSermon.title}
                   className="w-full h-full border-none"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -286,10 +331,11 @@ export default function Home() {
               )}
             </div>
             <div>
-              <p className="text-green-400 text-xs font-bold tracking-widest uppercase mb-4">{sermon.date}</p>
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">{sermon.title}</h3>
-              <p className="text-zinc-500 font-medium mb-2">{sermon.preacher}</p>
-              <p className="text-emerald-600 italic mb-8">{sermon.scripture}</p>
+              <p className="text-green-400 text-xs font-bold tracking-widest uppercase mb-4">{latestSermon.date}</p>
+              <h3 className="text-3xl md:text-4xl font-bold mb-4">{latestSermon.title}</h3>
+              <p className="text-zinc-500 font-medium mb-2">{latestSermon.preacher}</p>
+              <p className="text-emerald-600 italic mb-6">{latestSermon.scripture}</p>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-8">{latestSermon.description}</p>
               <Link to="/sermons" className="bg-green-900/20 border border-green-500/30 px-8 py-4 rounded-full font-bold hover:bg-green-900/40 transition-all duration-300 text-green-300 text-sm tracking-wide uppercase">
                 View All Sermons
               </Link>
