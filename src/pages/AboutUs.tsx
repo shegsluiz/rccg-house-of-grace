@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Value {
@@ -284,9 +285,9 @@ export default function AboutUs() {
             <h2 className="text-3xl md:text-5xl font-bold leading-tight text-center lg:text-left">
               Ready to experience <em className="not-italic bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">grace</em> for yourself?
             </h2>
-            <a href="/connect" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-10 py-5 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] text-sm tracking-wide uppercase whitespace-nowrap">
+            <Link to="/connect" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-10 py-5 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] text-sm tracking-wide uppercase whitespace-nowrap">
               Plan Your Visit
-            </a>
+            </Link>
           </div>
         </div>
       </FadeSection>

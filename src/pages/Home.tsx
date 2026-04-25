@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, ReactNode } from "react";
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface ServiceTime {
@@ -160,12 +161,12 @@ export default function Home() {
             A place where grace is not just our name — it is the atmosphere you breathe and the foundation you stand on.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a href="/connect" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] flex items-center justify-center text-sm tracking-wide uppercase">
+            <Link to="/connect" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] flex items-center justify-center text-sm tracking-wide uppercase">
               Plan Your Visit
-            </a>
-            <a href="/about" className="bg-white/10 backdrop-blur-md border border-green-500/30 px-8 py-4 rounded-full font-bold hover:bg-green-500/20 transition-all duration-300 text-white text-sm tracking-wide uppercase hover:border-green-400">
+            </Link>
+            <Link to="/about" className="bg-white/10 backdrop-blur-md border border-green-500/30 px-8 py-4 rounded-full font-bold hover:bg-green-500/20 transition-all duration-300 text-white text-sm tracking-wide uppercase hover:border-green-400">
               Who We Are
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -277,9 +278,9 @@ export default function Home() {
               <h3 className="text-3xl md:text-4xl font-bold mb-4">{sermon.title}</h3>
               <p className="text-zinc-400 font-medium mb-2">{sermon.preacher}</p>
               <p className="text-emerald-400 italic mb-8">{sermon.scripture}</p>
-              <a href="/sermons" className="bg-white/10 backdrop-blur-md border border-green-500/30 px-8 py-4 rounded-full font-bold hover:bg-green-500/20 transition-all duration-300 text-white text-sm tracking-wide uppercase hover:border-green-400">
+              <Link to="/sermons" className="bg-white/10 backdrop-blur-md border border-green-500/30 px-8 py-4 rounded-full font-bold hover:bg-green-500/20 transition-all duration-300 text-white text-sm tracking-wide uppercase hover:border-green-400">
                 View All Sermons
-              </a>
+              </Link>
             </div>
           </div>
         </FadeSection>
@@ -293,9 +294,9 @@ export default function Home() {
               <p className="text-orange-400 text-sm font-bold uppercase tracking-widest mb-4">What's Coming Up</p>
               <h2 className="text-4xl md:text-5xl font-bold leading-tight">Upcoming Events</h2>
             </div>
-            <a href="/events" className="text-white hover:text-orange-400 transition-colors font-bold flex items-center gap-2">
+            <Link to="/events" className="text-white hover:text-orange-400 transition-colors font-bold flex items-center gap-2">
               View All <ChevronRight className="w-5 h-5" />
-            </a>
+            </Link>
           </div>
           <div className="w-12 h-1 bg-gradient-to-r from-orange-400 to-red-500 mb-12 rounded-full" />
         </FadeSection>
