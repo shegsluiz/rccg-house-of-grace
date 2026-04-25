@@ -96,13 +96,13 @@ const rccgEvents = [
 
 export default function Events() {
   return (
-    <div className="bg-white text-gray-900 min-h-screen font-sans">
+    <div className="bg-black text-white min-h-screen font-sans">
 
       {/* ── Hero ── */}
       <section className="relative py-32 px-6 md:px-20 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-green-50 via-white to-white pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-900 via-black to-black pointer-events-none" />
         <div className="relative z-10 max-w-3xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-700 mb-4">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-4">
             What's Happening
           </p>
           <h1
@@ -115,7 +115,7 @@ export default function Events() {
             </span>
           </h1>
           <div className="w-12 h-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mx-auto mb-6" />
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <p className="text-gray-400 text-lg leading-relaxed">
             There is always something happening at House of Grace. From weekly
             services to special programmes, find an event and come and
             experience God with us.
@@ -126,11 +126,11 @@ export default function Events() {
       {/* ── Regular Programs ── */}
       <section className="px-6 md:px-20 pb-20">
         <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-700 mb-2">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-2">
             Weekly Schedule
           </p>
           <h2
-            className="text-3xl font-bold mb-10 text-gray-900"
+            className="text-3xl font-bold mb-10 text-white"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             Regular Programmes
@@ -139,7 +139,7 @@ export default function Events() {
             {regularPrograms.map((prog) => (
               <div
                 key={prog.name}
-                className="bg-white border border-gray-200 shadow-sm rounded-3xl p-8 hover:shadow-md hover:border-green-200 transition flex gap-6 items-start group"
+                className="bg-black border border-zinc-700 shadow-sm rounded-3xl p-8 hover:shadow-md hover:border-green-500/30 transition flex gap-6 items-start group"
               >
                 <div className="shrink-0 text-center w-28">
                   <div
@@ -148,7 +148,7 @@ export default function Events() {
                     {prog.day}
                   </div>
                   <div
-                    className="text-lg md:text-xl font-bold mt-1 text-gray-900"
+                    className="text-lg md:text-xl font-bold mt-1 text-white"
                     style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                   >
                     {prog.time}
@@ -157,12 +157,12 @@ export default function Events() {
                 <div>
                   <div className={`w-8 h-0.5 bg-gradient-to-r ${prog.accent} rounded-full mb-3`} />
                   <h3
-                    className="font-bold text-lg mb-2 text-gray-900 group-hover:text-green-700 transition"
+                    className="font-bold text-lg mb-2 text-white group-hover:text-green-300 transition"
                     style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                   >
                     {prog.name}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-400 text-sm leading-relaxed">
                     {prog.description}
                   </p>
                 </div>
@@ -175,11 +175,11 @@ export default function Events() {
       {/* ── Upcoming Events ── */}
       <section className="px-6 md:px-20 pb-20">
         <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-700 mb-2">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-2">
             Coming Up
           </p>
           <h2
-            className="text-3xl font-bold mb-10 text-gray-900"
+            className="text-3xl font-bold mb-10 text-white"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             Upcoming Events
@@ -188,7 +188,7 @@ export default function Events() {
             {upcomingEvents.map((ev, i) => (
               <div
                 key={i}
-                className="bg-white border border-gray-200 shadow-sm rounded-3xl p-8 hover:shadow-md hover:border-green-200 transition flex flex-col gap-4 group"
+                className="bg-black border border-zinc-700 shadow-sm rounded-3xl p-8 hover:shadow-md hover:border-green-500/30 transition flex flex-col gap-4 group"
               >
                 <div>
                   <span
@@ -197,7 +197,7 @@ export default function Events() {
                     {ev.type}
                   </span>
                   <h3
-                    className="text-xl font-bold mt-2 mb-1 text-gray-900 group-hover:text-green-700 transition"
+                    className="text-xl font-bold mt-2 mb-1 text-white group-hover:text-green-300 transition"
                     style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                   >
                     {ev.title}
@@ -207,7 +207,7 @@ export default function Events() {
                   </p>
                 </div>
                 <div className={`w-10 h-0.5 bg-gradient-to-r ${ev.accent} rounded-full`} />
-                <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                <p className="text-gray-400 text-sm leading-relaxed flex-1">
                   {ev.description}
                 </p>
               </div>
@@ -219,16 +219,16 @@ export default function Events() {
       {/* ── RCCG HQ Events ── */}
       <section className="px-6 md:px-20 pb-28">
         <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-700 mb-2">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-2">
             The Bigger Family
           </p>
           <h2
-            className="text-3xl font-bold mb-4 text-gray-900"
+            className="text-3xl font-bold mb-4 text-white"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             RCCG Global Events
           </h2>
-          <p className="text-gray-600 text-sm mb-10 max-w-xl leading-relaxed">
+          <p className="text-gray-400 text-sm mb-10 max-w-xl leading-relaxed">
             As part of the worldwide RCCG family, House of Grace participates
             in the major annual gatherings that draw millions of believers from
             across the globe.
@@ -240,24 +240,24 @@ export default function Events() {
                 href={ev.link}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-white border border-gray-200 shadow-sm rounded-3xl p-8 hover:shadow-md hover:border-green-200 transition flex flex-col gap-4 group"
+                className="bg-black border border-zinc-700 shadow-sm rounded-3xl p-8 hover:shadow-md hover:border-green-500/30 transition flex flex-col gap-4 group"
               >
                 <div className="flex justify-between items-center">
                   <span className="text-xs font-bold uppercase tracking-widest text-gray-500">
                     {ev.month}
                   </span>
-                  <span className="text-green-600 text-xs group-hover:translate-x-1 transition-transform">
+                  <span className="text-green-400 text-xs group-hover:translate-x-1 transition-transform">
                     ↗
                   </span>
                 </div>
                 <div className="w-10 h-0.5 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full" />
                 <h3
-                  className="font-bold text-lg text-gray-900 group-hover:text-green-600 transition"
+                  className="font-bold text-lg text-white group-hover:text-green-400 transition"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                 >
                   {ev.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{ev.desc}</p>
+                <p className="text-gray-400 text-sm leading-relaxed">{ev.desc}</p>
               </a>
             ))}
           </div>

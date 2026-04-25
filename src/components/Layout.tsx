@@ -35,9 +35,9 @@ export default function Layout() {
   };
 
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-green-500/30 overflow-x-hidden flex flex-col items-center">
+    <div className="min-h-screen bg-black font-sans text-white selection:bg-green-500/30 overflow-x-hidden flex flex-col items-center">
       {/* Navigation */}
-      <header className="w-full absolute top-0 left-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 pt-2 pb-2 shadow-sm">
+      <header className="w-full absolute top-0 left-0 z-50 bg-black/95 backdrop-blur-md border-b border-zinc-800 pt-2 pb-2 shadow-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12 py-5">
           {/* Logo */}
           <Link to="/">
@@ -55,13 +55,13 @@ export default function Layout() {
           <motion.nav 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="hidden md:flex items-center gap-6 bg-gray-50 border border-gray-200 px-8 py-2.5 rounded-full backdrop-blur-md absolute left-1/2 -translate-x-1/2"
+            className="hidden md:flex items-center gap-6 bg-zinc-900 border border-zinc-700 px-8 py-2.5 rounded-full backdrop-blur-md absolute left-1/2 -translate-x-1/2"
           >
             {navLinks.map((item) => (
               <Link 
                 key={item.name} 
                 to={item.path} 
-                className={`text-sm font-medium transition-colors ${isActive(item.path) ? 'text-green-600 font-bold' : 'text-gray-500 hover:text-gray-900'}`}
+                className={`text-sm font-medium transition-colors ${isActive(item.path) ? 'text-green-400 font-bold' : 'text-gray-500 hover:text-white'}`}
               >
                 {item.name}
               </Link>
@@ -74,10 +74,10 @@ export default function Layout() {
             animate={{ opacity: 1, x: 0 }}
             className="hidden md:flex items-center gap-4"
           >
-            <button className="px-5 py-2 bg-green-50 text-green-700 rounded-full text-sm font-medium hover:bg-green-100 transition-all">
+            <button className="px-5 py-2 bg-green-900/20 text-green-300 rounded-full text-sm font-medium hover:bg-green-900/40 transition-all">
               Join Us
             </button>
-            <Link to="/kingdom-cinema" className="px-5 py-2 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-50 transition-all inline-block">
+            <Link to="/kingdom-cinema" className="px-5 py-2 border border-zinc-700 text-gray-300 rounded-full text-sm font-medium hover:bg-zinc-900 transition-all inline-block">
               Kingdom Cinema
             </Link>
           </motion.div>
@@ -86,7 +86,7 @@ export default function Layout() {
           <div className="md:hidden flex items-center z-50">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+              className="p-2 text-gray-300 hover:bg-zinc-800 rounded-lg transition-colors"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -101,7 +101,7 @@ export default function Layout() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "100%" }}
               transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-              className="fixed inset-0 bg-white flex flex-col md:hidden z-[100] overflow-y-auto"
+              className="fixed inset-0 bg-black flex flex-col md:hidden z-[100] overflow-y-auto"
             >
               {/* Header inside mobile menu */}
               <div className="flex justify-between items-center p-6">
@@ -166,7 +166,7 @@ export default function Layout() {
       </div>
 
       {/* Footer Navigation */}
-      <footer className="w-full bg-gray-50 pt-16 pb-12 md:pb-20 px-6 md:px-12 lg:px-8 border-t border-gray-200 mt-auto relative overflow-hidden">
+      <footer className="w-full bg-zinc-900 pt-16 pb-12 md:pb-20 px-6 md:px-12 lg:px-8 border-t border-zinc-700 mt-auto relative overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-8 items-start">
           {/* Col 1: Logo */}
           <div className="flex flex-col gap-6">
@@ -184,7 +184,7 @@ export default function Layout() {
                 <Link 
                   key={item.name} 
                   to={item.path} 
-                  className="text-gray-500 hover:text-gray-900 transition-colors w-fit underline-offset-4 hover:underline"
+                  className="text-gray-500 hover:text-white transition-colors w-fit underline-offset-4 hover:underline"
                 >
                   {item.name}
                 </Link>
@@ -198,7 +198,7 @@ export default function Layout() {
             <div className="flex flex-col gap-6">
               <h4 className="text-xl font-semibold tracking-tight">Contact Us</h4>
               <div className="space-y-4">
-                <a href="mailto:rccghouseofgracemedia@gmail.com" className="text-gray-500 hover:text-gray-900 transition-colors block underline-offset-4 hover:underline">
+                <a href="mailto:rccghouseofgracemedia@gmail.com" className="text-gray-500 hover:text-white transition-colors block underline-offset-4 hover:underline">
                   rccghouseofgracemedia@gmail.com
                 </a>
                 <p className="text-gray-500 block whitespace-nowrap leading-relaxed">
@@ -211,16 +211,16 @@ export default function Layout() {
             <div className="flex flex-col gap-6">
               <h4 className="text-xl font-semibold tracking-tight">Our Social</h4>
               <div className="flex gap-4">
-                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="p-2 -ml-2 text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-all">
+                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="p-2 -ml-2 text-gray-500 hover:text-white hover:bg-zinc-800 rounded-full transition-all">
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="p-2 text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-all">
+                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="p-2 text-gray-500 hover:text-white hover:bg-zinc-800 rounded-full transition-all">
                   <TikTokIcon className="w-5 h-5" />
                 </a>
-                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="p-2 text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-all">
+                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="p-2 text-gray-500 hover:text-white hover:bg-zinc-800 rounded-full transition-all">
                   <Youtube className="w-5 h-5" />
                 </a>
-                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="p-2 text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-all">
+                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="p-2 text-gray-500 hover:text-white hover:bg-zinc-800 rounded-full transition-all">
                   <Instagram className="w-5 h-5" />
                 </a>
               </div>
