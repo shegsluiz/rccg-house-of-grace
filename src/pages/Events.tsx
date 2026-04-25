@@ -62,6 +62,7 @@ const upcomingEvents = [
     type: "Prayer",
     description: "A powerful night of worship, word, and encounters with the Holy Spirit. Connect locally or tune in globally.",
     accent: "from-orange-500 to-red-500",
+    image: "https://www.rccg.org/wp-content/uploads/2026/04/banner-1024x512.jpg",
   },
   {
     title: "Zonal Conference",
@@ -188,28 +189,35 @@ export default function Events() {
             {upcomingEvents.map((ev, i) => (
               <div
                 key={i}
-                className="bg-black border border-zinc-700 shadow-sm rounded-3xl p-8 hover:shadow-md hover:border-green-500/30 transition flex flex-col gap-4 group"
+                className="bg-black border border-zinc-700 shadow-sm rounded-3xl hover:shadow-md hover:border-green-500/30 transition flex flex-col group overflow-hidden"
               >
-                <div>
-                  <span
-                    className={`text-xs font-bold uppercase tracking-widest bg-gradient-to-r ${ev.accent} bg-clip-text text-transparent`}
-                  >
-                    {ev.type}
-                  </span>
-                  <h3
-                    className="text-xl font-bold mt-2 mb-1 text-white group-hover:text-green-300 transition"
-                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                  >
-                    {ev.title}
-                  </h3>
-                  <p className="text-gray-500 text-xs font-medium">
-                    {ev.date} · {ev.time}
+                {(ev as any).image && (
+                  <div className="w-full aspect-video overflow-hidden border-b border-zinc-800">
+                    <img src={(ev as any).image} alt={ev.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                )}
+                <div className="p-8 flex flex-col gap-4 flex-1">
+                  <div>
+                    <span
+                      className={`text-xs font-bold uppercase tracking-widest bg-gradient-to-r ${ev.accent} bg-clip-text text-transparent`}
+                    >
+                      {ev.type}
+                    </span>
+                    <h3
+                      className="text-xl font-bold mt-2 mb-1 text-white group-hover:text-green-300 transition"
+                      style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                    >
+                      {ev.title}
+                    </h3>
+                    <p className="text-gray-500 text-xs font-medium">
+                      {ev.date} · {ev.time}
+                    </p>
+                  </div>
+                  <div className={`w-10 h-0.5 bg-gradient-to-r ${ev.accent} rounded-full`} />
+                  <p className="text-gray-400 text-sm leading-relaxed flex-1">
+                    {ev.description}
                   </p>
                 </div>
-                <div className={`w-10 h-0.5 bg-gradient-to-r ${ev.accent} rounded-full`} />
-                <p className="text-gray-400 text-sm leading-relaxed flex-1">
-                  {ev.description}
-                </p>
               </div>
             ))}
           </div>

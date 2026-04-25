@@ -16,6 +16,7 @@ interface Event {
   title: string;
   type: string;
   description: string;
+  image?: string;
 }
 
 interface Sermon {
@@ -68,11 +69,12 @@ const serviceTimes: ServiceTime[] = [
 
 const events: Event[] = [
   {
-    date: "TBA",
-    month: "—",
-    title: "Add Your Next Event",
+    date: "1st",
+    month: "Friday",
+    title: "Monthly Holy Ghost Service",
     type: "Special",
-    description: "Update this section with your upcoming church events via antigravity.",
+    description: "A powerful night of worship, word, and encounters with the Holy Spirit. Join us as we connect with the RCCG global family.",
+    image: "https://www.rccg.org/wp-content/uploads/2026/04/banner-1024x512.jpg",
   },
   {
     date: "TBA",
@@ -309,15 +311,24 @@ export default function Home() {
         <FadeSection delay={120}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {events.map((ev, i) => (
-              <div key={i} className="bg-zinc-900 border border-zinc-800 p-10 rounded-3xl hover:border-orange-300 transition-all relative overflow-hidden group">
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-400 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="flex items-baseline gap-2 mb-6">
-                  <span className="text-4xl font-bold text-orange-600">{ev.date}</span>
-                  <span className="text-xs font-bold tracking-widest uppercase text-orange-600/70">{ev.month}</span>
+              <div key={i} className="bg-zinc-900 border border-zinc-800 rounded-3xl hover:border-orange-300 transition-all relative overflow-hidden group flex flex-col">
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-400 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
+                {ev.image && (
+                  <div className="w-full aspect-video overflow-hidden border-b border-zinc-800">
+                    <img src={ev.image} alt={ev.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                )}
+                <div className="p-8 md:p-10 flex flex-col flex-1">
+                  <div className="flex items-baseline gap-2 mb-6">
+                    <span className="text-4xl font-bold text-orange-500">{ev.date}</span>
+                    <span className="text-xs font-bold tracking-widest uppercase text-orange-500/70">{ev.month}</span>
+                  </div>
+                  <div>
+                    <span className="inline-block px-3 py-1 border border-orange-500/30 rounded-full text-[10px] tracking-widest uppercase text-orange-400 mb-4 bg-orange-500/10">{ev.type}</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{ev.title}</h3>
+                  <p className="text-gray-400 leading-relaxed text-sm flex-1">{ev.description}</p>
                 </div>
-                <span className="inline-block px-3 py-1 border border-orange-200 rounded-full text-[10px] tracking-widest uppercase text-orange-600 mb-4 bg-orange-50">{ev.type}</span>
-                <h3 className="text-xl font-bold mb-3">{ev.title}</h3>
-                <p className="text-gray-400 leading-relaxed text-sm">{ev.description}</p>
               </div>
             ))}
           </div>
