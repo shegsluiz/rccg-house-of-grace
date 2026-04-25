@@ -54,6 +54,7 @@ const upcomingEvents = [
     type: "Thanksgiving",
     description: "Join us every first Sunday of the month as we lift up our voices in gratitude and celebrate God's faithfulness in our lives.",
     accent: "from-green-500 to-emerald-500",
+    image: "/Thanksgiving Post.png",
   },
   {
     title: "Monthly Holy Ghost Service (May Edition)",

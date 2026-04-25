@@ -79,11 +79,13 @@ const events: Event[] = [
     image: "https://www.rccg.org/wp-content/uploads/2026/04/banner-1024x512.jpg",
   },
   {
-    date: "TBA",
-    month: "—",
-    title: "Add Your Next Event",
-    type: "Prayer",
-    description: "Update this section with your upcoming church events via antigravity.",
+    date: "1st",
+    month: "Sunday",
+    time: "9:35 AM",
+    title: "Thanksgiving Sunday",
+    type: "Celebration",
+    description: "Join us for a special time of gratitude and testimony as we celebrate God's goodness in our lives.",
+    image: "/Thanksgiving Post.png",
   },
 ];
 
