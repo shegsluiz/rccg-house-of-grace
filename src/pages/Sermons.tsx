@@ -9,7 +9,7 @@
 // 4. Add to your .env file:  VITE_YOUTUBE_API_KEY=your_api_key_here
 // 5. The channel ID is already set below.
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const CHANNEL_ID = "UCV_ngO2hpet078gqzKptM9g";
 const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY as string;
@@ -80,7 +80,12 @@ async function fetchVideos(): Promise<VideoItem[]> {
 }
 
 // ── Components ────────────────────────────────────────────────────────────────
-function VideoCard({ video, featured = false }: { video: VideoItem; featured?: boolean }) {
+interface VideoCardProps {
+  video: VideoItem;
+  featured?: boolean;
+}
+
+const VideoCard: React.FC<VideoCardProps> = ({ video, featured = false }) => {
   const [playing, setPlaying] = useState(false);
 
   if (featured) {

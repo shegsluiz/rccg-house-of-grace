@@ -8,6 +8,7 @@ const regularPrograms = [
     time: "7:45 AM - 9:00 AM",
     description: "Join our creative expression of the word of God through film, visuals, and storytelling.",
     accent: "from-green-500 to-emerald-500",
+    image: "/Kingdom.Cinema 2.jpg",
   },
   {
     name: "Sunday School",
@@ -141,8 +142,14 @@ export default function Events() {
             {regularPrograms.map((prog) => (
               <div
                 key={prog.name}
-                className="bg-black border border-zinc-700 shadow-sm rounded-3xl p-8 hover:shadow-md hover:border-green-500/30 transition flex gap-6 items-start group"
+                className="bg-black border border-zinc-700 shadow-sm rounded-3xl hover:shadow-md hover:border-green-500/30 transition flex flex-col group overflow-hidden"
               >
+                {(prog as any).image && (
+                  <div className="w-full aspect-video overflow-hidden border-b border-zinc-800">
+                    <img src={(prog as any).image} alt={prog.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                )}
+                <div className="p-8 flex gap-6 items-start">
                 <div className="shrink-0 text-center w-28">
                   <div
                     className={`text-[10px] font-bold uppercase tracking-widest bg-gradient-to-r ${prog.accent} bg-clip-text text-transparent`}
@@ -167,6 +174,7 @@ export default function Events() {
                   <p className="text-zinc-500 text-sm leading-relaxed">
                     {prog.description}
                   </p>
+                </div>
                 </div>
               </div>
             ))}

@@ -8,6 +8,7 @@ interface ServiceTime {
   time: string;
   name: string;
   description: string;
+  image?: string;
 }
 
 interface Event {
@@ -39,6 +40,7 @@ const serviceTimes: ServiceTime[] = [
     time: "7:45 AM",
     name: "Kingdom Cinema (First Service)",
     description: "Join our creative expression of the word of God through film, visuals, and storytelling.",
+    image: "/Kingdom.Cinema 2.jpg",
   },
   {
     day: "Sunday",
@@ -294,11 +296,15 @@ export default function Home() {
         <FadeSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {serviceTimes.map((s) => (
-              <div key={s.name} className="bg-zinc-900 border border-zinc-800 p-10 rounded-3xl hover:bg-zinc-800 transition-all">
-                <p className="text-orange-500 text-xs font-bold tracking-widest uppercase mb-4">{s.day}</p>
-                <p className="text-3xl font-bold mb-4">{s.time}</p>
+              <div key={s.name} className="group">
+                {s.image && (
+                  <div className="relative aspect-video mb-6 rounded-2xl overflow-hidden border border-zinc-800">
+                    <img src={s.image} alt={s.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                )}
+                <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-green-500 mb-2">{s.day} · {s.time}</p>
                 <p className="text-lg font-bold text-white mb-4">{s.name}</p>
-                <p className="text-zinc-500 leading-relaxed">{s.description}</p>
+                <p className="text-zinc-500 leading-relaxed text-sm">{s.description}</p>
               </div>
             ))}
           </div>
