@@ -4,14 +4,14 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --color-accent-purple: #C084FC;
+  --color-accent-green: #C084FC;
   --color-accent-pink: #E879F9;
-  --color-purple-400: #C084FC;
+  --color-green-400: #C084FC;
   --color-pink-500: #E879F9;
 }
 
 @layer base {
   body {
-    @apply bg-black text-white antialiased selection:bg-accent-purple/30;
+    @apply bg-black text-white antialiased selection:bg-accent-green/30;
   }
 }

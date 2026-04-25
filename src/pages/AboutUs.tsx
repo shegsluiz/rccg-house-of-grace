@@ -119,7 +119,7 @@ function FadeSection({
 // ─── Main Component ───────────────────────────────────────────────────────────
 export default function AboutUs() {
   return (
-    <div className="bg-black text-white min-h-screen font-sans selection:bg-purple-500/30 overflow-x-hidden">
+    <div className="bg-black text-white min-h-screen font-sans selection:bg-green-500/30 overflow-x-hidden">
       
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <section className="relative min-h-[80vh] flex flex-col justify-end px-6 md:px-12 lg:px-24 pb-24 overflow-hidden">
@@ -132,11 +132,11 @@ export default function AboutUs() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-10" />
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
-          <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-purple-400 mb-5 flex items-center gap-3">
-            <span className="w-8 h-[1px] bg-purple-400"></span> RCCG · House of Grace · Zonal HQ
+          <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-green-400 mb-5 flex items-center gap-3">
+            <span className="w-8 h-[1px] bg-green-400"></span> RCCG · House of Grace · Zonal HQ
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight text-white max-w-4xl">
-            A House Built on <em className="not-italic bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Grace</em>
+            A House Built on <em className="not-italic bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">Grace</em>
           </h1>
           <p className="text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed mt-6 mb-10 font-medium">
             We are a community of believers who have encountered the transforming grace of God — and we exist to extend that grace to every person who walks through our doors.
@@ -144,8 +144,8 @@ export default function AboutUs() {
         </div>
 
         <div className="absolute bottom-10 right-6 md:right-12 lg:right-24 z-20 flex flex-col items-center gap-2 opacity-60">
-          <div className="w-[1px] h-12 bg-gradient-to-b from-purple-400 to-transparent animate-pulse" />
-          <span className="text-[10px] tracking-[0.2em] uppercase text-purple-400" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
+          <div className="w-[1px] h-12 bg-gradient-to-b from-green-400 to-transparent animate-pulse" />
+          <span className="text-[10px] tracking-[0.2em] uppercase text-green-400" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
         </div>
       </section>
 
@@ -157,17 +157,17 @@ export default function AboutUs() {
           </div>
           <div className="flex items-center gap-8 md:gap-12 flex-wrap justify-center">
             <div className="flex flex-col gap-1">
-              <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">9M+</span>
+              <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">9M+</span>
               <span className="text-[10px] tracking-widest uppercase text-zinc-500 font-bold">Members worldwide</span>
             </div>
             <div className="w-[1px] h-10 bg-white/10 hidden md:block" />
             <div className="flex flex-col gap-1">
-              <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">197</span>
+              <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">197</span>
               <span className="text-[10px] tracking-widest uppercase text-zinc-500 font-bold">Countries & territories</span>
             </div>
             <div className="w-[1px] h-10 bg-white/10 hidden md:block" />
             <div className="flex flex-col gap-1">
-              <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">50K+</span>
+              <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">50K+</span>
               <span className="text-[10px] tracking-widest uppercase text-zinc-500 font-bold">Parishes worldwide</span>
             </div>
           </div>
@@ -179,11 +179,11 @@ export default function AboutUs() {
         <FadeSection>
           <p className="text-pink-400 text-sm font-bold uppercase tracking-widest mb-4">Our Mission</p>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">Why We Exist</h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-purple-400 to-pink-500 mb-12 rounded-full" />
+          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-pink-500 mb-12 rounded-full" />
         </FadeSection>
         <FadeSection delay={120}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <blockquote className="text-2xl md:text-3xl font-bold italic leading-relaxed text-zinc-300 border-l-4 border-purple-500 pl-8 py-2">
+            <blockquote className="text-2xl md:text-3xl font-bold italic leading-relaxed text-zinc-300 border-l-4 border-green-500 pl-8 py-2">
               "To make heaven. To take as many people with us. To have a member of RCCG in every family of all nations."
             </blockquote>
             <div className="text-zinc-400 text-lg leading-relaxed space-y-6">
@@ -209,16 +209,16 @@ export default function AboutUs() {
       </section>
 
       {/* ── Core Values ──────────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/10 via-black to-black">
+      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-900/10 via-black to-black">
         <FadeSection>
-          <p className="text-purple-400 text-sm font-bold uppercase tracking-widest mb-4">Our Core Values</p>
+          <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4">Our Core Values</p>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-16">What Defines Us</h2>
         </FadeSection>
         <FadeSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {values.map((v) => (
               <div key={v.number} className="bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/[0.08] transition-all group">
-                <p className="text-6xl font-bold text-white/10 group-hover:text-purple-400/30 transition-colors mb-6">{v.number}</p>
+                <p className="text-6xl font-bold text-white/10 group-hover:text-green-400/30 transition-colors mb-6">{v.number}</p>
                 <h3 className="text-2xl font-bold mb-4">{v.title}</h3>
                 <p className="text-zinc-400 leading-relaxed text-sm">{v.description}</p>
               </div>
@@ -258,13 +258,13 @@ export default function AboutUs() {
         <FadeSection>
           <p className="text-pink-400 text-sm font-bold uppercase tracking-widest mb-4">New Here?</p>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">What To Expect On Your First Visit</h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-purple-400 to-pink-500 mb-16 rounded-full" />
+          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-pink-500 mb-16 rounded-full" />
         </FadeSection>
         <FadeSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             {whatToExpect.map((item) => (
               <div key={item.title} className="flex gap-6 items-start group">
-                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl text-purple-400 group-hover:scale-110 transition-transform shrink-0 shadow-[0_0_20px_rgba(192,132,252,0.1)]">
+                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl text-green-400 group-hover:scale-110 transition-transform shrink-0 shadow-[0_0_20px_rgba(192,132,252,0.1)]">
                   {item.icon}
                 </div>
                 <div>
@@ -280,9 +280,9 @@ export default function AboutUs() {
       {/* ── CTA Strip ─────────────────────────────────────────────────────────── */}
       <FadeSection>
         <div className="my-24 px-6 md:px-12 lg:px-24">
-          <div className="bg-gradient-to-r from-purple-900/40 via-black to-purple-900/40 border border-purple-500/20 rounded-3xl p-12 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-[0_0_50px_rgba(192,132,252,0.1)] max-w-7xl mx-auto">
+          <div className="bg-gradient-to-r from-green-900/40 via-black to-green-900/40 border border-green-500/20 rounded-3xl p-12 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-[0_0_50px_rgba(192,132,252,0.1)] max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold leading-tight text-center lg:text-left">
-              Ready to experience <em className="not-italic bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">grace</em> for yourself?
+              Ready to experience <em className="not-italic bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">grace</em> for yourself?
             </h2>
             <a href="/connect" className="bg-white text-black px-10 py-5 rounded-full font-bold hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.2)] text-sm tracking-wide uppercase whitespace-nowrap">
               Plan Your Visit

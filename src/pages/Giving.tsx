@@ -1,5 +1,5 @@
 // src/pages/Giving.tsx
-// Brand: bg-black, Inter + Space Grotesk, purple-pink gradient, orange-red secondary, glassmorphism cards
+// Brand: bg-black, Inter + Space Grotesk, green-pink gradient, orange-red secondary, glassmorphism cards
 
 const givingCategories = [
   {
@@ -7,14 +7,14 @@ const givingCategories = [
     description:
       "Honouring God with the first tenth of your income is an act of faith and obedience. Bring your tithes as an expression of trust in God's provision over your life.",
     scripture: "Malachi 3:10",
-    accent: "from-purple-500 to-pink-500",
+    accent: "from-green-500 to-pink-500",
   },
   {
     title: "Offerings",
     description:
       "Above your tithe, give freely as the Lord leads your heart. Every offering sown into the house of God is a seed that returns a harvest of blessings.",
     scripture: "2 Corinthians 9:7",
-    accent: "from-purple-500 to-pink-500",
+    accent: "from-green-500 to-pink-500",
   },
   {
     title: "Building Fund",
@@ -63,9 +63,9 @@ export default function Giving() {
 
       {/* ── Hero ── */}
       <section className="relative py-32 px-6 md:px-20 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-black to-black pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-green-900/20 via-black to-black pointer-events-none" />
         <div className="relative z-10 max-w-3xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-purple-400 mb-4">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-4">
             Give & Be Blessed
           </p>
           <h1
@@ -73,11 +73,11 @@ export default function Giving() {
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             Honour God{" "}
-            <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">
               With Your Giving
             </span>
           </h1>
-          <div className="w-12 h-1 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mx-auto mb-6" />
+          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-pink-500 rounded-full mx-auto mb-6" />
           <p className="text-zinc-400 text-lg leading-relaxed">
             "Bring the whole tithe into the storehouse, that there may be food
             in my house. Test me in this," says the Lord Almighty, "and see if
@@ -91,7 +91,7 @@ export default function Giving() {
       {/* ── Giving Categories ── */}
       <section className="px-6 md:px-20 pb-20">
         <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-purple-400 mb-2">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-2">
             Ways To Give
           </p>
           <h2
@@ -131,7 +131,7 @@ export default function Giving() {
       <section className="px-6 md:px-20 pb-20">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/5 border border-white/10 rounded-3xl p-10">
-            <p className="text-sm font-bold uppercase tracking-widest text-purple-400 mb-2">
+            <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-2">
               Bank Transfer
             </p>
             <h2
@@ -168,7 +168,7 @@ export default function Giving() {
       {/* ── RCCG Online Giving ── */}
       <section className="px-6 md:px-20 pb-20">
         <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-purple-400 mb-2">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-2">
             Online Giving
           </p>
           <h2
@@ -184,7 +184,7 @@ export default function Giving() {
                 desc: "Give your regular tithes and offerings through the RCCG secure payment portal.",
                 link: "https://rccgpayments.trccg.org/holyGhost/trccg.org/offering.php",
                 label: "Give Here",
-                accent: "from-purple-500 to-pink-500",
+                accent: "from-green-500 to-pink-500",
               },
               {
                 title: "Nehemiah Builders",
@@ -198,7 +198,7 @@ export default function Giving() {
                 desc: "Become a covenant partner with RCCG and share in the global harvest of souls.",
                 link: "https://rccgpayments.trccg.org/cp/",
                 label: "Covenant Partners",
-                accent: "from-purple-500 to-pink-500",
+                accent: "from-green-500 to-pink-500",
               },
             ].map((item) => (
               <div
@@ -235,7 +235,7 @@ export default function Giving() {
       <section className="px-6 md:px-20 pb-28">
         <div className="max-w-3xl mx-auto text-center">
           <div className="bg-white/5 border border-white/10 rounded-3xl p-10">
-            <p className="text-sm font-bold uppercase tracking-widest text-purple-400 mb-6">
+            <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-6">
               Praise Report
             </p>
             <p

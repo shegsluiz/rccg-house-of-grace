@@ -67,7 +67,7 @@ const whatWeDo = [
 // ─── Main Component ───────────────────────────────────────────────────────────
 export default function KingdomCinema() {
   return (
-    <div className="bg-black text-white min-h-screen font-sans overflow-x-hidden selection:bg-purple-500/30">
+    <div className="bg-black text-white min-h-screen font-sans overflow-x-hidden selection:bg-green-500/30">
       
       {/* ── Hero ── */}
       <section className="relative min-h-[70vh] flex flex-col justify-end px-6 md:px-12 lg:px-24 pb-24 pt-40 overflow-hidden">
@@ -80,18 +80,18 @@ export default function KingdomCinema() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-10" />
 
         <div className="relative z-20 max-w-7xl mx-auto w-full text-center mt-32">
-          <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-purple-400 mb-5 flex items-center justify-center gap-3">
-            <span className="w-8 h-[1px] bg-purple-400"></span> RCCG House of Grace <span className="w-8 h-[1px] bg-purple-400"></span>
+          <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-green-400 mb-5 flex items-center justify-center gap-3">
+            <span className="w-8 h-[1px] bg-green-400"></span> RCCG House of Grace <span className="w-8 h-[1px] bg-green-400"></span>
           </p>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-[1.05] tracking-tight text-white mb-6">
             Kingdom<br />
-            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 via-pink-500 to-orange-400 bg-clip-text text-transparent">
               Cinema
             </span>
           </h1>
           <p className="text-zinc-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed italic font-medium">
             "Go into all the world and preach the gospel to all creation."<br />
-            <span className="text-purple-400 not-italic text-sm font-bold uppercase tracking-widest mt-4 inline-block">— Mark 16:15</span>
+            <span className="text-green-400 not-italic text-sm font-bold uppercase tracking-widest mt-4 inline-block">— Mark 16:15</span>
           </p>
         </div>
       </section>
@@ -144,16 +144,16 @@ export default function KingdomCinema() {
       {/* ── What We Do ── */}
       <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
         <FadeSection text-center>
-          <p className="text-purple-400 text-sm font-bold uppercase tracking-widest mb-4 text-center">Kingdom Cinema Creates</p>
+          <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4 text-center">Kingdom Cinema Creates</p>
           <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-16 text-center">
-            What We <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Do</span>
+            What We <span className="bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">Do</span>
           </h2>
         </FadeSection>
         <FadeSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {whatWeDo.map((item, i) => (
               <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/[0.08] transition-all flex items-center gap-6 group">
-                <div className="text-3xl font-bold text-purple-400/30 group-hover:text-purple-400 transition-colors">
+                <div className="text-3xl font-bold text-green-400/30 group-hover:text-green-400 transition-colors">
                   0{i + 1}.
                 </div>
                 <h3 className="text-xl md:text-2xl font-semibold text-white">{item}</h3>

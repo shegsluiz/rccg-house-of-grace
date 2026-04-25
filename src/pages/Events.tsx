@@ -1,5 +1,5 @@
 // src/pages/Events.tsx
-// Brand: bg-black, Inter + Space Grotesk, purple-pink gradient, orange-red secondary, glassmorphism cards
+// Brand: bg-black, Inter + Space Grotesk, green-pink gradient, orange-red secondary, glassmorphism cards
 
 const regularPrograms = [
   {
@@ -7,7 +7,7 @@ const regularPrograms = [
     day: "Every Sunday",
     time: "7:45 AM - 9:00 AM",
     description: "Join our creative expression of the word of God through film, visuals, and storytelling.",
-    accent: "from-purple-500 to-pink-500",
+    accent: "from-green-500 to-pink-500",
   },
   {
     name: "Sunday School",
@@ -21,14 +21,14 @@ const regularPrograms = [
     day: "Every Sunday",
     time: "9:35 AM - 11:00 AM",
     description: "Experience dynamic worship, powerful preaching, and heartfelt fellowship.",
-    accent: "from-purple-500 to-pink-500",
+    accent: "from-green-500 to-pink-500",
   },
   {
     name: "Digging Deep",
     day: "Every Tuesday",
     time: "6:30 PM - 8:00 PM",
     description: "A deep dive into the Bible to grow in wisdom and understanding of scripture.",
-    accent: "from-purple-500 to-pink-500",
+    accent: "from-green-500 to-pink-500",
   },
   {
     name: "Faith Clinic",
@@ -53,7 +53,7 @@ const upcomingEvents = [
     time: "9:35 AM",
     type: "Thanksgiving",
     description: "Join us every first Sunday of the month as we lift up our voices in gratitude and celebrate God's faithfulness in our lives.",
-    accent: "from-purple-500 to-pink-500",
+    accent: "from-green-500 to-pink-500",
   },
   {
     title: "Monthly Holy Ghost Service",
@@ -69,7 +69,7 @@ const upcomingEvents = [
     time: "TBA",
     type: "Special",
     description: "Stay tuned for updates on our upcoming Zonal gathering, featuring guest ministers and transformative worship sessions.",
-    accent: "from-purple-500 to-pink-500",
+    accent: "from-green-500 to-pink-500",
   },
 ];
 
@@ -100,9 +100,9 @@ export default function Events() {
 
       {/* ── Hero ── */}
       <section className="relative py-32 px-6 md:px-20 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-black to-black pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-green-900/20 via-black to-black pointer-events-none" />
         <div className="relative z-10 max-w-3xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-purple-400 mb-4">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-4">
             What's Happening
           </p>
           <h1
@@ -110,11 +110,11 @@ export default function Events() {
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             Events &{" "}
-            <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">
               Programmes
             </span>
           </h1>
-          <div className="w-12 h-1 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mx-auto mb-6" />
+          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-pink-500 rounded-full mx-auto mb-6" />
           <p className="text-zinc-400 text-lg leading-relaxed">
             There is always something happening at House of Grace. From weekly
             services to special programmes, find an event and come and
@@ -126,7 +126,7 @@ export default function Events() {
       {/* ── Regular Programs ── */}
       <section className="px-6 md:px-20 pb-20">
         <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-purple-400 mb-2">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-2">
             Weekly Schedule
           </p>
           <h2
@@ -175,7 +175,7 @@ export default function Events() {
       {/* ── Upcoming Events ── */}
       <section className="px-6 md:px-20 pb-20">
         <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-purple-400 mb-2">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-2">
             Coming Up
           </p>
           <h2
@@ -219,7 +219,7 @@ export default function Events() {
       {/* ── RCCG HQ Events ── */}
       <section className="px-6 md:px-20 pb-28">
         <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-purple-400 mb-2">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-2">
             The Bigger Family
           </p>
           <h2
@@ -246,13 +246,13 @@ export default function Events() {
                   <span className="text-xs font-bold uppercase tracking-widest text-zinc-500">
                     {ev.month}
                   </span>
-                  <span className="text-purple-400 text-xs group-hover:translate-x-1 transition-transform">
+                  <span className="text-green-400 text-xs group-hover:translate-x-1 transition-transform">
                     ↗
                   </span>
                 </div>
-                <div className="w-10 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
+                <div className="w-10 h-0.5 bg-gradient-to-r from-green-500 to-pink-500 rounded-full" />
                 <h3
-                  className="font-bold text-lg group-hover:text-purple-400 transition"
+                  className="font-bold text-lg group-hover:text-green-400 transition"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                 >
                   {ev.title}

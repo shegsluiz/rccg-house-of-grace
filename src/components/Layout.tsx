@@ -29,7 +29,7 @@ export default function Layout() {
   };
 
   return (
-    <div className="min-h-screen bg-black font-sans text-white selection:bg-purple-400/30 overflow-x-hidden flex flex-col items-center">
+    <div className="min-h-screen bg-black font-sans text-white selection:bg-green-400/30 overflow-x-hidden flex flex-col items-center">
       {/* Navigation */}
       <header className="w-full absolute top-0 left-0 z-50 bg-gradient-to-b from-black/80 via-black/40 to-transparent pt-2 pb-12">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12 py-5">

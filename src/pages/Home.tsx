@@ -141,7 +141,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen font-sans selection:bg-purple-500/30">
+    <div className="bg-black text-white min-h-screen font-sans selection:bg-green-500/30">
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col justify-end px-6 md:px-12 lg:px-24 pb-24 overflow-hidden">
@@ -149,12 +149,12 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
-          <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-purple-400 mb-5 flex items-center gap-3">
-            <span className="w-8 h-[1px] bg-purple-400"></span> Welcome to
+          <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-green-400 mb-5 flex items-center gap-3">
+            <span className="w-8 h-[1px] bg-green-400"></span> Welcome to
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight text-white max-w-4xl">
             RCCG<br />
-            House of <em className="not-italic bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Grace</em>
+            House of <em className="not-italic bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">Grace</em>
           </h1>
           <p className="text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed mt-6 mb-10 font-medium">
             A place where grace is not just our name — it is the atmosphere you breathe and the foundation you stand on.
@@ -170,8 +170,8 @@ export default function Home() {
         </div>
 
         <div className="absolute bottom-10 right-6 md:right-12 lg:right-24 z-20 flex flex-col items-center gap-2 opacity-60">
-          <div className="w-[1px] h-12 bg-gradient-to-b from-purple-400 to-transparent animate-pulse" />
-          <span className="text-[10px] tracking-[0.2em] uppercase text-purple-400" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
+          <div className="w-[1px] h-12 bg-gradient-to-b from-green-400 to-transparent animate-pulse" />
+          <span className="text-[10px] tracking-[0.2em] uppercase text-green-400" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
         </div>
       </section>
 
@@ -184,9 +184,9 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
             <div>
-              <p className="text-purple-400 text-sm font-bold uppercase tracking-widest mb-4">A Word From Our Pastor</p>
+              <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4">A Word From Our Pastor</p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">You are welcome<br />home.</h2>
-              <div className="w-12 h-1 bg-gradient-to-r from-purple-400 to-pink-500 mb-8 rounded-full" />
+              <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-pink-500 mb-8 rounded-full" />
               <div className="text-zinc-400 text-lg leading-relaxed space-y-6">
                 <p>
                   Whether you are joining us for the first time or you have been a part of this family for years, I want you to know that you are not here by accident. God has a purpose for every step that led you through our doors.
@@ -199,7 +199,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-12 pt-8 border-t border-white/10">
-                <p className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent italic">Pastor — Add Name Here</p>
+                <p className="text-xl font-bold bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent italic">Pastor — Add Name Here</p>
                 <p className="text-xs tracking-widest uppercase text-zinc-500 mt-2 font-semibold">Zonal Pastor · RCCG House of Grace</p>
               </div>
             </div>
@@ -217,7 +217,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {pillars.map((p) => (
               <div key={p.word} className="bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/[0.08] transition-all group">
-                <p className="text-6xl font-bold text-white/10 group-hover:text-purple-400/30 transition-colors mb-4">{p.letter}</p>
+                <p className="text-6xl font-bold text-white/10 group-hover:text-green-400/30 transition-colors mb-4">{p.letter}</p>
                 <h3 className="text-2xl font-bold mb-4">{p.word}</h3>
                 <p className="text-zinc-400 leading-relaxed">{p.line}</p>
               </div>
@@ -250,16 +250,16 @@ export default function Home() {
       {/* ── Latest Sermon ─────────────────────────────────────────────────────── */}
       <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
         <FadeSection>
-          <p className="text-purple-400 text-sm font-bold uppercase tracking-widest mb-4">Hear The Word</p>
+          <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4">Hear The Word</p>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">Latest Sermon</h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-purple-400 to-pink-500 mb-12 rounded-full" />
+          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-pink-500 mb-12 rounded-full" />
         </FadeSection>
         <FadeSection delay={120}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 bg-white/5">
               {sermon.youtubeId === "YOUR_YOUTUBE_VIDEO_ID" ? (
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-purple-400/50">
-                  <div className="w-16 h-16 rounded-full border border-purple-400/30 flex items-center justify-center text-2xl">▶</div>
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-green-400/50">
+                  <div className="w-16 h-16 rounded-full border border-green-400/30 flex items-center justify-center text-2xl">▶</div>
                   <span className="text-xs tracking-widest uppercase font-bold">Find ID at @rccghouseofgrace5858</span>
                 </div>
               ) : (
@@ -273,7 +273,7 @@ export default function Home() {
               )}
             </div>
             <div>
-              <p className="text-purple-400 text-xs font-bold tracking-widest uppercase mb-4">{sermon.date}</p>
+              <p className="text-green-400 text-xs font-bold tracking-widest uppercase mb-4">{sermon.date}</p>
               <h3 className="text-3xl md:text-4xl font-bold mb-4">{sermon.title}</h3>
               <p className="text-zinc-400 font-medium mb-2">{sermon.preacher}</p>
               <p className="text-pink-400 italic mb-8">{sermon.scripture}</p>
@@ -320,7 +320,7 @@ export default function Home() {
       {/* ── Newsletter ────────────────────────────────────────────────────────── */}
       <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
         <FadeSection>
-          <div className="bg-gradient-to-br from-purple-900/40 to-black border border-purple-500/20 rounded-3xl p-10 md:p-16 text-center max-w-4xl mx-auto shadow-[0_0_50px_rgba(192,132,252,0.1)]">
+          <div className="bg-gradient-to-br from-green-900/40 to-black border border-green-500/20 rounded-3xl p-10 md:p-16 text-center max-w-4xl mx-auto shadow-[0_0_50px_rgba(192,132,252,0.1)]">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Join Our Mailing List</h2>
             <p className="text-zinc-400 mb-10 max-w-lg mx-auto">
               Get updates on sermons, events, and church news delivered directly to your inbox.
@@ -333,14 +333,14 @@ export default function Home() {
                   value={emailInput}
                   onChange={(e) => setEmailInput(e.target.value)}
                   required
-                  className="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-4 focus:outline-none focus:border-purple-400 text-white placeholder:text-zinc-500"
+                  className="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-4 focus:outline-none focus:border-green-400 text-white placeholder:text-zinc-500"
                 />
                 <button type="submit" className="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 text-sm tracking-wide uppercase">
                   Subscribe
                 </button>
               </form>
             ) : (
-              <p className="text-purple-400 font-bold">✦ Thank you — you're on the list. God bless you.</p>
+              <p className="text-green-400 font-bold">✦ Thank you — you're on the list. God bless you.</p>
             )}
             <p className="text-xs text-zinc-600 mt-6">No spam, ever. Unsubscribe at any time.</p>
           </div>
