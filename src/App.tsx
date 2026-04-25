@@ -6,6 +6,7 @@ import Sermons from "./pages/Sermons";
 import Giving from "./pages/Giving";
 import KingdomCinema from "./pages/KingdomCinema";
 import Connect from "./pages/Connect";
+import Events from "./pages/Events";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="giving" element={<Giving />} />
           <Route path="kingdom-cinema" element={<KingdomCinema />} />
           <Route path="connect" element={<Connect />} />
+          <Route path="events" element={<Events />} />
         </Route>
       </Routes>
     </BrowserRouter>
