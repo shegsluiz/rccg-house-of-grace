@@ -165,7 +165,7 @@ export default function Layout() {
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
               <img src="/logo.png" alt="RCCG House of Grace Logo" className="h-20 md:h-24 w-auto object-contain drop-shadow-md" />
-              <span className="font-extrabold text-xl md:text-2xl tracking-tight max-w-[200px] leading-tight">RCCG, HOUSE OF GRACE</span>
+              <span className="font-extrabold text-xl md:text-2xl tracking-tight whitespace-nowrap leading-tight">RCCG, HOUSE OF GRACE</span>
             </div>
           </div>
 
