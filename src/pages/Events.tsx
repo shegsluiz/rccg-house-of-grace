@@ -1,0 +1,268 @@
+// src/pages/Events.tsx
+// Brand: bg-black, Inter + Space Grotesk, purple-pink gradient, orange-red secondary, glassmorphism cards
+
+const regularPrograms = [
+  {
+    name: "Kingdom Cinema (First Service)",
+    day: "Every Sunday",
+    time: "7:45 AM - 9:00 AM",
+    description: "Join our creative expression of the word of God through film, visuals, and storytelling.",
+    accent: "from-purple-500 to-pink-500",
+  },
+  {
+    name: "Sunday School",
+    day: "Every Sunday",
+    time: "9:00 AM - 9:30 AM",
+    description: "Interactive study of God's Word to build a strong foundation for your faith.",
+    accent: "from-orange-500 to-red-500",
+  },
+  {
+    name: "Celebration Service",
+    day: "Every Sunday",
+    time: "9:35 AM - 11:00 AM",
+    description: "Experience dynamic worship, powerful preaching, and heartfelt fellowship.",
+    accent: "from-purple-500 to-pink-500",
+  },
+  {
+    name: "Digging Deep",
+    day: "Every Tuesday",
+    time: "6:30 PM - 8:00 PM",
+    description: "A deep dive into the Bible to grow in wisdom and understanding of scripture.",
+    accent: "from-purple-500 to-pink-500",
+  },
+  {
+    name: "Faith Clinic",
+    day: "Every Thursday",
+    time: "6:30 PM - 8:00 PM",
+    description: "A time of intense prayer, healing, and spiritual empowerment.",
+    accent: "from-orange-500 to-red-500",
+  },
+  {
+    name: "Zion Hour",
+    day: "3rd Saturday",
+    time: "7:00 AM - 9:00 AM",
+    description: "Early morning prophetic encounter to set the pace for your month.",
+    accent: "from-orange-500 to-red-500",
+  },
+];
+
+const upcomingEvents = [
+  {
+    title: "Thanksgiving Sunday",
+    date: "1st Sunday",
+    time: "9:35 AM",
+    type: "Thanksgiving",
+    description: "Join us every first Sunday of the month as we lift up our voices in gratitude and celebrate God's faithfulness in our lives.",
+    accent: "from-purple-500 to-pink-500",
+  },
+  {
+    title: "Monthly Holy Ghost Service",
+    date: "1st Friday",
+    time: "7:00 PM",
+    type: "Prayer",
+    description: "A powerful night of worship, word, and encounters with the Holy Spirit. Connect locally or tune in globally.",
+    accent: "from-orange-500 to-red-500",
+  },
+  {
+    title: "Zonal Conference",
+    date: "Coming Soon",
+    time: "TBA",
+    type: "Special",
+    description: "Stay tuned for updates on our upcoming Zonal gathering, featuring guest ministers and transformative worship sessions.",
+    accent: "from-purple-500 to-pink-500",
+  },
+];
+
+const rccgEvents = [
+  {
+    title: "Special Holy Ghost Service",
+    desc: "A massive global gathering held in March at Redemption City for divine impartations and breakthrough prayers.",
+    link: "https://www.rccg.org",
+    month: "March 5–8, 2026",
+  },
+  {
+    title: "RCCG Annual Convention",
+    desc: "The annual convention is a Spirit-filled week of worship, seminars, and life-transforming messages.",
+    link: "https://www.rccg.org",
+    month: "August 3–9, 2026",
+  },
+  {
+    title: "Holy Ghost Congress",
+    desc: "The annual global gathering closing out the year — a time of intensive prayer, worship, and divine encounters.",
+    link: "https://www.rccg.org",
+    month: "Dec 7–13, 2026",
+  },
+];
+
+export default function Events() {
+  return (
+    <div className="bg-black text-white min-h-screen font-sans">
+
+      {/* ── Hero ── */}
+      <section className="relative py-32 px-6 md:px-20 text-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-black to-black pointer-events-none" />
+        <div className="relative z-10 max-w-3xl mx-auto">
+          <p className="text-sm font-bold uppercase tracking-widest text-purple-400 mb-4">
+            What's Happening
+          </p>
+          <h1
+            className="text-5xl md:text-7xl font-bold mb-6"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            Events &{" "}
+            <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+              Programmes
+            </span>
+          </h1>
+          <div className="w-12 h-1 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mx-auto mb-6" />
+          <p className="text-zinc-400 text-lg leading-relaxed">
+            There is always something happening at House of Grace. From weekly
+            services to special programmes, find an event and come and
+            experience God with us.
+          </p>
+        </div>
+      </section>
+
+      {/* ── Regular Programs ── */}
+      <section className="px-6 md:px-20 pb-20">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-sm font-bold uppercase tracking-widest text-purple-400 mb-2">
+            Weekly Schedule
+          </p>
+          <h2
+            className="text-3xl font-bold mb-10"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            Regular Programmes
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {regularPrograms.map((prog) => (
+              <div
+                key={prog.name}
+                className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition flex gap-6 items-start"
+              >
+                <div className="shrink-0 text-center w-28">
+                  <div
+                    className={`text-[10px] font-bold uppercase tracking-widest bg-gradient-to-r ${prog.accent} bg-clip-text text-transparent`}
+                  >
+                    {prog.day}
+                  </div>
+                  <div
+                    className="text-lg md:text-xl font-bold mt-1"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                  >
+                    {prog.time}
+                  </div>
+                </div>
+                <div>
+                  <div className={`w-8 h-0.5 bg-gradient-to-r ${prog.accent} rounded-full mb-3`} />
+                  <h3
+                    className="font-bold text-lg mb-2"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                  >
+                    {prog.name}
+                  </h3>
+                  <p className="text-zinc-400 text-sm leading-relaxed">
+                    {prog.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Upcoming Events ── */}
+      <section className="px-6 md:px-20 pb-20">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-sm font-bold uppercase tracking-widest text-purple-400 mb-2">
+            Coming Up
+          </p>
+          <h2
+            className="text-3xl font-bold mb-10"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            Upcoming Events
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {upcomingEvents.map((ev, i) => (
+              <div
+                key={i}
+                className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition flex flex-col gap-4"
+              >
+                <div>
+                  <span
+                    className={`text-xs font-bold uppercase tracking-widest bg-gradient-to-r ${ev.accent} bg-clip-text text-transparent`}
+                  >
+                    {ev.type}
+                  </span>
+                  <h3
+                    className="text-xl font-bold mt-2 mb-1"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                  >
+                    {ev.title}
+                  </h3>
+                  <p className="text-zinc-500 text-xs">
+                    {ev.date} · {ev.time}
+                  </p>
+                </div>
+                <div className={`w-10 h-0.5 bg-gradient-to-r ${ev.accent} rounded-full`} />
+                <p className="text-zinc-400 text-sm leading-relaxed flex-1">
+                  {ev.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── RCCG HQ Events ── */}
+      <section className="px-6 md:px-20 pb-28">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-sm font-bold uppercase tracking-widest text-purple-400 mb-2">
+            The Bigger Family
+          </p>
+          <h2
+            className="text-3xl font-bold mb-4"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            RCCG Global Events
+          </h2>
+          <p className="text-zinc-400 text-sm mb-10 max-w-xl leading-relaxed">
+            As part of the worldwide RCCG family, House of Grace participates
+            in the major annual gatherings that draw millions of believers from
+            across the globe.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {rccgEvents.map((ev) => (
+              <a
+                key={ev.title}
+                href={ev.link}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition flex flex-col gap-4 group"
+              >
+                <div className="flex justify-between items-center">
+                  <span className="text-xs font-bold uppercase tracking-widest text-zinc-500">
+                    {ev.month}
+                  </span>
+                  <span className="text-purple-400 text-xs group-hover:translate-x-1 transition-transform">
+                    ↗
+                  </span>
+                </div>
+                <div className="w-10 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
+                <h3
+                  className="font-bold text-lg group-hover:text-purple-400 transition"
+                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                >
+                  {ev.title}
+                </h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">{ev.desc}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
