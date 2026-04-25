@@ -1,9 +1,15 @@
 import { motion, AnimatePresence } from "motion/react";
 import { 
-  Menu, X, Facebook, Instagram, Linkedin, Twitter, Youtube, ChevronRight
+  Menu, X, Facebook, Instagram, Youtube, ChevronRight
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
+
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+  </svg>
+);
 
 export default function Layout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -144,8 +150,9 @@ export default function Layout() {
 
               {/* Social Links at the bottom */}
               <div className="flex justify-center gap-8 pb-10 pt-4 text-zinc-400">
-                <a href="https://facebook.com/" target="_blank" rel="noreferrer" className="hover:text-zinc-900 transition-colors text-sm font-medium">Facebook</a>
+                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="hover:text-zinc-900 transition-colors text-sm font-medium">Facebook</a>
                 <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="hover:text-zinc-900 transition-colors text-sm font-medium">Instagram</a>
+                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="hover:text-zinc-900 transition-colors text-sm font-medium">TikTok</a>
                 <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="hover:text-zinc-900 transition-colors text-sm font-medium">YouTube</a>
               </div>
             </motion.div>
@@ -204,8 +211,11 @@ export default function Layout() {
             <div className="flex flex-col gap-6">
               <h4 className="text-xl font-semibold tracking-tight">Our Social</h4>
               <div className="flex gap-4">
-                <a href="https://facebook.com/" target="_blank" rel="noreferrer" className="p-2 -ml-2 text-zinc-400 hover:text-white transition-all">
+                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="p-2 -ml-2 text-zinc-400 hover:text-white transition-all">
                   <Facebook className="w-5 h-5" />
+                </a>
+                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="p-2 text-zinc-400 hover:text-white transition-all">
+                  <TikTokIcon className="w-5 h-5" />
                 </a>
                 <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="p-2 text-zinc-400 hover:text-white transition-all">
                   <Youtube className="w-5 h-5" />

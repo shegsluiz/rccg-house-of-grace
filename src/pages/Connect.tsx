@@ -28,7 +28,8 @@ const contactDetails = [
 
 const socialLinks = [
   { name: "Instagram", handle: "@rccghoga14", url: "https://www.instagram.com/rccghoga14/", color: "from-green-500 to-emerald-500" },
-  { name: "Facebook", handle: "RCCG House of Grace", url: "https://facebook.com/", color: "from-green-500 to-emerald-500" },
+  { name: "Facebook", handle: "RCCG House of Grace", url: "https://www.facebook.com/rccghoga14", color: "from-green-500 to-emerald-500" },
+  { name: "TikTok", handle: "@rccghouseofgracelp15", url: "https://www.tiktok.com/@rccghouseofgracelp15", color: "from-green-500 to-emerald-500" },
   { name: "YouTube", handle: "@rccghouseofgrace5858", url: "https://www.youtube.com/@rccghouseofgrace5858", color: "from-orange-500 to-red-500" },
   { name: "WhatsApp Community", handle: "Join our group", url: "https://wa.me/", color: "from-orange-500 to-red-500" },
 ];
