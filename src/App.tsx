@@ -5,7 +5,7 @@ import AboutUs from "./pages/AboutUs";
 import Sermons from "./pages/Sermons";
 import Giving from "./pages/Giving";
 import KingdomCinema from "./pages/KingdomCinema";
-import { Connect } from "vite";
+import Connect from "./pages/Connect";
 
 export default function App() {
   return (
