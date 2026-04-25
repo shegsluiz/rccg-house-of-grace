@@ -125,7 +125,7 @@ export default function AboutUs() {
     <div className="bg-black text-white min-h-screen font-sans selection:bg-green-500/30 overflow-x-hidden">
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[80vh] flex flex-col justify-end px-6 md:px-12 lg:px-24 pb-24 overflow-hidden">
+      <section className="relative min-h-[100dvh] flex flex-col justify-end px-6 md:px-12 lg:px-8 pb-16 md:pb-24 overflow-hidden">
         {/* Background Image restored */}
         <img
           src="/IMG_6410.jpg"
@@ -138,7 +138,7 @@ export default function AboutUs() {
           <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-[#ffefb7] mb-5 flex items-center gap-3">
             <span className="w-8 h-[1px] bg-[#ffefb7]"></span> RCCG · House of Grace · Zonal HQ
           </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight text-white max-w-4xl">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.05] tracking-tight text-white max-w-4xl">
             A House Built on <em className="not-italic bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Grace</em>
           </h1>
           <p className="text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed mt-6 mb-10 font-medium">
@@ -152,10 +152,10 @@ export default function AboutUs() {
         </div>
       </section>
       {/* ── Mission ──────────────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-white/5 w-full">
         <FadeSection>
           <p className="text-emerald-400 text-sm font-bold uppercase tracking-widest mb-4">Our Mission</p>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">Why We Exist</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-8">Why We Exist</h2>
           <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mb-12 rounded-full" />
         </FadeSection>
         <FadeSection delay={120}>
@@ -182,10 +182,10 @@ export default function AboutUs() {
       </section>
 
       {/* ── Core Values ──────────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-900/10 via-black to-black">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-white/5 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-900/10 via-black to-black w-full">
         <FadeSection>
           <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4">Our Core Values</p>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-16">What Defines Us</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-16">What Defines Us</h2>
         </FadeSection>
         <FadeSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -201,10 +201,10 @@ export default function AboutUs() {
       </section>
 
       {/* ── Church Structure / Leadership ─────────────────────────────────────── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-white/5 w-full">
         <FadeSection>
           <p className="text-orange-400 text-sm font-bold uppercase tracking-widest mb-4">Our Structure</p>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">Spiritual Covering & Leadership</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-8">Spiritual Covering & Leadership</h2>
           <div className="w-12 h-1 bg-gradient-to-r from-orange-400 to-red-500 mb-8 rounded-full" />
           <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl mb-16">
             House of Grace is a Zonal Headquarters under Lagos Province 15 of
@@ -238,10 +238,10 @@ export default function AboutUs() {
       </section>
 
       {/* ── What to Expect ────────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto w-full">
         <FadeSection>
           <p className="text-emerald-400 text-sm font-bold uppercase tracking-widest mb-4">New Here?</p>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">What To Expect On Your First Visit</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-8">What To Expect On Your First Visit</h2>
           <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mb-16 rounded-full" />
         </FadeSection>
         <FadeSection delay={100}>
@@ -263,9 +263,9 @@ export default function AboutUs() {
 
       {/* ── CTA Strip ─────────────────────────────────────────────────────────── */}
       <FadeSection>
-        <div className="my-24 px-6 md:px-12 lg:px-24">
+        <div className="my-16 md:my-24 px-6 md:px-12 lg:px-8 w-full max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-green-900/40 via-black to-green-900/40 border border-green-500/20 rounded-3xl p-12 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-[0_0_50px_rgba(74,222,128,0.1)] max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight text-center lg:text-left">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center lg:text-left">
               Ready to experience <em className="not-italic bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">grace</em> for yourself?
             </h2>
             <Link to="/connect" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-10 py-5 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] text-sm tracking-wide uppercase whitespace-nowrap">

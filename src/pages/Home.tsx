@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, ReactNode } from "react";
+import React, { useEffect, useRef, useState, ReactNode } from "react";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -145,7 +145,7 @@ export default function Home() {
     <div className="bg-black text-white min-h-screen font-sans selection:bg-green-500/30">
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex flex-col justify-end px-6 md:px-12 lg:px-24 pb-24 overflow-hidden">
+      <section className="relative min-h-[100dvh] flex flex-col justify-end px-6 md:px-12 lg:px-8 pb-16 md:pb-24 overflow-hidden">
         <video autoPlay muted loop playsInline src="/hero-bg.mp4" className="absolute inset-0 w-full h-full object-cover z-0 opacity-60 mix-blend-screen" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
 
@@ -153,7 +153,7 @@ export default function Home() {
           <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-green-400 mb-5 flex items-center gap-3">
             <span className="w-8 h-[1px] bg-green-400"></span> Welcome to
           </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight text-white max-w-4xl">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.05] tracking-tight text-white max-w-4xl">
             RCCG<br />
             House of <em className="not-italic bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Grace</em>
           </h1>
@@ -177,7 +177,7 @@ export default function Home() {
       </section>
 
       {/* ── Welcome / Pastor Message ──────────────────────────────────────────── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-white/5 w-full">
         <FadeSection>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-[4/5] max-w-md w-full mx-auto lg:mx-0 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(74,222,128,0.1)] border border-white/10">
@@ -186,21 +186,21 @@ export default function Home() {
             </div>
             <div>
               <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4">A Word From Our Pastor</p>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">You are welcome<br />home.</h2>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8">YOU ARE WELCOME<br />HOME.</h2>
               <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mb-8 rounded-full" />
               <div className="text-zinc-400 text-lg leading-relaxed space-y-6">
                 <p>
                   Whether you are joining us for the first time or you have been a part of this family for years, I want you to know that you are not here by accident. God has a purpose for every step that led you through our doors.
                 </p>
                 <p>
-                  At RCCG House of Grace, we believe that every person carries within them a divine potential — and our mission is to create an environment where that potential is discovered, nurtured, and released. Grace is our name, our identity, and the very atmosphere of this house.
+                  At RCCG House of Grace, we believe that every person carries within them a divine potential and our mission is to create an environment where that potential is discovered, nurtured, and released. Grace is our name, our identity, and the very atmosphere of this house.
                 </p>
                 <p>
                   Come as you are. You will find a family that loves you, welcomes you, and walks with you into all that God has for your life.
                 </p>
               </div>
               <div className="mt-12 pt-8 border-t border-white/10">
-                <p className="text-xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent italic">Pastor — Add Name Here</p>
+                <p className="text-xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent italic">Pastor — ABIOBUN OLUWATOSIN</p>
                 <p className="text-xs tracking-widest uppercase text-zinc-500 mt-2 font-semibold">Zonal Pastor · RCCG House of Grace</p>
               </div>
             </div>
@@ -209,10 +209,10 @@ export default function Home() {
       </section>
 
       {/* ── Identity Pillars ──────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-white/5 w-full">
         <FadeSection>
           <p className="text-emerald-400 text-sm font-bold uppercase tracking-widest mb-4 text-center">Who We Are</p>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-16 text-center">Grace · Fire · Purpose</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-12 md:mb-16 text-center">Grace · Fire · Purpose</h2>
         </FadeSection>
         <FadeSection delay={120}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -228,10 +228,10 @@ export default function Home() {
       </section>
 
       {/* ── Service Times ─────────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-white/5 w-full">
         <FadeSection>
           <p className="text-orange-400 text-sm font-bold uppercase tracking-widest mb-4">Join Us</p>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">Worship With Us</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-8">Worship With Us</h2>
           <div className="w-12 h-1 bg-gradient-to-r from-orange-400 to-red-500 mb-12 rounded-full" />
         </FadeSection>
         <FadeSection delay={100}>
@@ -249,10 +249,10 @@ export default function Home() {
       </section>
 
       {/* ── Latest Sermon ─────────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-white/5 w-full">
         <FadeSection>
           <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4">Hear The Word</p>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">Latest Sermon</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-8">Latest Sermon</h2>
           <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mb-12 rounded-full" />
         </FadeSection>
         <FadeSection delay={120}>
@@ -287,12 +287,12 @@ export default function Home() {
       </section>
 
       {/* ── Upcoming Events ───────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-white/5 w-full">
         <FadeSection>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
               <p className="text-orange-400 text-sm font-bold uppercase tracking-widest mb-4">What's Coming Up</p>
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">Upcoming Events</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold leading-tight">Upcoming Events</h2>
             </div>
             <Link to="/events" className="text-white hover:text-orange-400 transition-colors font-bold flex items-center gap-2">
               View All <ChevronRight className="w-5 h-5" />
@@ -319,7 +319,7 @@ export default function Home() {
       </section>
 
       {/* ── Newsletter ────────────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto w-full">
         <FadeSection>
           <div className="bg-gradient-to-br from-green-900/40 to-black border border-green-500/20 rounded-3xl p-10 md:p-16 text-center max-w-4xl mx-auto shadow-[0_0_50px_rgba(74,222,128,0.1)]">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Join Our Mailing List</h2>
@@ -349,7 +349,7 @@ export default function Home() {
       </section>
 
       {/* ── RCCG Affiliation ──────────────────────────────────────────────────── */}
-      <div className="border-t border-white/5 py-8 px-6 md:px-12 lg:px-24 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div className="border-t border-white/5 py-8 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4">
           <span className="px-3 py-1 border border-white/10 rounded-full text-[10px] tracking-widest uppercase text-zinc-400">A Parish of RCCG</span>
           <span className="text-xs text-zinc-600 font-medium">Zonal HQ · Lagos Province 15</span>

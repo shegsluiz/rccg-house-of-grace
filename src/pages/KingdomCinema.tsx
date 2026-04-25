@@ -70,7 +70,7 @@ export default function KingdomCinema() {
     <div className="bg-black text-white min-h-screen font-sans overflow-x-hidden selection:bg-green-500/30">
       
       {/* ── Hero ── */}
-      <section className="relative min-h-[70vh] flex flex-col justify-end px-6 md:px-12 lg:px-24 pb-24 pt-40 overflow-hidden">
+      <section className="relative min-h-[100dvh] flex flex-col justify-end px-6 md:px-12 lg:px-8 pb-16 md:pb-24 pt-40 overflow-hidden">
         {/* Placeholder for a cinematic background */}
         <img 
           src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2000&auto=format&fit=crop" 
@@ -83,7 +83,7 @@ export default function KingdomCinema() {
           <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-[#ffefb7] mb-5 flex items-center justify-center gap-3">
             <span className="w-8 h-[1px] bg-[#ffefb7]"></span> RCCG House of Grace <span className="w-8 h-[1px] bg-[#ffefb7]"></span>
           </p>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-[1.05] tracking-tight text-white mb-6">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold leading-[1.05] tracking-tight text-white mb-6">
             Kingdom<br />
             <span className="bg-gradient-to-r from-green-400 via-emerald-500 to-orange-400 bg-clip-text text-transparent">
               Cinema
@@ -97,9 +97,9 @@ export default function KingdomCinema() {
       </section>
 
       {/* ── Vision ── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto text-center border-b border-white/5">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-5xl mx-auto text-center border-b border-white/5 w-full">
         <FadeSection>
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-8">
             Our <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">Vision</span>
           </h2>
           <div className="w-12 h-1 bg-gradient-to-r from-orange-400 to-red-500 mb-12 rounded-full mx-auto" />
@@ -113,10 +113,10 @@ export default function KingdomCinema() {
       </section>
 
       {/* ── Mission ── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-white/5 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <FadeSection className="order-2 lg:order-1">
-            <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-8">
               Our <span className="text-white">Mission</span>
             </h2>
             <div className="w-12 h-1 bg-white mb-12 rounded-full" />
@@ -142,10 +142,10 @@ export default function KingdomCinema() {
       </section>
 
       {/* ── What We Do ── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-white/5 w-full">
         <FadeSection text-center>
           <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4 text-center">Kingdom Cinema Creates</p>
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-16 text-center">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-16 text-center">
             What We <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Do</span>
           </h2>
         </FadeSection>
@@ -164,9 +164,9 @@ export default function KingdomCinema() {
       </section>
 
       {/* ── Why It Matters ── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto text-center border-b border-white/5">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-5xl mx-auto text-center border-b border-white/5 w-full">
         <FadeSection>
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-8">
             Why It Matters
           </h2>
           <div className="w-12 h-1 bg-white mb-12 rounded-full mx-auto" />
@@ -177,7 +177,7 @@ export default function KingdomCinema() {
       </section>
 
       {/* ── Stay Connected ── */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <FadeSection>
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 bg-white/5 shadow-[0_0_50px_rgba(74,222,128,0.1)]">
@@ -189,7 +189,7 @@ export default function KingdomCinema() {
             </div>
           </FadeSection>
           <FadeSection delay={150}>
-            <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-8">
               Stay <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">Connected</span>
             </h2>
             <div className="w-12 h-1 bg-gradient-to-r from-orange-400 to-red-500 mb-12 rounded-full" />

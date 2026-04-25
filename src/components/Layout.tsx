@@ -159,7 +159,7 @@ export default function Layout() {
       </div>
 
       {/* Footer Navigation */}
-      <footer className="w-full pt-12 pb-20 px-4 md:px-10 max-w-7xl mx-auto border-t border-white/5 mt-auto relative overflow-hidden">
+      <footer className="w-full pt-16 pb-12 md:pb-20 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-t border-white/5 mt-auto relative overflow-hidden">
         <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-8 items-start">
           {/* Col 1: Logo */}
           <div className="flex flex-col gap-6">
