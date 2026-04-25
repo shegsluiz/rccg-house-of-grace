@@ -17,6 +17,7 @@ interface Event {
   type: string;
   description: string;
   image?: string;
+  time?: string;
 }
 
 interface Sermon {
@@ -71,9 +72,10 @@ const events: Event[] = [
   {
     date: "1st",
     month: "Friday",
-    title: "Monthly Holy Ghost Service (April Edition)",
-    type: "Special",
-    description: "Theme: 'Excellent Fruits'. Join us for a night of divine fruitfulness and spiritual transformation as we connect with the global RCCG family.",
+    time: "6:00 PM",
+    title: "Monthly Holy Ghost Service (May Edition)",
+    type: "Prayer",
+    description: "Theme: 'Excellent Counsel'. A powerful night of worship, the Word, and divine encounters with the Holy Spirit. Join us onsite or connect from anywhere as we experience God's guidance and grace.",
     image: "https://www.rccg.org/wp-content/uploads/2026/04/banner-1024x512.jpg",
   },
   {
@@ -322,6 +324,7 @@ export default function Home() {
                   <div className="flex items-baseline gap-2 mb-6">
                     <span className="text-4xl font-bold text-orange-500">{ev.date}</span>
                     <span className="text-xs font-bold tracking-widest uppercase text-orange-500/70">{ev.month}</span>
+                    {ev.time && <span className="ml-auto text-[10px] font-bold tracking-widest uppercase text-zinc-500">{ev.time}</span>}
                   </div>
                   <div>
                     <span className="inline-block px-3 py-1 border border-orange-500/30 rounded-full text-[10px] tracking-widest uppercase text-orange-400 mb-4 bg-orange-500/10">{ev.type}</span>
