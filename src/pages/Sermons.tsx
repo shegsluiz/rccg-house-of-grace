@@ -102,7 +102,7 @@ export default function Sermons() {
                 href="https://www.youtube.com/@rccghouseofgrace5858"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-block mt-6 px-6 py-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-semibold hover:opacity-90 transition"
+                className="inline-block mt-6 px-6 py-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] uppercase tracking-wide"
               >
                 Watch on YouTube →
               </a>

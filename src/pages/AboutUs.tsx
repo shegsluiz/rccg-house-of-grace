@@ -152,7 +152,7 @@ export default function AboutUs() {
       {/* ── RCCG Stats Banner ────────────────────────────────────────────────── */}
       <FadeSection>
         <div className="border-y border-white/5 py-12 px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center justify-between gap-10 max-w-7xl mx-auto">
-          <div className="px-5 py-2 border border-white/10 rounded-lg text-xs tracking-widest uppercase text-zinc-400 font-bold shadow-[0_0_20px_rgba(192,132,252,0.05)]">
+          <div className="px-5 py-2 border border-white/10 rounded-lg text-xs tracking-widest uppercase text-zinc-400 font-bold shadow-[0_0_20px_rgba(74,222,128,0.05)]">
             A Parish of The Redeemed Christian Church of God
           </div>
           <div className="flex items-center gap-8 md:gap-12 flex-wrap justify-center">
@@ -264,7 +264,7 @@ export default function AboutUs() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             {whatToExpect.map((item) => (
               <div key={item.title} className="flex gap-6 items-start group">
-                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl text-green-400 group-hover:scale-110 transition-transform shrink-0 shadow-[0_0_20px_rgba(192,132,252,0.1)]">
+                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl text-green-400 group-hover:scale-110 transition-transform shrink-0 shadow-[0_0_20px_rgba(74,222,128,0.1)]">
                   {item.icon}
                 </div>
                 <div>
@@ -280,11 +280,11 @@ export default function AboutUs() {
       {/* ── CTA Strip ─────────────────────────────────────────────────────────── */}
       <FadeSection>
         <div className="my-24 px-6 md:px-12 lg:px-24">
-          <div className="bg-gradient-to-r from-green-900/40 via-black to-green-900/40 border border-green-500/20 rounded-3xl p-12 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-[0_0_50px_rgba(192,132,252,0.1)] max-w-7xl mx-auto">
+          <div className="bg-gradient-to-r from-green-900/40 via-black to-green-900/40 border border-green-500/20 rounded-3xl p-12 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-[0_0_50px_rgba(74,222,128,0.1)] max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold leading-tight text-center lg:text-left">
               Ready to experience <em className="not-italic bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">grace</em> for yourself?
             </h2>
-            <a href="/connect" className="bg-white text-black px-10 py-5 rounded-full font-bold hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.2)] text-sm tracking-wide uppercase whitespace-nowrap">
+            <a href="/connect" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-10 py-5 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] text-sm tracking-wide uppercase whitespace-nowrap">
               Plan Your Visit
             </a>
           </div>

@@ -160,10 +160,10 @@ export default function Home() {
             A place where grace is not just our name — it is the atmosphere you breathe and the foundation you stand on.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a href="/connect" className="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center justify-center text-sm tracking-wide uppercase">
+            <a href="/connect" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] flex items-center justify-center text-sm tracking-wide uppercase">
               Plan Your Visit
             </a>
-            <a href="/about" className="bg-white/10 backdrop-blur-md border border-white/20 px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-colors text-white text-sm tracking-wide uppercase">
+            <a href="/about" className="bg-white/10 backdrop-blur-md border border-green-500/30 px-8 py-4 rounded-full font-bold hover:bg-green-500/20 transition-all duration-300 text-white text-sm tracking-wide uppercase hover:border-green-400">
               Who We Are
             </a>
           </div>
@@ -179,7 +179,7 @@ export default function Home() {
       <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
         <FadeSection>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative aspect-[4/5] max-w-md w-full mx-auto lg:mx-0 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(192,132,252,0.1)] border border-white/10">
+            <div className="relative aspect-[4/5] max-w-md w-full mx-auto lg:mx-0 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(74,222,128,0.1)] border border-white/10">
               <img src="/IMG_6384.jpg" alt="Welcome to RCCG House of Grace" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
@@ -277,7 +277,7 @@ export default function Home() {
               <h3 className="text-3xl md:text-4xl font-bold mb-4">{sermon.title}</h3>
               <p className="text-zinc-400 font-medium mb-2">{sermon.preacher}</p>
               <p className="text-emerald-400 italic mb-8">{sermon.scripture}</p>
-              <a href="/sermons" className="bg-white/10 backdrop-blur-md border border-white/20 px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-colors text-white inline-block text-sm uppercase tracking-wide">
+              <a href="/sermons" className="bg-white/10 backdrop-blur-md border border-green-500/30 px-8 py-4 rounded-full font-bold hover:bg-green-500/20 transition-all duration-300 text-white text-sm tracking-wide uppercase hover:border-green-400">
                 View All Sermons
               </a>
             </div>
@@ -320,7 +320,7 @@ export default function Home() {
       {/* ── Newsletter ────────────────────────────────────────────────────────── */}
       <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
         <FadeSection>
-          <div className="bg-gradient-to-br from-green-900/40 to-black border border-green-500/20 rounded-3xl p-10 md:p-16 text-center max-w-4xl mx-auto shadow-[0_0_50px_rgba(192,132,252,0.1)]">
+          <div className="bg-gradient-to-br from-green-900/40 to-black border border-green-500/20 rounded-3xl p-10 md:p-16 text-center max-w-4xl mx-auto shadow-[0_0_50px_rgba(74,222,128,0.1)]">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Join Our Mailing List</h2>
             <p className="text-zinc-400 mb-10 max-w-lg mx-auto">
               Get updates on sermons, events, and church news delivered directly to your inbox.
@@ -335,7 +335,7 @@ export default function Home() {
                   required
                   className="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-4 focus:outline-none focus:border-green-400 text-white placeholder:text-zinc-500"
                 />
-                <button type="submit" className="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 text-sm tracking-wide uppercase">
+                <button type="submit" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] flex items-center justify-center text-sm tracking-wide uppercase">
                   Subscribe
                 </button>
               </form>
