@@ -126,13 +126,15 @@ export default function AboutUs() {
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <section className="relative min-h-[100dvh] flex flex-col justify-end px-6 md:px-12 lg:px-8 pb-16 md:pb-24 overflow-hidden">
-        {/* Background Image restored */}
-        <img
-          src="/IMG_6410.jpg"
-          alt="Worship background"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-20 mix-blend-multiply"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          src="/hero-bg.mp4"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black z-10" />
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
           <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-green-300 mb-5 flex items-center gap-3">
