@@ -71,9 +71,9 @@ const events: Event[] = [
   {
     date: "1st",
     month: "Friday",
-    title: "Monthly Holy Ghost Service",
+    title: "Monthly Holy Ghost Service (April Edition)",
     type: "Special",
-    description: "A powerful night of worship, word, and encounters with the Holy Spirit. Join us as we connect with the RCCG global family.",
+    description: "Theme: 'Excellent Fruits'. Join us for a night of divine fruitfulness and spiritual transformation as we connect with the global RCCG family.",
     image: "https://www.rccg.org/wp-content/uploads/2026/04/banner-1024x512.jpg",
   },
   {

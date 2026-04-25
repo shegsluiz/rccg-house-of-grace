@@ -56,11 +56,11 @@ const upcomingEvents = [
     accent: "from-green-500 to-emerald-500",
   },
   {
-    title: "Monthly Holy Ghost Service",
+    title: "Monthly Holy Ghost Service (April Edition)",
     date: "1st Friday",
     time: "7:00 PM",
     type: "Prayer",
-    description: "A powerful night of worship, word, and encounters with the Holy Spirit. Connect locally or tune in globally.",
+    description: "Theme: 'Excellent Fruits'. A powerful night of worship, word, and encounters with the Holy Spirit. Connect locally or tune in globally for divine fruitfulness.",
     accent: "from-orange-500 to-red-500",
     image: "https://www.rccg.org/wp-content/uploads/2026/04/banner-1024x512.jpg",
   },
