@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "motion/react";
 import { 
-  Menu, X, Facebook, Instagram, Linkedin, Twitter, Youtube
+  Menu, X, Facebook, Instagram, Linkedin, Twitter, Youtube, ChevronRight
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
@@ -91,21 +91,63 @@ export default function Layout() {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-0 w-full bg-zinc-950/95 backdrop-blur-xl border-b border-white/10 p-6 flex flex-col gap-6 md:hidden z-40 shadow-2xl"
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "100%" }}
+              transition={{ type: "spring", bounce: 0, duration: 0.4 }}
+              className="fixed inset-0 bg-white flex flex-col md:hidden z-[100] overflow-y-auto"
             >
-              {navLinks.map((item) => (
-                <Link 
-                  key={item.name} 
-                  to={item.path} 
+              {/* Header inside mobile menu */}
+              <div className="flex justify-between items-center p-6">
+                {/* Half circle logo matching mockup */}
+                <div className="w-6 h-12 bg-zinc-900 rounded-r-full" /> 
+                <button 
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-2xl font-semibold transition-colors ${isActive(item.path) ? 'text-white' : 'text-gray-300 hover:text-white'}`}
+                  className="p-2 text-zinc-900 hover:bg-zinc-100 rounded-full transition-colors"
                 >
-                  {item.name}
+                  <X className="w-7 h-7" />
+                </button>
+              </div>
+
+              {/* Links */}
+              <div className="flex flex-col px-8 py-6 gap-8 flex-grow">
+                {navLinks.map((item) => (
+                  <Link 
+                    key={item.name} 
+                    to={item.path} 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex justify-between items-center text-zinc-900 font-medium transition-colors group"
+                  >
+                    <span className="text-xl">{item.name}</span>
+                    <ChevronRight className="w-5 h-5 text-zinc-400 group-hover:text-zinc-900 transition-colors" />
+                  </Link>
+                ))}
+                <Link 
+                  to="/kingdom-cinema" 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex justify-between items-center text-zinc-900 font-medium transition-colors group"
+                >
+                  <span className="text-xl">Kingdom Cinema</span>
+                  <ChevronRight className="w-5 h-5 text-zinc-400 group-hover:text-zinc-900 transition-colors" />
                 </Link>
-              ))}
+
+                <div className="pt-6">
+                  <Link
+                    to="/connect"
+                    onClick={() => setIsMobileMenuOpen(false)} 
+                    className="w-full bg-zinc-900 text-white py-4 rounded-xl font-medium text-lg hover:bg-zinc-800 transition-colors flex items-center justify-center"
+                  >
+                    Plan Your Visit
+                  </Link>
+                </div>
+              </div>
+
+              {/* Social Links at the bottom */}
+              <div className="flex justify-center gap-8 pb-10 pt-4 text-zinc-400">
+                <a href="https://facebook.com/" target="_blank" rel="noreferrer" className="hover:text-zinc-900 transition-colors text-sm font-medium">Facebook</a>
+                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="hover:text-zinc-900 transition-colors text-sm font-medium">Instagram</a>
+                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="hover:text-zinc-900 transition-colors text-sm font-medium">YouTube</a>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
