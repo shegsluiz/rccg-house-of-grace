@@ -8,6 +8,6 @@
 
 @layer base {
   body {
-    @apply bg-black text-white antialiased selection:bg-green-500/30;
+    @apply bg-white text-gray-900 antialiased selection:bg-green-100;
   }
 }

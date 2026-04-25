@@ -59,13 +59,13 @@ const testimony = {
 
 export default function Giving() {
   return (
-    <div className="bg-black text-white min-h-screen font-sans">
+    <div className="bg-white text-gray-900 min-h-screen font-sans">
 
       {/* ── Hero ── */}
       <section className="relative py-32 px-6 md:px-20 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-green-900/20 via-black to-black pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-green-50 via-white to-white pointer-events-none" />
         <div className="relative z-10 max-w-3xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-4">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-700 mb-4">
             Give & Be Blessed
           </p>
           <h1
@@ -73,29 +73,29 @@ export default function Giving() {
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             Honour God{" "}
-            <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
               With Your Giving
             </span>
           </h1>
-          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full mx-auto mb-6" />
-          <p className="text-zinc-400 text-lg leading-relaxed">
+          <div className="w-12 h-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mx-auto mb-6" />
+          <p className="text-gray-600 text-lg leading-relaxed">
             "Bring the whole tithe into the storehouse, that there may be food
             in my house. Test me in this," says the Lord Almighty, "and see if
             I will not throw open the floodgates of heaven and pour out so much
             blessing that there will not be room enough to store it."
           </p>
-          <p className="text-zinc-600 text-sm mt-3 italic">— Malachi 3:10</p>
+          <p className="text-gray-500 text-sm mt-3 italic">— Malachi 3:10</p>
         </div>
       </section>
 
       {/* ── Giving Categories ── */}
       <section className="px-6 md:px-20 pb-20">
         <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-2">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-700 mb-2">
             Ways To Give
           </p>
           <h2
-            className="text-3xl font-bold mb-10"
+            className="text-3xl font-bold mb-10 text-gray-900"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             Giving Categories
@@ -104,21 +104,21 @@ export default function Giving() {
             {givingCategories.map((cat) => (
               <div
                 key={cat.title}
-                className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition"
+                className="bg-white border border-gray-200 shadow-sm rounded-3xl p-8 hover:shadow-md hover:border-green-200 transition group"
               >
                 <div
                   className={`w-10 h-1 bg-gradient-to-r ${cat.accent} rounded-full mb-5`}
                 />
                 <h3
-                  className="text-xl font-bold mb-3"
+                  className="text-xl font-bold mb-3 text-gray-900 group-hover:text-green-700 transition"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                 >
                   {cat.title}
                 </h3>
-                <p className="text-zinc-400 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   {cat.description}
                 </p>
-                <p className="text-xs font-bold uppercase tracking-widest text-zinc-600 italic">
+                <p className="text-xs font-bold uppercase tracking-widest text-gray-500 italic">
                   {cat.scripture}
                 </p>
               </div>
@@ -130,34 +130,34 @@ export default function Giving() {
       {/* ── Bank Details ── */}
       <section className="px-6 md:px-20 pb-20">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-10">
-            <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-2">
+          <div className="bg-gray-50 border border-gray-200 shadow-sm rounded-3xl p-10">
+            <p className="text-sm font-bold uppercase tracking-widest text-green-700 mb-2">
               Bank Transfer
             </p>
             <h2
-              className="text-3xl font-bold mb-2"
+              className="text-3xl font-bold mb-2 text-gray-900"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
               Give Directly
             </h2>
-            <p className="text-zinc-400 text-sm mb-8">
+            <p className="text-gray-600 text-sm mb-8">
               Transfer directly to our church account using the details below.
               Please use your full name as the payment reference.
             </p>
-            <div className="divide-y divide-white/10">
+            <div className="divide-y divide-gray-200">
               {bankDetails.map((item) => (
                 <div
                   key={item.label}
                   className="flex justify-between items-center py-4"
                 >
-                  <span className="text-zinc-500 text-sm uppercase tracking-widest text-xs font-bold">
+                  <span className="text-gray-500 text-sm uppercase tracking-widest text-xs font-bold">
                     {item.label}
                   </span>
-                  <span className="text-white font-semibold">{item.value}</span>
+                  <span className="text-gray-900 font-semibold">{item.value}</span>
                 </div>
               ))}
             </div>
-            <p className="text-zinc-600 text-xs mt-6 italic">
+            <p className="text-gray-500 text-xs mt-6 italic">
               * Bank details will be updated via antigravity. Please confirm
               with the church office before any transfer.
             </p>
@@ -168,11 +168,11 @@ export default function Giving() {
       {/* ── RCCG Online Giving ── */}
       <section className="px-6 md:px-20 pb-20">
         <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-2">
+          <p className="text-sm font-bold uppercase tracking-widest text-green-700 mb-2">
             Online Giving
           </p>
           <h2
-            className="text-3xl font-bold mb-6"
+            className="text-3xl font-bold mb-6 text-gray-900"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             Give Through RCCG HQ
@@ -203,25 +203,25 @@ export default function Giving() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition flex flex-col gap-4"
+                className="bg-white border border-gray-200 shadow-sm rounded-3xl p-8 hover:shadow-md hover:border-green-200 transition flex flex-col gap-4 group"
               >
                 <div
                   className={`w-10 h-1 bg-gradient-to-r ${item.accent} rounded-full`}
                 />
                 <h3
-                  className="text-lg font-bold"
+                  className="text-lg font-bold text-gray-900 group-hover:text-green-700 transition"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                 >
                   {item.title}
                 </h3>
-                <p className="text-zinc-400 text-sm leading-relaxed flex-1">
+                <p className="text-gray-600 text-sm leading-relaxed flex-1">
                   {item.desc}
                 </p>
                 <a
                   href={item.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-block text-center px-5 py-2.5 rounded-full border border-white/10 text-sm text-white hover:bg-white/10 transition"
+                  className="inline-block text-center px-5 py-2.5 rounded-full border border-gray-200 shadow-sm text-sm text-gray-900 hover:bg-gray-50 transition"
                 >
                   {item.label} ↗
                 </a>
@@ -234,18 +234,18 @@ export default function Giving() {
       {/* ── Testimony ── */}
       <section className="px-6 md:px-20 pb-28">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-10">
-            <p className="text-sm font-bold uppercase tracking-widest text-green-400 mb-6">
+          <div className="bg-green-50 border border-green-100 shadow-sm rounded-3xl p-10">
+            <p className="text-sm font-bold uppercase tracking-widest text-green-700 mb-6">
               Praise Report
             </p>
             <p
-              className="text-xl md:text-2xl font-light leading-relaxed text-zinc-300 italic mb-6"
+              className="text-xl md:text-2xl font-light leading-relaxed text-gray-800 italic mb-6"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
               "{testimony.quote}"
             </p>
-            <p className="text-zinc-500 text-sm">{testimony.name}</p>
-            <p className="text-zinc-700 text-xs mt-2">
+            <p className="text-gray-600 font-medium text-sm">{testimony.name}</p>
+            <p className="text-gray-400 text-xs mt-2">
               * Replace with a real testimony via antigravity.
             </p>
           </div>

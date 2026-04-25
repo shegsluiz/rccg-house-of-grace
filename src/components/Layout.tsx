@@ -35,9 +35,9 @@ export default function Layout() {
   };
 
   return (
-    <div className="min-h-screen bg-black font-sans text-white selection:bg-green-400/30 overflow-x-hidden flex flex-col items-center">
+    <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-green-500/30 overflow-x-hidden flex flex-col items-center">
       {/* Navigation */}
-      <header className="w-full absolute top-0 left-0 z-50 bg-gradient-to-b from-black/80 via-black/40 to-transparent pt-2 pb-12">
+      <header className="w-full absolute top-0 left-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 pt-2 pb-2 shadow-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12 py-5">
           {/* Logo */}
           <Link to="/">
@@ -55,13 +55,13 @@ export default function Layout() {
           <motion.nav 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="hidden md:flex items-center gap-6 bg-white/5 border border-white/10 px-8 py-2.5 rounded-full backdrop-blur-md absolute left-1/2 -translate-x-1/2"
+            className="hidden md:flex items-center gap-6 bg-gray-50 border border-gray-200 px-8 py-2.5 rounded-full backdrop-blur-md absolute left-1/2 -translate-x-1/2"
           >
             {navLinks.map((item) => (
               <Link 
                 key={item.name} 
                 to={item.path} 
-                className={`text-sm font-medium transition-colors ${isActive(item.path) ? 'text-white' : 'text-gray-300 hover:text-white'}`}
+                className={`text-sm font-medium transition-colors ${isActive(item.path) ? 'text-green-600 font-bold' : 'text-gray-500 hover:text-gray-900'}`}
               >
                 {item.name}
               </Link>
@@ -74,10 +74,10 @@ export default function Layout() {
             animate={{ opacity: 1, x: 0 }}
             className="hidden md:flex items-center gap-4"
           >
-            <button className="px-5 py-2 bg-white/10 rounded-full text-sm font-medium hover:bg-white/20 transition-all">
+            <button className="px-5 py-2 bg-green-50 text-green-700 rounded-full text-sm font-medium hover:bg-green-100 transition-all">
               Join Us
             </button>
-            <Link to="/kingdom-cinema" className="px-5 py-2 border border-white/20 rounded-full text-sm font-medium hover:bg-white/10 transition-all inline-block">
+            <Link to="/kingdom-cinema" className="px-5 py-2 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-50 transition-all inline-block">
               Kingdom Cinema
             </Link>
           </motion.div>
@@ -86,7 +86,7 @@ export default function Layout() {
           <div className="md:hidden flex items-center z-50">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+              className="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -166,8 +166,8 @@ export default function Layout() {
       </div>
 
       {/* Footer Navigation */}
-      <footer className="w-full pt-16 pb-12 md:pb-20 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-t border-white/5 mt-auto relative overflow-hidden">
-        <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-8 items-start">
+      <footer className="w-full bg-gray-50 pt-16 pb-12 md:pb-20 px-6 md:px-12 lg:px-8 border-t border-gray-200 mt-auto relative overflow-hidden">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-8 items-start">
           {/* Col 1: Logo */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
@@ -184,7 +184,7 @@ export default function Layout() {
                 <Link 
                   key={item.name} 
                   to={item.path} 
-                  className="text-zinc-400 hover:text-white transition-colors w-fit underline-offset-4 hover:underline"
+                  className="text-gray-500 hover:text-gray-900 transition-colors w-fit underline-offset-4 hover:underline"
                 >
                   {item.name}
                 </Link>
@@ -198,10 +198,10 @@ export default function Layout() {
             <div className="flex flex-col gap-6">
               <h4 className="text-xl font-semibold tracking-tight">Contact Us</h4>
               <div className="space-y-4">
-                <a href="mailto:rccghouseofgracemedia@gmail.com" className="text-zinc-400 hover:text-white transition-colors block underline-offset-4 hover:underline">
+                <a href="mailto:rccghouseofgracemedia@gmail.com" className="text-gray-500 hover:text-gray-900 transition-colors block underline-offset-4 hover:underline">
                   rccghouseofgracemedia@gmail.com
                 </a>
-                <p className="text-zinc-400 block max-w-[200px] leading-relaxed">
+                <p className="text-gray-500 block whitespace-nowrap leading-relaxed">
                   52, Ajibola Crescent, Alapere, Ketu, Lagos
                 </p>
               </div>
@@ -211,16 +211,16 @@ export default function Layout() {
             <div className="flex flex-col gap-6">
               <h4 className="text-xl font-semibold tracking-tight">Our Social</h4>
               <div className="flex gap-4">
-                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="p-2 -ml-2 text-zinc-400 hover:text-white transition-all">
+                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="p-2 -ml-2 text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-all">
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="p-2 text-zinc-400 hover:text-white transition-all">
+                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="p-2 text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-all">
                   <TikTokIcon className="w-5 h-5" />
                 </a>
-                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="p-2 text-zinc-400 hover:text-white transition-all">
+                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="p-2 text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-all">
                   <Youtube className="w-5 h-5" />
                 </a>
-                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="p-2 text-zinc-400 hover:text-white transition-all">
+                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="p-2 text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-all">
                   <Instagram className="w-5 h-5" />
                 </a>
               </div>
