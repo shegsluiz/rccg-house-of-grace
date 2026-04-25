@@ -80,7 +80,7 @@ export default function KingdomCinema() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10" />
 
         <div className="relative z-20 max-w-7xl mx-auto w-full text-center mt-32">
-          <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-orange-600 mb-5 flex items-center justify-center gap-3">
+          <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-orange-500 mb-5 flex items-center justify-center gap-3">
             <span className="w-8 h-[1px] bg-orange-600"></span> RCCG House of Grace <span className="w-8 h-[1px] bg-orange-600"></span>
           </p>
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold leading-[1.05] tracking-tight text-white mb-6">
@@ -106,7 +106,7 @@ export default function KingdomCinema() {
           <p className="text-xl md:text-2xl text-zinc-800 leading-relaxed mb-6 font-medium">
             Kingdom Cinema is a creative expression of the word of God through film, visuals, and storytelling.
           </p>
-          <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
+          <p className="text-lg md:text-xl text-zinc-500 leading-relaxed">
             Our vision is to reach hearts, inspire faith, and communicate the message of Jesus Christ in a way that speaks to this generation.
           </p>
         </FadeSection>
@@ -197,7 +197,7 @@ export default function KingdomCinema() {
             <div className="space-y-10">
               <div>
                 <p className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-2">Email</p>
-                <a href="mailto:rccghouseofgracemedia@gmail.com" className="text-xl md:text-2xl font-bold text-white hover:text-orange-600 transition-colors">
+                <a href="mailto:rccghouseofgracemedia@gmail.com" className="text-xl md:text-2xl font-bold text-white hover:text-orange-500 transition-colors">
                   rccghouseofgracemedia@gmail.com
                 </a>
               </div>

@@ -117,7 +117,7 @@ export default function Events() {
             </span>
           </h1>
           <div className="w-12 h-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mx-auto mb-6" />
-          <p className="text-gray-400 text-lg leading-relaxed">
+          <p className="text-zinc-500 text-lg leading-relaxed">
             There is always something happening at House of Grace. From weekly
             services to special programmes, find an event and come and
             experience God with us.
@@ -164,7 +164,7 @@ export default function Events() {
                   >
                     {prog.name}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-zinc-500 text-sm leading-relaxed">
                     {prog.description}
                   </p>
                 </div>
@@ -215,7 +215,7 @@ export default function Events() {
                     </p>
                   </div>
                   <div className={`w-10 h-0.5 bg-gradient-to-r ${ev.accent} rounded-full`} />
-                  <p className="text-gray-400 text-sm leading-relaxed flex-1">
+                  <p className="text-zinc-500 text-sm leading-relaxed flex-1">
                     {ev.description}
                   </p>
                 </div>
@@ -237,7 +237,7 @@ export default function Events() {
           >
             RCCG Global Events
           </h2>
-          <p className="text-gray-400 text-sm mb-10 max-w-xl leading-relaxed">
+          <p className="text-zinc-500 text-sm mb-10 max-w-xl leading-relaxed">
             As part of the worldwide RCCG family, House of Grace participates
             in the major annual gatherings that draw millions of believers from
             across the globe.
@@ -266,7 +266,7 @@ export default function Events() {
                 >
                   {ev.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{ev.desc}</p>
+                <p className="text-zinc-500 text-sm leading-relaxed">{ev.desc}</p>
               </a>
             ))}
           </div>

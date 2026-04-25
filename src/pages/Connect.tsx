@@ -92,7 +92,7 @@ export default function Connect() {
             </span>
           </h1>
           <div className="w-12 h-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mx-auto mb-6" />
-          <p className="text-gray-400 text-lg leading-relaxed">
+          <p className="text-zinc-500 text-lg leading-relaxed">
             Whether you are new, have a question, or want to get more involved
             — we are here and we'd love to connect with you.
           </p>
@@ -113,7 +113,7 @@ export default function Connect() {
               >
                 Here is what to expect when you visit us
               </h2>
-              <p className="text-gray-400 leading-relaxed text-sm">
+              <p className="text-zinc-500 leading-relaxed text-sm">
                 We want your first visit to feel warm, easy, and memorable.
                 From the moment you arrive, you will be welcomed by friendly
                 faces who are genuinely glad you are here.
@@ -134,7 +134,7 @@ export default function Connect() {
                   </span>
                   <div>
                     <h3 className="font-bold text-white text-sm mb-1">{step.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{step.body}</p>
+                    <p className="text-zinc-500 text-sm leading-relaxed">{step.body}</p>
                   </div>
                 </div>
               ))}
@@ -249,7 +249,7 @@ export default function Connect() {
                 <h3 className="text-xl font-bold mb-2 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                   Thank you!
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-zinc-500 text-sm leading-relaxed">
                   Your message has been received. A member of our team will be
                   in touch with you shortly. God bless you.
                 </p>
@@ -271,7 +271,7 @@ export default function Connect() {
           >
             Cell Groups & Fellowships
           </h2>
-          <p className="text-gray-400 text-sm mb-10 max-w-xl leading-relaxed">
+          <p className="text-zinc-500 text-sm mb-10 max-w-xl leading-relaxed">
             Life is better in community. Our cell groups meet weekly in homes
             and venues across the zone — for prayer, the Word, and genuine
             fellowship.
@@ -289,15 +289,15 @@ export default function Connect() {
                 >
                   {group.name}
                 </h3>
-                <div className="flex flex-col gap-2 text-sm text-gray-400">
-                  <p className="flex items-center gap-2"><span className="text-gray-400">📅</span> {group.day} · {group.time}</p>
-                  <p className="flex items-center gap-2"><span className="text-gray-400">👤</span> {group.leader}</p>
-                  <p className="flex items-center gap-2"><span className="text-gray-400">📍</span> {group.area}</p>
+                <div className="flex flex-col gap-2 text-sm text-zinc-500">
+                  <p className="flex items-center gap-2"><span className="text-zinc-500">📅</span> {group.day} · {group.time}</p>
+                  <p className="flex items-center gap-2"><span className="text-zinc-500">👤</span> {group.leader}</p>
+                  <p className="flex items-center gap-2"><span className="text-zinc-500">📍</span> {group.area}</p>
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-gray-400 text-xs mt-6 italic">
+          <p className="text-zinc-500 text-xs mt-6 italic">
             * Update cell group details via antigravity.
           </p>
         </div>
@@ -332,7 +332,7 @@ export default function Connect() {
               </a>
             ))}
           </div>
-          <p className="text-gray-400 text-xs mt-6 italic">
+          <p className="text-zinc-500 text-xs mt-6 italic">
             * Update social media handles and URLs via antigravity.
           </p>
         </div>

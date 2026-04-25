@@ -200,7 +200,7 @@ export default function Home() {
               <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4">A Word From Our Pastor</p>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8">YOU ARE WELCOME<br />HOME.</h2>
               <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mb-8 rounded-full" />
-              <div className="text-gray-400 text-lg leading-relaxed space-y-6">
+              <div className="text-zinc-500 text-lg leading-relaxed space-y-6">
                 <p>
                   Whether you are joining us for the first time or you have been a part of this family for years, I want you to know that you are not here by accident. God has a purpose for every step that led you through our doors.
                 </p>
@@ -232,7 +232,7 @@ export default function Home() {
               <div key={p.word} className="bg-zinc-900 border border-zinc-800 p-10 rounded-3xl hover:bg-zinc-800 transition-all group">
                 <p className="text-6xl font-bold text-zinc-800 group-hover:text-green-400/20 transition-colors mb-4">{p.letter}</p>
                 <h3 className="text-2xl font-bold mb-4">{p.word}</h3>
-                <p className="text-gray-400 leading-relaxed">{p.line}</p>
+                <p className="text-zinc-500 leading-relaxed">{p.line}</p>
               </div>
             ))}
           </div>
@@ -242,7 +242,7 @@ export default function Home() {
       {/* ── Service Times ─────────────────────────────────────────────────────── */}
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-zinc-700 w-full">
         <FadeSection>
-          <p className="text-orange-600 text-sm font-bold uppercase tracking-widest mb-4">Join Us</p>
+          <p className="text-orange-500 text-sm font-bold uppercase tracking-widest mb-4">Join Us</p>
           <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-8">Worship With Us</h2>
           <div className="w-12 h-1 bg-gradient-to-r from-orange-400 to-red-500 mb-12 rounded-full" />
         </FadeSection>
@@ -250,10 +250,10 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {serviceTimes.map((s) => (
               <div key={s.name} className="bg-zinc-900 border border-zinc-800 p-10 rounded-3xl hover:bg-zinc-800 transition-all">
-                <p className="text-orange-600 text-xs font-bold tracking-widest uppercase mb-4">{s.day}</p>
+                <p className="text-orange-500 text-xs font-bold tracking-widest uppercase mb-4">{s.day}</p>
                 <p className="text-3xl font-bold mb-4">{s.time}</p>
                 <p className="text-lg font-bold text-white mb-4">{s.name}</p>
-                <p className="text-gray-400 leading-relaxed">{s.description}</p>
+                <p className="text-zinc-500 leading-relaxed">{s.description}</p>
               </div>
             ))}
           </div>
@@ -288,7 +288,7 @@ export default function Home() {
             <div>
               <p className="text-green-400 text-xs font-bold tracking-widest uppercase mb-4">{sermon.date}</p>
               <h3 className="text-3xl md:text-4xl font-bold mb-4">{sermon.title}</h3>
-              <p className="text-gray-400 font-medium mb-2">{sermon.preacher}</p>
+              <p className="text-zinc-500 font-medium mb-2">{sermon.preacher}</p>
               <p className="text-emerald-600 italic mb-8">{sermon.scripture}</p>
               <Link to="/sermons" className="bg-green-900/20 border border-green-500/30 px-8 py-4 rounded-full font-bold hover:bg-green-900/40 transition-all duration-300 text-green-300 text-sm tracking-wide uppercase">
                 View All Sermons
@@ -303,10 +303,10 @@ export default function Home() {
         <FadeSection>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
-              <p className="text-orange-600 text-sm font-bold uppercase tracking-widest mb-4">What's Coming Up</p>
+              <p className="text-orange-500 text-sm font-bold uppercase tracking-widest mb-4">What's Coming Up</p>
               <h2 className="text-4xl sm:text-5xl font-bold leading-tight">Upcoming Events</h2>
             </div>
-            <Link to="/events" className="text-white hover:text-orange-600 transition-colors font-bold flex items-center gap-2">
+            <Link to="/events" className="text-white hover:text-orange-500 transition-colors font-bold flex items-center gap-2">
               View All <ChevronRight className="w-5 h-5" />
             </Link>
           </div>
@@ -332,7 +332,7 @@ export default function Home() {
                     <span className="inline-block px-3 py-1 border border-orange-500/30 rounded-full text-[10px] tracking-widest uppercase text-orange-400 mb-4 bg-orange-500/10">{ev.type}</span>
                   </div>
                   <h3 className="text-xl font-bold mb-3">{ev.title}</h3>
-                  <p className="text-gray-400 leading-relaxed text-sm flex-1">{ev.description}</p>
+                  <p className="text-zinc-500 leading-relaxed text-sm flex-1">{ev.description}</p>
                 </div>
               </div>
             ))}
@@ -345,7 +345,7 @@ export default function Home() {
         <FadeSection>
           <div className="bg-gradient-to-br from-zinc-900 to-black border border-green-500/30 rounded-3xl p-10 md:p-16 text-center max-w-4xl mx-auto shadow-sm">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Join Our Mailing List</h2>
-            <p className="text-gray-400 mb-10 max-w-lg mx-auto">
+            <p className="text-zinc-500 mb-10 max-w-lg mx-auto">
               Get updates on sermons, events, and church news delivered directly to your inbox.
             </p>
             {!subscribed ? (
@@ -356,7 +356,7 @@ export default function Home() {
                   value={emailInput}
                   onChange={(e) => setEmailInput(e.target.value)}
                   required
-                  className="flex-1 bg-black border border-zinc-700 rounded-full px-6 py-4 focus:outline-none focus:border-green-400 text-white placeholder:text-gray-400"
+                  className="flex-1 bg-black border border-zinc-700 rounded-full px-6 py-4 focus:outline-none focus:border-green-400 text-white placeholder:text-zinc-500"
                 />
                 <button type="submit" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] flex items-center justify-center text-sm tracking-wide uppercase">
                   Subscribe

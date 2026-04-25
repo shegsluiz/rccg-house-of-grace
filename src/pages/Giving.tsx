@@ -78,7 +78,7 @@ export default function Giving() {
             </span>
           </h1>
           <div className="w-12 h-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mx-auto mb-6" />
-          <p className="text-gray-400 text-lg leading-relaxed">
+          <p className="text-zinc-500 text-lg leading-relaxed">
             "Bring the whole tithe into the storehouse, that there may be food
             in my house. Test me in this," says the Lord Almighty, "and see if
             I will not throw open the floodgates of heaven and pour out so much
@@ -115,7 +115,7 @@ export default function Giving() {
                 >
                   {cat.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                <p className="text-zinc-500 text-sm leading-relaxed mb-4">
                   {cat.description}
                 </p>
                 <p className="text-xs font-bold uppercase tracking-widest text-gray-500 italic">
@@ -140,7 +140,7 @@ export default function Giving() {
             >
               Give Directly
             </h2>
-            <p className="text-gray-400 text-sm mb-8">
+            <p className="text-zinc-500 text-sm mb-8">
               Transfer directly to our church account using the details below.
               Please use your full name as the payment reference.
             </p>
@@ -214,7 +214,7 @@ export default function Giving() {
                 >
                   {item.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed flex-1">
+                <p className="text-zinc-500 text-sm leading-relaxed flex-1">
                   {item.desc}
                 </p>
                 <a
@@ -244,8 +244,8 @@ export default function Giving() {
             >
               "{testimony.quote}"
             </p>
-            <p className="text-gray-400 font-medium text-sm">{testimony.name}</p>
-            <p className="text-gray-400 text-xs mt-2">
+            <p className="text-zinc-500 font-medium text-sm">{testimony.name}</p>
+            <p className="text-zinc-500 text-xs mt-2">
               * Replace with a real testimony via antigravity.
             </p>
           </div>

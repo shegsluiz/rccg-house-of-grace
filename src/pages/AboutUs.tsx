@@ -143,7 +143,7 @@ export default function AboutUs() {
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.05] tracking-tight text-white max-w-4xl">
             A House Built on <em className="not-italic bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Grace</em>
           </h1>
-          <p className="text-gray-400 text-lg md:text-xl max-w-lg leading-relaxed mt-6 mb-10 font-medium">
+          <p className="text-zinc-500 text-lg md:text-xl max-w-lg leading-relaxed mt-6 mb-10 font-medium">
             We are a community of believers who have encountered the transforming grace of God and we exist to extend that grace to every person who walks through our doors.
           </p>
         </div>
@@ -165,7 +165,7 @@ export default function AboutUs() {
             <blockquote className="text-2xl md:text-3xl font-bold italic leading-relaxed text-zinc-800 border-l-4 border-green-500 pl-8 py-2">
               "To make heaven. To take as many people with us. To have a member of RCCG in every family of all nations."
             </blockquote>
-            <div className="text-gray-400 text-lg leading-relaxed space-y-6">
+            <div className="text-zinc-500 text-lg leading-relaxed space-y-6">
               <p>
                 At RCCG House of Grace, we are fully committed to the global
                 vision of The Redeemed Christian Church of Goda vision of
@@ -195,7 +195,7 @@ export default function AboutUs() {
               <div key={v.number} className="bg-black border border-zinc-700 shadow-sm p-10 rounded-3xl hover:shadow-md hover:border-green-500/30 transition-all group">
                 <p className="text-6xl font-bold text-gray-100 group-hover:text-green-100 transition-colors mb-6">{v.number}</p>
                 <h3 className="text-2xl font-bold mb-4">{v.title}</h3>
-                <p className="text-gray-400 leading-relaxed text-sm">{v.description}</p>
+                <p className="text-zinc-500 leading-relaxed text-sm">{v.description}</p>
               </div>
             ))}
           </div>
@@ -208,7 +208,7 @@ export default function AboutUs() {
           <p className="text-amber-600 text-sm font-bold uppercase tracking-widest mb-4">Our Structure</p>
           <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-8">Spiritual Covering & Leadership</h2>
           <div className="w-12 h-1 bg-gradient-to-r from-amber-500 to-amber-600 mb-8 rounded-full" />
-          <p className="text-gray-400 text-lg leading-relaxed max-w-3xl mb-16">
+          <p className="text-zinc-500 text-lg leading-relaxed max-w-3xl mb-16">
             House of Grace is a Zonal Headquarters under Lagos Province 15 of
             the Redeemed Christian Church of God. We are covered by a chain of
             spiritual authority that connects us to the global body of Christ.
@@ -230,7 +230,7 @@ export default function AboutUs() {
                   <div>
                     <p className="text-[10px] tracking-widest uppercase text-amber-600 font-bold mb-3">{l.role}</p>
                     <p className="text-2xl font-bold text-white mb-2">{l.name}</p>
-                    <p className="text-sm text-gray-400 tracking-wide">{l.note}</p>
+                    <p className="text-sm text-zinc-500 tracking-wide">{l.note}</p>
                   </div>
                 </div>
               </div>
@@ -255,7 +255,7 @@ export default function AboutUs() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{item.body}</p>
+                  <p className="text-zinc-500 leading-relaxed">{item.body}</p>
                 </div>
               </div>
             ))}
