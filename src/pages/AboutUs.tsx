@@ -12,6 +12,7 @@ interface LeadershipItem {
   role: string;
   name: string;
   note: string;
+  image?: string;
 }
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -41,6 +42,7 @@ const leadership: LeadershipItem[] = [
     role: "General Overseer, RCCG",
     name: "Pastor E.A. Adeboye",
     note: "Global spiritual covering",
+    image: "/DADDY EA ADEBOYE.jpeg",
   },
 ];
 
@@ -121,13 +123,13 @@ function FadeSection({
 export default function AboutUs() {
   return (
     <div className="bg-black text-white min-h-screen font-sans selection:bg-green-500/30 overflow-x-hidden">
-      
+
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <section className="relative min-h-[80vh] flex flex-col justify-end px-6 md:px-12 lg:px-24 pb-24 overflow-hidden">
         {/* Background Image restored */}
-        <img 
-          src="/IMG_6410.jpg" 
-          alt="Worship background" 
+        <img
+          src="/IMG_6410.jpg"
+          alt="Worship background"
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 mix-blend-screen"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-10" />
@@ -140,7 +142,7 @@ export default function AboutUs() {
             A House Built on <em className="not-italic bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Grace</em>
           </h1>
           <p className="text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed mt-6 mb-10 font-medium">
-            We are a community of believers who have encountered the transforming grace of God — and we exist to extend that grace to every person who walks through our doors.
+            We are a community of believers who have encountered the transforming grace of God and we exist to extend that grace to every person who walks through our doors.
           </p>
         </div>
 
@@ -149,32 +151,6 @@ export default function AboutUs() {
           <span className="text-[10px] tracking-[0.2em] uppercase text-green-400" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
         </div>
       </section>
-
-      {/* ── RCCG Stats Banner ────────────────────────────────────────────────── */}
-      <FadeSection>
-        <div className="border-y border-white/5 py-12 px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center justify-between gap-10 max-w-7xl mx-auto">
-          <div className="px-5 py-2 border border-white/10 rounded-lg text-xs tracking-widest uppercase text-zinc-400 font-bold shadow-[0_0_20px_rgba(74,222,128,0.05)]">
-            A Parish of The Redeemed Christian Church of God
-          </div>
-          <div className="flex items-center gap-8 md:gap-12 flex-wrap justify-center">
-            <div className="flex flex-col gap-1">
-              <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">9M+</span>
-              <span className="text-[10px] tracking-widest uppercase text-zinc-500 font-bold">Members worldwide</span>
-            </div>
-            <div className="w-[1px] h-10 bg-white/10 hidden md:block" />
-            <div className="flex flex-col gap-1">
-              <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">197</span>
-              <span className="text-[10px] tracking-widest uppercase text-zinc-500 font-bold">Countries & territories</span>
-            </div>
-            <div className="w-[1px] h-10 bg-white/10 hidden md:block" />
-            <div className="flex flex-col gap-1">
-              <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">50K+</span>
-              <span className="text-[10px] tracking-widest uppercase text-zinc-500 font-bold">Parishes worldwide</span>
-            </div>
-          </div>
-        </div>
-      </FadeSection>
-
       {/* ── Mission ──────────────────────────────────────────────────────────── */}
       <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
         <FadeSection>
@@ -190,19 +166,15 @@ export default function AboutUs() {
             <div className="text-zinc-400 text-lg leading-relaxed space-y-6">
               <p>
                 At RCCG House of Grace, we are fully committed to the global
-                vision of The Redeemed Christian Church of God — a vision of
+                vision of The Redeemed Christian Church of Goda vision of
                 total evangelism, holiness, and the transformation of nations
                 through the power of the Gospel.
               </p>
               <p>
-                As a Zonal Headquarters under Lagos Province 15, we carry not
-                just a local mandate but a strategic one — raising a community
-                of believers who will impact their families, workplaces, and the
-                world around them with the grace and love of God.
+                As part of The Redeemed Christian Church of God and a Zonal Headquarters under Lagos Province 15, we are committed to raising people who will impact their world with grace, purpose, and the power of the Gospel.
               </p>
               <p>
-                We pursue holiness not as a burden but as a lifestyle, and we
-                plant the love of God everywhere we go.
+                We pursue holiness not as a burden but as a lifestyle, and we plant the love of God everywhere we go.
               </p>
             </div>
           </div>
@@ -245,9 +217,20 @@ export default function AboutUs() {
             {leadership.map((l) => (
               <div key={l.role} className="bg-white/5 border border-white/10 p-8 rounded-3xl relative overflow-hidden group hover:border-orange-400/50 transition-all">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-400 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-                <p className="text-[10px] tracking-widest uppercase text-orange-400 font-bold mb-4">{l.role}</p>
-                <p className="text-xl font-bold text-white mb-2">{l.name}</p>
-                <p className="text-xs text-zinc-500 tracking-wide">{l.note}</p>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+                  {l.image && (
+                    <img 
+                      src={l.image} 
+                      alt={l.name} 
+                      className="w-20 h-20 rounded-full object-cover border border-white/10 shadow-[0_0_20px_rgba(255,255,255,0.05)] shrink-0" 
+                    />
+                  )}
+                  <div>
+                    <p className="text-[10px] tracking-widest uppercase text-orange-400 font-bold mb-2">{l.role}</p>
+                    <p className="text-xl font-bold text-white mb-1">{l.name}</p>
+                    <p className="text-xs text-zinc-500 tracking-wide">{l.note}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
