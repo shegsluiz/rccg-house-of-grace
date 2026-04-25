@@ -154,7 +154,7 @@ export default function Home() {
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight text-white max-w-4xl">
             RCCG<br />
-            House of <em className="not-italic bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">Grace</em>
+            House of <em className="not-italic bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Grace</em>
           </h1>
           <p className="text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed mt-6 mb-10 font-medium">
             A place where grace is not just our name — it is the atmosphere you breathe and the foundation you stand on.
@@ -186,7 +186,7 @@ export default function Home() {
             <div>
               <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4">A Word From Our Pastor</p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">You are welcome<br />home.</h2>
-              <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-pink-500 mb-8 rounded-full" />
+              <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mb-8 rounded-full" />
               <div className="text-zinc-400 text-lg leading-relaxed space-y-6">
                 <p>
                   Whether you are joining us for the first time or you have been a part of this family for years, I want you to know that you are not here by accident. God has a purpose for every step that led you through our doors.
@@ -199,7 +199,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-12 pt-8 border-t border-white/10">
-                <p className="text-xl font-bold bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent italic">Pastor — Add Name Here</p>
+                <p className="text-xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent italic">Pastor — Add Name Here</p>
                 <p className="text-xs tracking-widest uppercase text-zinc-500 mt-2 font-semibold">Zonal Pastor · RCCG House of Grace</p>
               </div>
             </div>
@@ -210,7 +210,7 @@ export default function Home() {
       {/* ── Identity Pillars ──────────────────────────────────────────────────── */}
       <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
         <FadeSection>
-          <p className="text-pink-400 text-sm font-bold uppercase tracking-widest mb-4 text-center">Who We Are</p>
+          <p className="text-emerald-400 text-sm font-bold uppercase tracking-widest mb-4 text-center">Who We Are</p>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-16 text-center">Grace · Fire · Purpose</h2>
         </FadeSection>
         <FadeSection delay={120}>
@@ -252,7 +252,7 @@ export default function Home() {
         <FadeSection>
           <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4">Hear The Word</p>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">Latest Sermon</h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-pink-500 mb-12 rounded-full" />
+          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mb-12 rounded-full" />
         </FadeSection>
         <FadeSection delay={120}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -276,7 +276,7 @@ export default function Home() {
               <p className="text-green-400 text-xs font-bold tracking-widest uppercase mb-4">{sermon.date}</p>
               <h3 className="text-3xl md:text-4xl font-bold mb-4">{sermon.title}</h3>
               <p className="text-zinc-400 font-medium mb-2">{sermon.preacher}</p>
-              <p className="text-pink-400 italic mb-8">{sermon.scripture}</p>
+              <p className="text-emerald-400 italic mb-8">{sermon.scripture}</p>
               <a href="/sermons" className="bg-white/10 backdrop-blur-md border border-white/20 px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-colors text-white inline-block text-sm uppercase tracking-wide">
                 View All Sermons
               </a>

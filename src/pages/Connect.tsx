@@ -1,5 +1,5 @@
 // src/pages/Connect.tsx
-// Brand: bg-black, Inter + Space Grotesk, green-pink gradient, orange-red secondary, glassmorphism cards
+// Brand: bg-black, Inter + Space Grotesk, green-emerald gradient, orange-red secondary, glassmorphism cards
 
 import { useState, ChangeEvent, FormEvent } from "react";
 
@@ -27,8 +27,8 @@ const contactDetails = [
 ];
 
 const socialLinks = [
-  { name: "Instagram", handle: "@rccghoga14", url: "https://www.instagram.com/rccghoga14/", color: "from-green-500 to-pink-500" },
-  { name: "Facebook", handle: "RCCG House of Grace", url: "https://facebook.com/", color: "from-green-500 to-pink-500" },
+  { name: "Instagram", handle: "@rccghoga14", url: "https://www.instagram.com/rccghoga14/", color: "from-green-500 to-emerald-500" },
+  { name: "Facebook", handle: "RCCG House of Grace", url: "https://facebook.com/", color: "from-green-500 to-emerald-500" },
   { name: "YouTube", handle: "@rccghouseofgrace5858", url: "https://www.youtube.com/@rccghouseofgrace5858", color: "from-orange-500 to-red-500" },
   { name: "WhatsApp Community", handle: "Join our group", url: "https://wa.me/", color: "from-orange-500 to-red-500" },
 ];
@@ -86,11 +86,11 @@ export default function Connect() {
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             Get{" "}
-            <span className="bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
               Connected
             </span>
           </h1>
-          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-pink-500 rounded-full mx-auto mb-6" />
+          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full mx-auto mb-6" />
           <p className="text-zinc-400 text-lg leading-relaxed">
             Whether you are new, have a question, or want to get more involved
             — we are here and we'd love to connect with you.
@@ -126,7 +126,7 @@ export default function Connect() {
               ].map((step) => (
                 <div key={step.num} className="flex gap-4 items-start">
                   <span
-                    className="text-2xl font-bold bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent shrink-0"
+                    className="text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent shrink-0"
                     style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                   >
                     {step.num}
@@ -237,7 +237,7 @@ export default function Connect() {
                 />
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-full bg-gradient-to-r from-green-500 to-pink-500 text-white font-semibold text-sm hover:opacity-90 transition"
+                  className="w-full py-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold text-sm hover:opacity-90 transition"
                 >
                   Send Message →
                 </button>
@@ -281,7 +281,7 @@ export default function Connect() {
                 key={group.name}
                 className="bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition"
               >
-                <div className="w-10 h-1 bg-gradient-to-r from-green-500 to-pink-500 rounded-full mb-5" />
+                <div className="w-10 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-5" />
                 <h3
                   className="font-bold text-lg mb-3"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}

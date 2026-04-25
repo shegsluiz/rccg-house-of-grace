@@ -132,11 +132,11 @@ export default function AboutUs() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-10" />
 
         <div className="relative z-20 max-w-7xl mx-auto w-full">
-          <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-green-400 mb-5 flex items-center gap-3">
-            <span className="w-8 h-[1px] bg-green-400"></span> RCCG · House of Grace · Zonal HQ
+          <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-[#ffefb7] mb-5 flex items-center gap-3">
+            <span className="w-8 h-[1px] bg-[#ffefb7]"></span> RCCG · House of Grace · Zonal HQ
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight text-white max-w-4xl">
-            A House Built on <em className="not-italic bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">Grace</em>
+            A House Built on <em className="not-italic bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Grace</em>
           </h1>
           <p className="text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed mt-6 mb-10 font-medium">
             We are a community of believers who have encountered the transforming grace of God — and we exist to extend that grace to every person who walks through our doors.
@@ -157,17 +157,17 @@ export default function AboutUs() {
           </div>
           <div className="flex items-center gap-8 md:gap-12 flex-wrap justify-center">
             <div className="flex flex-col gap-1">
-              <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">9M+</span>
+              <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">9M+</span>
               <span className="text-[10px] tracking-widest uppercase text-zinc-500 font-bold">Members worldwide</span>
             </div>
             <div className="w-[1px] h-10 bg-white/10 hidden md:block" />
             <div className="flex flex-col gap-1">
-              <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">197</span>
+              <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">197</span>
               <span className="text-[10px] tracking-widest uppercase text-zinc-500 font-bold">Countries & territories</span>
             </div>
             <div className="w-[1px] h-10 bg-white/10 hidden md:block" />
             <div className="flex flex-col gap-1">
-              <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">50K+</span>
+              <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">50K+</span>
               <span className="text-[10px] tracking-widest uppercase text-zinc-500 font-bold">Parishes worldwide</span>
             </div>
           </div>
@@ -177,9 +177,9 @@ export default function AboutUs() {
       {/* ── Mission ──────────────────────────────────────────────────────────── */}
       <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto border-b border-white/5">
         <FadeSection>
-          <p className="text-pink-400 text-sm font-bold uppercase tracking-widest mb-4">Our Mission</p>
+          <p className="text-emerald-400 text-sm font-bold uppercase tracking-widest mb-4">Our Mission</p>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">Why We Exist</h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-pink-500 mb-12 rounded-full" />
+          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mb-12 rounded-full" />
         </FadeSection>
         <FadeSection delay={120}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -256,9 +256,9 @@ export default function AboutUs() {
       {/* ── What to Expect ────────────────────────────────────────────────────── */}
       <section className="py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
         <FadeSection>
-          <p className="text-pink-400 text-sm font-bold uppercase tracking-widest mb-4">New Here?</p>
+          <p className="text-emerald-400 text-sm font-bold uppercase tracking-widest mb-4">New Here?</p>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">What To Expect On Your First Visit</h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-pink-500 mb-16 rounded-full" />
+          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mb-16 rounded-full" />
         </FadeSection>
         <FadeSection delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
@@ -282,7 +282,7 @@ export default function AboutUs() {
         <div className="my-24 px-6 md:px-12 lg:px-24">
           <div className="bg-gradient-to-r from-green-900/40 via-black to-green-900/40 border border-green-500/20 rounded-3xl p-12 lg:p-20 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-[0_0_50px_rgba(192,132,252,0.1)] max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold leading-tight text-center lg:text-left">
-              Ready to experience <em className="not-italic bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">grace</em> for yourself?
+              Ready to experience <em className="not-italic bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">grace</em> for yourself?
             </h2>
             <a href="/connect" className="bg-white text-black px-10 py-5 rounded-full font-bold hover:bg-gray-200 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.2)] text-sm tracking-wide uppercase whitespace-nowrap">
               Plan Your Visit

@@ -1,5 +1,5 @@
 // src/pages/Sermons.tsx
-// Brand: bg-black, Inter + Space Grotesk, green-pink gradient accents, glassmorphism cards
+// Brand: bg-black, Inter + Space Grotesk, green-emerald gradient accents, glassmorphism cards
 
 const sermons = [
   {
@@ -44,11 +44,11 @@ export default function Sermons() {
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             Sermons &{" "}
-            <span className="bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
               Messages
             </span>
           </h1>
-          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-pink-500 rounded-full mx-auto mb-6" />
+          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full mx-auto mb-6" />
           <p className="text-zinc-400 text-lg leading-relaxed">
             Every message preached at RCCG House of Grace is rooted in
             Scripture and designed to strengthen your faith, transform your
@@ -82,7 +82,7 @@ export default function Sermons() {
               </div>
             </div>
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-pink-400">
+              <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">
                 Add Series Name
               </span>
               <h2
@@ -102,7 +102,7 @@ export default function Sermons() {
                 href="https://www.youtube.com/@rccghouseofgrace5858"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-block mt-6 px-6 py-3 rounded-full bg-gradient-to-r from-green-500 to-pink-500 text-white text-sm font-semibold hover:opacity-90 transition"
+                className="inline-block mt-6 px-6 py-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-semibold hover:opacity-90 transition"
               >
                 Watch on YouTube →
               </a>
@@ -170,7 +170,7 @@ export default function Sermons() {
               rel="noreferrer"
               className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition flex gap-5 items-start group"
             >
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-pink-500 flex items-center justify-center text-white font-bold text-sm shrink-0">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white font-bold text-sm shrink-0">
                 OH
               </div>
               <div>

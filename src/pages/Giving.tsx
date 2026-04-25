@@ -1,5 +1,5 @@
 // src/pages/Giving.tsx
-// Brand: bg-black, Inter + Space Grotesk, green-pink gradient, orange-red secondary, glassmorphism cards
+// Brand: bg-black, Inter + Space Grotesk, green-emerald gradient, orange-red secondary, glassmorphism cards
 
 const givingCategories = [
   {
@@ -7,14 +7,14 @@ const givingCategories = [
     description:
       "Honouring God with the first tenth of your income is an act of faith and obedience. Bring your tithes as an expression of trust in God's provision over your life.",
     scripture: "Malachi 3:10",
-    accent: "from-green-500 to-pink-500",
+    accent: "from-green-500 to-emerald-500",
   },
   {
     title: "Offerings",
     description:
       "Above your tithe, give freely as the Lord leads your heart. Every offering sown into the house of God is a seed that returns a harvest of blessings.",
     scripture: "2 Corinthians 9:7",
-    accent: "from-green-500 to-pink-500",
+    accent: "from-green-500 to-emerald-500",
   },
   {
     title: "Building Fund",
@@ -73,11 +73,11 @@ export default function Giving() {
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             Honour God{" "}
-            <span className="bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
               With Your Giving
             </span>
           </h1>
-          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-pink-500 rounded-full mx-auto mb-6" />
+          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full mx-auto mb-6" />
           <p className="text-zinc-400 text-lg leading-relaxed">
             "Bring the whole tithe into the storehouse, that there may be food
             in my house. Test me in this," says the Lord Almighty, "and see if
@@ -184,7 +184,7 @@ export default function Giving() {
                 desc: "Give your regular tithes and offerings through the RCCG secure payment portal.",
                 link: "https://rccgpayments.trccg.org/holyGhost/trccg.org/offering.php",
                 label: "Give Here",
-                accent: "from-green-500 to-pink-500",
+                accent: "from-green-500 to-emerald-500",
               },
               {
                 title: "Nehemiah Builders",
@@ -198,7 +198,7 @@ export default function Giving() {
                 desc: "Become a covenant partner with RCCG and share in the global harvest of souls.",
                 link: "https://rccgpayments.trccg.org/cp/",
                 label: "Covenant Partners",
-                accent: "from-green-500 to-pink-500",
+                accent: "from-green-500 to-emerald-500",
               },
             ].map((item) => (
               <div

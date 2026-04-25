@@ -80,12 +80,12 @@ export default function KingdomCinema() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-10" />
 
         <div className="relative z-20 max-w-7xl mx-auto w-full text-center mt-32">
-          <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-green-400 mb-5 flex items-center justify-center gap-3">
-            <span className="w-8 h-[1px] bg-green-400"></span> RCCG House of Grace <span className="w-8 h-[1px] bg-green-400"></span>
+          <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-[#ffefb7] mb-5 flex items-center justify-center gap-3">
+            <span className="w-8 h-[1px] bg-[#ffefb7]"></span> RCCG House of Grace <span className="w-8 h-[1px] bg-[#ffefb7]"></span>
           </p>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-[1.05] tracking-tight text-white mb-6">
             Kingdom<br />
-            <span className="bg-gradient-to-r from-green-400 via-pink-500 to-orange-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 via-emerald-500 to-orange-400 bg-clip-text text-transparent">
               Cinema
             </span>
           </h1>
@@ -146,7 +146,7 @@ export default function KingdomCinema() {
         <FadeSection text-center>
           <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4 text-center">Kingdom Cinema Creates</p>
           <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-16 text-center">
-            What We <span className="bg-gradient-to-r from-green-400 to-pink-500 bg-clip-text text-transparent">Do</span>
+            What We <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Do</span>
           </h2>
         </FadeSection>
         <FadeSection delay={100}>

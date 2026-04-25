@@ -5,9 +5,9 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --color-accent-green: #C084FC;
-  --color-accent-pink: #E879F9;
+  --color-accent-emerald: #E879F9;
   --color-green-400: #C084FC;
-  --color-pink-500: #E879F9;
+  --color-emerald-500: #E879F9;
 }
 
 @layer base {
