@@ -217,18 +217,18 @@ export default function AboutUs() {
             {leadership.map((l) => (
               <div key={l.role} className="bg-white/5 border border-white/10 p-8 rounded-3xl relative overflow-hidden group hover:border-orange-400/50 transition-all">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-400 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+                <div className="flex flex-col items-center text-center gap-6">
                   {l.image && (
                     <img 
                       src={l.image} 
                       alt={l.name} 
-                      className="w-20 h-20 rounded-full object-cover border border-white/10 shadow-[0_0_20px_rgba(255,255,255,0.05)] shrink-0" 
+                      className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-2 border-white/10 shadow-[0_0_30px_rgba(255,255,255,0.1)] shrink-0" 
                     />
                   )}
                   <div>
-                    <p className="text-[10px] tracking-widest uppercase text-orange-400 font-bold mb-2">{l.role}</p>
-                    <p className="text-xl font-bold text-white mb-1">{l.name}</p>
-                    <p className="text-xs text-zinc-500 tracking-wide">{l.note}</p>
+                    <p className="text-[10px] tracking-widest uppercase text-orange-400 font-bold mb-3">{l.role}</p>
+                    <p className="text-2xl font-bold text-white mb-2">{l.name}</p>
+                    <p className="text-sm text-zinc-400 tracking-wide">{l.note}</p>
                   </div>
                 </div>
               </div>
