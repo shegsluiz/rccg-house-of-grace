@@ -115,25 +115,25 @@ export default function KingdomCinema() {
       </section>
 
       {/* ── Mission ── */}
-      <section className="hog-section-white py-24">
+      <section className="hog-section-black py-24 border-y border-hog-black-border">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <FadeSection className="order-2 lg:order-1">
               <h2 className="hog-heading text-4xl sm:text-5xl md:text-6xl mb-8 text-left">
-                Our <span className="text-hog-green-600">Mission</span>
+                Our <span className="text-hog-green-400">Mission</span>
               </h2>
               <div className="hog-rule mb-12" />
               <div className="space-y-10">
                 {missionPoints.map((item, i) => (
                   <div key={i} className="flex gap-6 items-start group">
-                    <span className="text-3xl font-black text-hog-green-600/30 group-hover:text-hog-green-600 transition-colors font-display">{item.num}</span>
-                    <p className="text-lg md:text-xl text-hog-text-dark leading-relaxed font-medium">{item.text}</p>
+                    <span className="text-3xl font-black text-hog-green-400/30 group-hover:text-hog-green-400 transition-colors font-display">{item.num}</span>
+                    <p className="text-lg md:text-xl text-hog-text-light leading-relaxed font-medium">{item.text}</p>
                   </div>
                 ))}
               </div>
             </FadeSection>
             <FadeSection delay={150} className="order-1 lg:order-2">
-              <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden border border-hog-green-100/20 bg-white shadow-2xl flex items-center justify-center p-16">
+              <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden border border-hog-black-border bg-hog-black-card shadow-2xl flex items-center justify-center p-16">
                 <img 
                   src="/kingdom-cinema-logo.png" 
                   alt="Kingdom Cinema Logo" 

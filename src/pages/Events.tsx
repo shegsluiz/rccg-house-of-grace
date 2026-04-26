@@ -154,7 +154,7 @@ export default function Events() {
                 className="hog-card flex flex-col group overflow-hidden"
               >
                 {(prog as any).image && (
-                  <div className="w-full aspect-video overflow-hidden border-b border-hog-green-100/10">
+                  <div className={`w-full aspect-video overflow-hidden border-b ${prog.name.includes("Kingdom Cinema") ? "bg-hog-black border-hog-black-border" : "border-hog-green-100/10"}`}>
                     <img src={(prog as any).image} alt={prog.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   </div>
                 )}

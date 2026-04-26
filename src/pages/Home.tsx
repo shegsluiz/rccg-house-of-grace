@@ -310,7 +310,7 @@ export default function Home() {
                   </div>
 
                   {s.image && (
-                    <div className="relative aspect-video mb-6 rounded-xl overflow-hidden border border-hog-green-100 shadow-sm">
+                    <div className={`relative aspect-video mb-6 rounded-xl overflow-hidden border shadow-sm ${s.name.includes("Kingdom Cinema") ? "bg-hog-black border-hog-black-border" : "border-hog-green-100"}`}>
                       <img src={s.image} alt={s.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                     </div>
                   )}
@@ -396,7 +396,7 @@ export default function Home() {
                 <div key={i} className="hog-card relative overflow-hidden group flex flex-col">
                   <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-hog-green-400 to-hog-green-600 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
                   {ev.image && (
-                    <div className="w-full aspect-video overflow-hidden border-b border-hog-green-100">
+                    <div className={`w-full aspect-video overflow-hidden border-b ${ev.title.includes("Kingdom Cinema") ? "bg-hog-black border-hog-black-border" : "border-hog-green-100"}`}>
                       <img src={ev.image} alt={ev.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                   )}
