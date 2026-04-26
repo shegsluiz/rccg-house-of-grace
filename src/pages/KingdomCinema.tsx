@@ -98,19 +98,39 @@ export default function KingdomCinema() {
 
       {/* ── Vision ── */}
       <section className="hog-section-cream py-24">
-        <div className="container-wide max-w-5xl text-center">
-          <FadeSection>
-            <h2 className="hog-heading text-4xl sm:text-5xl md:text-6xl mb-8">
-              Our <span className="text-hog-green-600">Vision</span>
-            </h2>
-            <div className="hog-rule mx-auto mb-12" />
-            <p className="text-xl md:text-2xl text-hog-text-dark leading-relaxed mb-6 font-medium font-display">
-              Kingdom Cinema is a creative expression of the word of God through film, visuals, and storytelling.
-            </p>
-            <p className="hog-body text-lg md:text-xl">
-              Our vision is to reach hearts, inspire faith, and communicate the message of Jesus Christ in a way that speaks to this generation.
-            </p>
-          </FadeSection>
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <FadeSection>
+              <div className="relative aspect-[16/10] lg:aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl group border border-hog-green-200/20">
+                <img 
+                  src="/IMG_6515.JPG" 
+                  alt="Our Vision in Action" 
+                  className="absolute inset-0 w-full h-full object-cover transition duration-1000 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-hog-green-900/10 group-hover:bg-transparent transition-colors" />
+                <div className="absolute inset-0 shadow-[inset_0_0_100px_rgba(0,0,0,0.1)]" />
+              </div>
+            </FadeSection>
+
+            <FadeSection delay={150}>
+              <h2 className="hog-heading text-4xl sm:text-5xl md:text-6xl mb-8 text-left">
+                Our <span className="text-hog-green-600">Vision</span>
+              </h2>
+              <div className="hog-rule mb-12" />
+              <div className="space-y-8">
+                <p className="text-2xl md:text-3xl text-hog-text-dark leading-tight font-bold font-display">
+                  Creativity that speaks <br/> 
+                  <span className="text-hog-green-600">beyond words.</span>
+                </p>
+                <p className="hog-body text-lg md:text-xl leading-relaxed">
+                  Kingdom Cinema is a creative expression of the word of God through film, visuals, and storytelling. We believe that in a visual age, the message of the Gospel deserves the highest level of creative excellence.
+                </p>
+                <p className="hog-body text-lg md:text-xl leading-relaxed">
+                  Our vision is to reach hearts, inspire faith, and communicate the message of Jesus Christ in a way that resonates deeply with this generation.
+                </p>
+              </div>
+            </FadeSection>
+          </div>
         </div>
       </section>
 

@@ -195,17 +195,36 @@ export default function AboutUs() {
             <p className="hog-eyebrow mb-4">Our Core Values</p>
             <h2 className="hog-heading text-4xl sm:text-5xl mb-16">What Defines Us</h2>
           </FadeSection>
-          <FadeSection delay={100}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {values.map((v) => (
-                <div key={v.number} className="hog-card p-10 group">
-                  <p className="text-6xl font-black text-hog-green-900/20 group-hover:text-hog-green-400/20 transition-colors mb-6 font-display">{v.number}</p>
-                  <h3 className="text-2xl font-bold mb-4 text-hog-text-light">{v.title}</h3>
-                  <p className="text-hog-text-dim leading-relaxed text-sm">{v.description}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <FadeSection delay={100}>
+              <div className="relative aspect-[4/5] lg:aspect-auto lg:h-[600px] rounded-[32px] overflow-hidden shadow-2xl group border border-white/10">
+                <img 
+                  src="/IMG_6530.JPG" 
+                  alt="House of Grace Workers" 
+                  className="absolute inset-0 w-full h-full object-cover transition duration-1000 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-hog-green-950/80 via-transparent to-transparent opacity-60" />
+                <div className="absolute bottom-10 left-10 right-10">
+                  <p className="text-hog-green-400 font-black tracking-widest text-[10px] uppercase mb-2">The Hands of Grace</p>
+                  <h3 className="text-white text-3xl font-bold font-display">Serving with Fire & Purpose</h3>
                 </div>
-              ))}
-            </div>
-          </FadeSection>
+              </div>
+            </FadeSection>
+
+            <FadeSection delay={200}>
+              <div className="flex flex-col gap-6">
+                {values.map((v) => (
+                  <div key={v.number} className="hog-card bg-hog-green-900/20 border-hog-green-800/30 p-8 group flex gap-8 items-start hover:bg-hog-green-900/40 transition-all duration-500">
+                    <p className="text-5xl font-black text-hog-green-400/20 group-hover:text-hog-green-400 transition-colors font-display shrink-0">{v.number}</p>
+                    <div>
+                      <h3 className="text-xl font-bold mb-3 text-white font-display group-hover:text-hog-green-400 transition-colors">{v.title}</h3>
+                      <p className="text-hog-text-dim leading-relaxed text-sm">{v.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </FadeSection>
+          </div>
         </div>
       </section>
 

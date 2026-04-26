@@ -1,7 +1,7 @@
 // src/pages/Connect.tsx
 // Brand: bg-black, Inter + Space Grotesk, green-emerald gradient, orange-red secondary, glassmorphism cards
 
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, useRef, useEffect, ReactNode, ChangeEvent, FormEvent } from "react";
 import { 
   Instagram, 
   Facebook, 
@@ -101,6 +101,54 @@ const cellGroups = [
   },
 ];
 
+// ─── Sub-components ───────────────────────────────────────────────────────────
+function useFadeIn() {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return { ref, visible };
+}
+
+function FadeSection({
+  children,
+  delay = 0,
+  className = "",
+}: {
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+}) {
+  const { ref, visible } = useFadeIn();
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(28px)",
+        transition: `opacity 0.75s ease ${delay}ms, transform 0.75s ease ${delay}ms`,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 export default function Connect() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [sent, setSent] = useState(false);
@@ -119,23 +167,34 @@ export default function Connect() {
     <div className="bg-hog-black text-hog-text-light min-h-screen font-sans selection:bg-hog-green-100">
 
       {/* ── Hero ── */}
-      <section className="hog-section-black relative pt-48 pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-hog-green-800/10 via-hog-black/60 to-transparent pointer-events-none" />
+      <section className="hog-section-black relative pt-48 pb-32 overflow-hidden min-h-[60vh] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/IMG_9073_optimized.jpeg" 
+            alt="Hero Background" 
+            className="w-full h-full object-cover opacity-30 scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-hog-black via-hog-black/40 to-hog-black" />
+        </div>
+
         <div className="relative z-10 container-wide text-center">
-          <p className="hog-eyebrow mb-4">
-            We'd Love To Hear From You
-          </p>
-          <h1 className="hog-heading text-4xl sm:text-6xl md:text-7xl mb-6">
-            Get{" "}
-            <span className="text-hog-green-400">
-              Connected
-            </span>
-          </h1>
-          <div className="hog-rule mx-auto mb-6" />
-          <p className="hog-body text-lg max-w-2xl mx-auto">
-            Whether you are new, have a question, or want to get more involved
-            — we are here and we'd love to connect with you.
-          </p>
+          <FadeSection>
+            <p className="hog-eyebrow mb-4">
+              We'd Love To Hear From You
+            </p>
+            <h1 className="hog-heading text-4xl sm:text-6xl md:text-7xl mb-6">
+              Get{" "}
+              <span className="text-hog-green-400">
+                Connected
+              </span>
+            </h1>
+            <div className="hog-rule mx-auto mb-6" />
+            <p className="hog-body text-lg max-w-2xl mx-auto">
+              Whether you are new, have a question, or want to get more involved
+              — we are here and we'd love to connect with you.
+            </p>
+          </FadeSection>
         </div>
       </section>
 
@@ -145,10 +204,10 @@ export default function Connect() {
           <div className="bg-white rounded-[32px] border border-hog-green-200/30 overflow-hidden shadow-sm">
             <div className="grid lg:grid-cols-[1fr_1.2fr_1.5fr] items-stretch">
               {/* Image Column */}
-              <div className="h-64 lg:h-auto relative">
+              <div className="h-64 lg:h-auto relative overflow-hidden bg-hog-black">
                 <img 
                   src="/IMG_6413.JPG" 
-                  alt="Church community" 
+                  alt="Congregation" 
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-hog-green-500/10 to-transparent" />
