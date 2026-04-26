@@ -2,8 +2,8 @@ import { motion, AnimatePresence } from "motion/react";
 import { 
   Menu, X, Facebook, Instagram, Youtube, ChevronRight
 } from "lucide-react";
-import { useState, useEffect } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
+import { OptimizedImage } from "./OptimizedImage";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -46,7 +46,7 @@ export default function Layout() {
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center gap-3 cursor-pointer shrink-0 z-50"
             >
-              <img src="/logo.png" alt="RCCG House of Grace Logo" className="h-16 md:h-20 w-auto object-contain drop-shadow-sm" />
+              <OptimizedImage src="/optimized/logo.webp" alt="RCCG House of Grace Logo" className="h-16 md:h-20 w-auto" />
               <span className="font-extrabold text-sm sm:text-lg md:text-xl tracking-tight text-hog-text-light">RCCG, HOUSE OF GRACE</span>
             </motion.div>
           </Link>
@@ -172,7 +172,7 @@ export default function Layout() {
           {/* Col 1: Logo */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
-              <img src="/logo.png" alt="RCCG House of Grace Logo" className="h-20 md:h-24 w-auto object-contain drop-shadow-md" />
+              <OptimizedImage src="/optimized/logo.webp" alt="RCCG House of Grace Logo" className="h-20 md:h-24 w-auto" />
               <span className="font-extrabold text-xl md:text-2xl tracking-tight whitespace-nowrap leading-tight text-hog-text-light">RCCG, HOUSE OF GRACE</span>
             </div>
           </div>

@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState, ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { OptimizedImage } from "../components/OptimizedImage";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Value {
@@ -42,13 +42,13 @@ const leadership: LeadershipItem[] = [
     role: "General Overseer, RCCG",
     name: "Pastor E.A. Adeboye",
     note: "Global spiritual covering",
-    image: "/DADDY EA ADEBOYE.jpeg",
+    image: "/optimized/DADDY EA ADEBOYE.webp",
   },
   {
     role: "Zonal Pastor",
     name: "Pastor Abiodun Oluwatosin",
     note: "Visionary Leader, House of Grace",
-    image: "/Pastor Abiodun.jpg",
+    image: "/optimized/Pastor Abiodun.webp",
   },
 ];
 
@@ -132,10 +132,11 @@ export default function AboutUs() {
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <section className="hog-section-black relative min-h-[100dvh] flex flex-col justify-end pb-16 md:pb-24 overflow-hidden">
-        <img
-          src="/IMG_6718.JPG"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-40 grayscale"
+        <OptimizedImage
+          src="/optimized/IMG_6718.webp"
+          className="absolute inset-0 w-full h-full z-0 opacity-40 grayscale"
           alt="About Us Hero"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-hog-green-800/20 via-hog-black/60 to-hog-black z-10" />
 
@@ -197,11 +198,11 @@ export default function AboutUs() {
           </FadeSection>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeSection delay={100}>
-              <div className="relative aspect-[4/5] lg:aspect-auto lg:h-[600px] rounded-[32px] overflow-hidden shadow-2xl group border border-white/10">
-                <img 
-                  src="/IMG_6530.JPG" 
+              <div className="relative aspect-[4/5] lg:aspect-auto lg:h-[600px] rounded-[32px] overflow-hidden shadow-2xl group border border-white/10 bg-hog-green-900">
+                <OptimizedImage 
+                  src="/optimized/IMG_6530.webp" 
                   alt="House of Grace Workers" 
-                  className="absolute inset-0 w-full h-full object-cover transition duration-1000 group-hover:scale-110"
+                  className="absolute inset-0 w-full h-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-hog-green-950/80 via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-10 left-10 right-10">
@@ -249,10 +250,10 @@ export default function AboutUs() {
                     {l.image && (
                       <div className="relative">
                         <div className="absolute inset-0 bg-hog-green-500 rounded-full blur-xl opacity-0 group-hover:opacity-20 transition-opacity" />
-                        <img 
+                        <OptimizedImage 
                           src={l.image} 
                           alt={l.name} 
-                          className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-hog-black-border shadow-2xl shrink-0 relative z-10" 
+                          className="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-hog-black-border shadow-2xl shrink-0 relative z-10" 
                         />
                       </div>
                     )}

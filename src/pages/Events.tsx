@@ -1,5 +1,5 @@
-// src/pages/Events.tsx
 // Brand: bg-black, Inter + Space Grotesk, green-emerald gradient, orange-red secondary, glassmorphism cards
+import { OptimizedImage } from "../components/OptimizedImage";
 
 const regularPrograms = [
   {
@@ -8,7 +8,7 @@ const regularPrograms = [
     time: "7:45 AM - 9:00 AM",
     description: "Join our creative expression of the word of God through film, visuals, and storytelling.",
     accent: "text-hog-green-500",
-    image: "/Kingdom.Cinema 2.jpg",
+    image: "/optimized/Kingdom.Cinema 2.webp",
   },
   {
     name: "Sunday School",
@@ -55,7 +55,7 @@ const upcomingEvents = [
     type: "Cinema",
     description: "Experience the power of storytelling and faith-based cinema. Join us for an inspiring movie experience that brings the Word to life.",
     accent: "text-hog-green-500",
-    image: "/Kingdom.Cinema 2.jpg",
+    image: "/optimized/Kingdom.Cinema 2.webp",
   },
   {
     title: "Thanksgiving Sunday",
@@ -64,7 +64,7 @@ const upcomingEvents = [
     type: "Thanksgiving",
     description: "Join us every first Sunday of the month as we lift up our voices in gratitude and celebrate God's faithfulness in our lives.",
     accent: "text-hog-green-500",
-    image: "/Thanksgiving Post.png",
+    image: "/optimized/Thanksgiving Post.webp",
   },
   {
     title: "Monthly Holy Ghost Service",
@@ -112,10 +112,11 @@ export default function Events() {
 
       {/* ── Hero ── */}
       <section className="hog-section-black relative pt-48 pb-32 overflow-hidden">
-        <img 
+        <OptimizedImage 
           src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2000&auto=format&fit=crop" 
           alt="Events background" 
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 brightness-125 contrast-105"
+          className="absolute inset-0 w-full h-full z-0 opacity-50 brightness-125 contrast-105"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-hog-black/20 via-hog-black/40 to-transparent pointer-events-none z-10" />
         <div className="absolute inset-0 bg-hog-green-600/5 mix-blend-overlay pointer-events-none z-10" />
@@ -155,7 +156,7 @@ export default function Events() {
               >
                 {(prog as any).image && (
                   <div className={`w-full aspect-video overflow-hidden border-b ${prog.name.includes("Kingdom Cinema") ? "bg-hog-black border-hog-black-border" : "border-hog-green-100/10"}`}>
-                    <img src={(prog as any).image} alt={prog.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <OptimizedImage src={(prog as any).image} alt={prog.name} className="w-full h-full" />
                   </div>
                 )}
                 <div className="p-8 flex flex-col sm:flex-row gap-8 items-start">
@@ -200,7 +201,7 @@ export default function Events() {
               >
                 {(ev as any).image && (
                   <div className="w-full aspect-video overflow-hidden border-b border-hog-green-100/10">
-                    <img src={(ev as any).image} alt={ev.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <OptimizedImage src={(ev as any).image} alt={ev.title} className="w-full h-full" />
                   </div>
                 )}
                 <div className="p-8 flex flex-col gap-5 flex-1">

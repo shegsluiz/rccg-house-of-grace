@@ -1,5 +1,5 @@
-// src/pages/Giving.tsx
 // Brand: bg-black, Inter + Space Grotesk, green-emerald gradient, orange-red secondary, glassmorphism cards
+import { OptimizedImage } from "../components/OptimizedImage";
 
 const givingCategories = [
   {
@@ -63,10 +63,11 @@ export default function Giving() {
 
       {/* ── Hero ── */}
       <section className="hog-section-black relative pt-48 pb-32 overflow-hidden">
-        <img 
+        <OptimizedImage 
           src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2000&auto=format&fit=crop" 
           alt="Giving background" 
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 brightness-125 contrast-105"
+          className="absolute inset-0 w-full h-full z-0 opacity-50 brightness-125 contrast-105"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-hog-black/20 via-hog-black/40 to-transparent pointer-events-none z-10" />
         <div className="absolute inset-0 bg-hog-green-600/5 mix-blend-overlay pointer-events-none z-10" />

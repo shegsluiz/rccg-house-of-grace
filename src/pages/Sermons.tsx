@@ -10,6 +10,7 @@
 // 5. The channel ID is already set below.
 
 import React, { useEffect, useState } from "react";
+import { OptimizedImage } from "../components/OptimizedImage";
 
 const CHANNEL_ID = "UCV_ngO2hpet078gqzKptM9g";
 const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY as string;
@@ -103,10 +104,10 @@ const VideoCard: React.FC<VideoCardProps> = ({ video, featured = false }) => {
               />
             ) : (
               <>
-                <img
+                <OptimizedImage
                   src={video.thumbnail}
                   alt={video.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition">
                   <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform text-white">
@@ -169,10 +170,10 @@ const VideoCard: React.FC<VideoCardProps> = ({ video, featured = false }) => {
           />
         ) : (
           <>
-            <img
+            <OptimizedImage
               src={video.thumbnail}
               alt={video.title}
-              className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+              className="w-full h-full"
             />
             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
               <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-lg text-white">

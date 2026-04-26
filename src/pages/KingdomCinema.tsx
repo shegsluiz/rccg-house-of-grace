@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, ReactNode } from "react";
+import { OptimizedImage } from "../components/OptimizedImage";
 
 // ─── Hook: Intersection Observer for fade-in ──────────────────────────────────
 function useFadeIn(threshold = 0.15) {
@@ -72,10 +73,11 @@ export default function KingdomCinema() {
       {/* ── Hero ── */}
       <section className="hog-section-black relative min-h-[100dvh] flex flex-col justify-end pb-16 md:pb-24 pt-40 overflow-hidden">
         {/* Cinematic background */}
-        <img 
+        <OptimizedImage 
           src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2000&auto=format&fit=crop" 
           alt="Cinema background" 
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 brightness-110 contrast-105 animate-slow-zoom"
+          className="absolute inset-0 w-full h-full z-0 opacity-50 brightness-110 contrast-105"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-hog-black via-hog-black/20 to-transparent z-10" />
 
@@ -101,11 +103,11 @@ export default function KingdomCinema() {
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeSection>
-              <div className="relative aspect-[16/10] lg:aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl group border border-hog-green-200/20">
-                <img 
-                  src="/IMG_6515.JPG" 
+              <div className="relative aspect-[16/10] lg:aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl group border border-hog-green-200/20 bg-hog-green-950">
+                <OptimizedImage 
+                  src="/optimized/IMG_6515.webp" 
                   alt="Our Vision in Action" 
-                  className="absolute inset-0 w-full h-full object-cover transition duration-1000 group-hover:scale-110"
+                  className="absolute inset-0 w-full h-full"
                 />
                 <div className="absolute inset-0 bg-hog-green-900/10 group-hover:bg-transparent transition-colors" />
                 <div className="absolute inset-0 shadow-[inset_0_0_100px_rgba(0,0,0,0.1)]" />
@@ -154,10 +156,10 @@ export default function KingdomCinema() {
             </FadeSection>
             <FadeSection delay={150} className="order-1 lg:order-2">
               <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden border border-hog-black-border bg-hog-black-card shadow-2xl flex items-center justify-center p-16">
-                <img 
-                  src="/kingdom-cinema-logo.png" 
+                <OptimizedImage 
+                  src="/optimized/kingdom-cinema-logo.webp" 
                   alt="Kingdom Cinema Logo" 
-                  className="w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition duration-700"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </FadeSection>
@@ -210,10 +212,10 @@ export default function KingdomCinema() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <FadeSection>
               <div className="relative aspect-video rounded-[2rem] overflow-hidden border border-hog-black-border bg-hog-black-card shadow-2xl group">
-                <img 
+                <OptimizedImage 
                   src="https://images.unsplash.com/photo-1595769816263-9b910be24d5f?q=80&w=1000&auto=format&fit=crop" 
                   alt="Cinema" 
-                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition duration-1000"
+                  className="absolute inset-0 w-full h-full"
                 />
                 <div className="absolute inset-0 bg-hog-green-900/20 mix-blend-overlay" />
               </div>

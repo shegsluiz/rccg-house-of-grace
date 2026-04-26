@@ -8,6 +8,7 @@ import {
   Youtube, 
   MessageCircle,
 } from "lucide-react";
+import { OptimizedImage } from "../components/OptimizedImage";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -169,11 +170,12 @@ export default function Connect() {
       {/* ── Hero ── */}
       <section className="hog-section-black relative pt-48 pb-32 overflow-hidden min-h-[60vh] flex items-center">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/IMG_9073_optimized.jpeg" 
+        <div className="absolute inset-0 z-0 bg-hog-black">
+          <OptimizedImage 
+            src="/optimized/IMG_9073_optimized.webp" 
             alt="Hero Background" 
-            className="w-full h-full object-cover opacity-30 scale-105"
+            className="w-full h-full opacity-30 scale-105"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-hog-black via-hog-black/40 to-hog-black" />
         </div>
@@ -205,10 +207,10 @@ export default function Connect() {
             <div className="grid lg:grid-cols-[1fr_1.2fr_1.5fr] items-stretch">
               {/* Image Column */}
               <div className="h-64 lg:h-auto relative overflow-hidden bg-hog-black">
-                <img 
-                  src="/IMG_6413.JPG" 
+                <OptimizedImage 
+                  src="/optimized/IMG_6413.webp" 
                   alt="Congregation" 
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-hog-green-500/10 to-transparent" />
               </div>

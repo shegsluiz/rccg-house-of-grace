@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState, ReactNode } from "react";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { OptimizedImage } from "../components/OptimizedImage";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface ServiceTime {
@@ -40,7 +40,7 @@ const serviceTimes: ServiceTime[] = [
     time: "7:45 AM",
     name: "Kingdom Cinema (First Service)",
     description: "Join our creative expression of the word of God through film, visuals, and storytelling.",
-    image: "/Kingdom.Cinema 2.jpg",
+    image: "/optimized/Kingdom.Cinema 2.webp",
   },
   {
     day: "Sunday",
@@ -91,7 +91,7 @@ const events: Event[] = [
     title: "Thanksgiving Sunday",
     type: "Celebration",
     description: "Join us for a special time of gratitude and testimony as we celebrate God's goodness in our lives.",
-    image: "/Thanksgiving Post.png",
+    image: "/optimized/Thanksgiving Post.webp",
   },
 ];
 
@@ -204,8 +204,10 @@ export default function Home() {
           muted
           loop
           playsInline
+          preload="metadata"
           src="/hero-bg.mp4"
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-40 brightness-110 contrast-105 animate-slow-zoom"
+          poster="/optimized/IMG_6718.webp"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-hog-black/20 via-hog-black/40 to-hog-black pointer-events-none z-10" />
 
@@ -240,8 +242,13 @@ export default function Home() {
       <section className="hog-section-cream section w-full">
         <FadeSection>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
-            <div className="relative aspect-[4/5] max-w-md w-full mx-auto lg:mx-0 rounded-3xl overflow-hidden shadow-card border border-hog-cream-deep">
-              <img src="/IMG_6384.jpg" alt="Welcome to RCCG House of Grace" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="relative aspect-[4/5] max-w-md w-full mx-auto lg:mx-0 rounded-3xl overflow-hidden shadow-card border border-hog-cream-deep bg-hog-cream">
+              <OptimizedImage 
+                src="/optimized/IMG_6384.webp" 
+                alt="Welcome to RCCG House of Grace" 
+                className="absolute inset-0 w-full h-full" 
+                priority
+              />
             </div>
             <div>
               <p className="hog-eyebrow">A Word From Our Pastor</p>
@@ -311,7 +318,11 @@ export default function Home() {
 
                   {s.image && (
                     <div className={`relative aspect-video mb-6 rounded-xl overflow-hidden border shadow-sm ${s.name.includes("Kingdom Cinema") ? "bg-hog-black border-hog-black-border" : "border-hog-green-100"}`}>
-                      <img src={s.image} alt={s.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                      <OptimizedImage 
+                        src={s.image} 
+                        alt={s.name} 
+                        className="w-full h-full" 
+                      />
                     </div>
                   )}
                   
@@ -397,7 +408,11 @@ export default function Home() {
                   <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-hog-green-400 to-hog-green-600 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
                   {ev.image && (
                     <div className={`w-full aspect-video overflow-hidden border-b ${ev.title.includes("Kingdom Cinema") ? "bg-hog-black border-hog-black-border" : "border-hog-green-100"}`}>
-                      <img src={ev.image} alt={ev.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <OptimizedImage 
+                        src={ev.image} 
+                        alt={ev.title} 
+                        className="w-full h-full" 
+                      />
                     </div>
                   )}
                   <div className="p-8 md:p-10 flex flex-col flex-1">
