@@ -301,7 +301,7 @@ export default function Home() {
               {serviceTimes.map((s) => (
                 <Link 
                   key={s.name} 
-                  to={s.name.includes("Kingdom Cinema") ? "/cinema" : "/events"}
+                  to={s.name.includes("Kingdom Cinema") ? "/kingdom-cinema" : "/events"}
                   className="hog-card bg-white border-hog-green-100 p-8 flex flex-col group hover:shadow-green-md hover:-translate-y-2 transition-all duration-300"
                 >
                   <div className="flex items-center justify-between mb-6">
