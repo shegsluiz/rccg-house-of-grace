@@ -140,38 +140,53 @@ export default function Connect() {
       </section>
 
       {/* ── New Here? ── */}
-      <section className="hog-section-cream py-20">
+      <section className="bg-[#F9FAF7] py-24">
         <div className="container-wide">
-          <div className="hog-card p-8 sm:p-12 md:p-16 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="hog-eyebrow mb-3">
-                First Time Visiting?
-              </p>
-              <h2 className="hog-heading text-3xl md:text-4xl mb-6">
-                Here is what to expect when you visit us
-              </h2>
-              <p className="hog-body text-sm">
-                We want your first visit to feel warm, easy, and memorable.
-                From the moment you arrive, you will be welcomed by friendly
-                faces who are genuinely glad you are here.
-              </p>
-            </div>
-            <div className="flex flex-col gap-6">
-              {[
-                { num: "01", title: "Arrive & Be Welcomed", body: "Our welcome team will greet you at the door and help you find your seat. No need to dress a certain way — come as you are." },
-                { num: "02", title: "Worship & The Word", body: "Experience vibrant praise and worship followed by a practical, Bible-based message that speaks to your everyday life." },
-                { num: "03", title: "Meet The Family", body: "After service, take a moment to connect with our pastoral team and members. We have a space set aside just for first-timers." },
-              ].map((step) => (
-                <div key={step.num} className="flex gap-5 items-start bg-hog-green-100/5 p-6 rounded-2xl border border-hog-green-100/10">
-                  <span className="text-3xl font-black text-hog-green-600/30 shrink-0 font-display">
-                    {step.num}
-                  </span>
-                  <div>
-                    <h3 className="font-bold text-hog-text-dark text-base mb-1">{step.title}</h3>
-                    <p className="hog-body text-sm">{step.body}</p>
+          <div className="bg-white rounded-[32px] border border-hog-green-200/30 overflow-hidden shadow-sm">
+            <div className="grid lg:grid-cols-[1fr_1.2fr_1.5fr] items-stretch">
+              {/* Image Column */}
+              <div className="h-64 lg:h-auto relative">
+                <img 
+                  src="/IMG_6413.JPG" 
+                  alt="Church community" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-hog-green-500/10 to-transparent" />
+              </div>
+
+              {/* Text Column */}
+              <div className="p-8 md:p-14 flex flex-col justify-center">
+                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-hog-green-600 mb-4">
+                  First Time Visiting?
+                </p>
+                <h2 className="hog-heading text-hog-text-dark text-3xl md:text-5xl leading-tight mb-6">
+                  Here is what to expect when you visit us
+                </h2>
+                <p className="hog-body text-base text-hog-text-ghost">
+                  We want your first visit to feel warm, easy, and memorable.
+                  From the moment you arrive, you will be welcomed by friendly
+                  faces who are genuinely glad you are here.
+                </p>
+              </div>
+
+              {/* Steps Column */}
+              <div className="p-8 md:p-14 flex flex-col gap-6 justify-center bg-gray-50/50">
+                {[
+                  { num: "01", title: "Arrive & Be Welcomed", body: "Our welcome team will greet you at the door and help you find your seat. No need to dress a certain way — come as you are." },
+                  { num: "02", title: "Worship & The Word", body: "Experience vibrant praise and worship followed by a practical, Bible-based message that speaks to your everyday life." },
+                  { num: "03", title: "Meet The Family", body: "After service, take a moment to connect with our pastoral team and members. We have a space set aside just for first-timers." },
+                ].map((step) => (
+                  <div key={step.num} className="bg-white p-6 rounded-2xl border border-hog-green-100/20 shadow-sm flex gap-6 items-start group hover:border-hog-green-400/30 transition-colors">
+                    <span className="text-3xl font-black text-hog-green-600/20 font-display">
+                      {step.num}
+                    </span>
+                    <div>
+                      <h3 className="font-bold text-hog-text-dark text-lg mb-1">{step.title}</h3>
+                      <p className="hog-body text-sm text-hog-text-ghost leading-relaxed">{step.body}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
