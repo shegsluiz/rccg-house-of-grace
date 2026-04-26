@@ -93,72 +93,73 @@ export default function Layout() {
           </div>
         </div>
 
-        {/* Mobile Navigation Overlay */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <motion.div
-               initial={{ opacity: 0, x: "100%" }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: "100%" }}
-              transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-              className="fixed inset-0 bg-hog-black flex flex-col md:hidden z-[100] overflow-y-auto"
-            >
-              {/* Header inside mobile menu */}
-              <div className="flex justify-between items-center p-6">
-                {/* Half circle logo matching mockup */}
-                <div className="w-6 h-12 bg-hog-black-card rounded-r-full" /> 
-                <button 
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors"
-                >
-                  <X className="w-7 h-7" />
-                </button>
-              </div>
+      </header>
+      
+      {/* Mobile Navigation Overlay */}
+      <AnimatePresence mode="wait">
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ type: "spring", bounce: 0, duration: 0.4 }}
+            className="fixed inset-0 bg-hog-black flex flex-col md:hidden z-[100] overflow-y-auto"
+          >
+            {/* Header inside mobile menu */}
+            <div className="flex justify-between items-center p-6">
+              {/* Half circle logo matching mockup */}
+              <div className="w-6 h-12 bg-hog-black-card rounded-r-full" /> 
+              <button 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors"
+              >
+                <X className="w-7 h-7" />
+              </button>
+            </div>
 
-              {/* Links */}
-              <div className="flex flex-col px-8 py-6 gap-8 flex-grow">
-                {navLinks.map((item) => (
-                  <Link 
-                    key={item.name} 
-                    to={item.path} 
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex justify-between items-center text-hog-text-light font-medium transition-colors group"
-                  >
-                    <span className="text-xl">{item.name}</span>
-                    <ChevronRight className="w-5 h-5 text-hog-text-ghost group-hover:text-hog-green-400 transition-colors" />
-                  </Link>
-                ))}
+            {/* Links */}
+            <div className="flex flex-col px-8 py-6 gap-8 flex-grow">
+              {navLinks.map((item) => (
                 <Link 
-                  to="/kingdom-cinema" 
+                  key={item.name} 
+                  to={item.path} 
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex justify-between items-center text-hog-text-light font-medium transition-colors group"
                 >
-                  <span className="text-xl">Kingdom Cinema</span>
+                  <span className="text-xl">{item.name}</span>
                   <ChevronRight className="w-5 h-5 text-hog-text-ghost group-hover:text-hog-green-400 transition-colors" />
                 </Link>
+              ))}
+              <Link 
+                to="/kingdom-cinema" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex justify-between items-center text-hog-text-light font-medium transition-colors group"
+              >
+                <span className="text-xl">Kingdom Cinema</span>
+                <ChevronRight className="w-5 h-5 text-hog-text-ghost group-hover:text-hog-green-400 transition-colors" />
+              </Link>
 
-                <div className="pt-6">
-                  <Link
-                    to="/connect"
-                    onClick={() => setIsMobileMenuOpen(false)} 
-                    className="hog-btn-primary w-full py-4 text-lg"
-                  >
-                    Plan Your Visit
-                  </Link>
-                </div>
+              <div className="pt-6">
+                <Link
+                  to="/connect"
+                  onClick={() => setIsMobileMenuOpen(false)} 
+                  className="hog-btn-primary w-full py-4 text-lg"
+                >
+                  Plan Your Visit
+                </Link>
               </div>
+            </div>
 
-              {/* Social Links at the bottom */}
-              <div className="flex justify-center gap-8 pb-10 pt-4 text-warm-400">
-                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="hover:text-sunrise-600 transition-colors text-sm font-medium">Facebook</a>
-                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="hover:text-sunrise-600 transition-colors text-sm font-medium">Instagram</a>
-                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="hover:text-sunrise-600 transition-colors text-sm font-medium">TikTok</a>
-                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="hover:text-sunrise-600 transition-colors text-sm font-medium">YouTube</a>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </header>
+            {/* Social Links at the bottom */}
+            <div className="flex justify-center gap-8 pb-10 pt-4 text-hog-text-dim">
+              <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium">Facebook</a>
+              <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium">Instagram</a>
+              <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium">TikTok</a>
+              <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium">YouTube</a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Main Content Rendered Here */}
       <div className="w-full flex flex-col items-center flex-grow">
