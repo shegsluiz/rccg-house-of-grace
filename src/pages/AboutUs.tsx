@@ -44,6 +44,12 @@ const leadership: LeadershipItem[] = [
     note: "Global spiritual covering",
     image: "/DADDY EA ADEBOYE.jpeg",
   },
+  {
+    role: "Zonal Pastor",
+    name: "Pastor Abiodun Oluwatosin",
+    note: "Visionary Leader, House of Grace",
+    image: "/Pastor Abiodun.jpg",
+  },
 ];
 
 const whatToExpect = [
