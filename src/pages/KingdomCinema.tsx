@@ -75,7 +75,7 @@ export default function KingdomCinema() {
         <img 
           src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2000&auto=format&fit=crop" 
           alt="Cinema background" 
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 brightness-110 contrast-105"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 brightness-110 contrast-105 animate-slow-zoom"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-hog-black via-hog-black/20 to-transparent z-10" />
 

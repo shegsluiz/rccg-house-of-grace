@@ -205,7 +205,7 @@ export default function Home() {
           loop
           playsInline
           src="/hero-bg.mp4"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-40 brightness-110 contrast-105"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-40 brightness-110 contrast-105 animate-slow-zoom"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-hog-black/20 via-hog-black/40 to-hog-black pointer-events-none z-10" />
 

@@ -118,6 +118,7 @@ export default function Events() {
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 brightness-125 contrast-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-hog-black/20 via-hog-black/40 to-transparent pointer-events-none z-10" />
+        <div className="absolute inset-0 bg-hog-green-600/5 mix-blend-overlay pointer-events-none z-10" />
         <div className="relative z-10 container-wide text-center">
           <p className="hog-eyebrow mb-4">
             What's Happening
