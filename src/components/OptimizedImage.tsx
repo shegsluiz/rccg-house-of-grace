@@ -55,9 +55,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         src={currentSrc}
         alt={alt}
         onLoad={() => setIsLoaded(true)}
-        className={`w-full h-full object-cover transition-all duration-1000 ease-out ${
+        className={`transition-all duration-1000 ease-out ${
           isLoaded ? 'opacity-100 scale-100 blur-0' : 'opacity-0 scale-105 blur-lg'
-        }`}
+        } ${className.includes('w-') ? '' : 'w-full'} ${className.includes('h-') ? '' : 'h-full'} ${className.includes('object-') ? '' : 'object-cover'} ${className}`}
         loading={priority ? "eager" : "lazy"}
         decoding={priority ? "sync" : "async"}
         {...(priority ? { fetchPriority: "high" } : {})}

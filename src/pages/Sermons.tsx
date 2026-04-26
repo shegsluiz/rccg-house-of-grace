@@ -96,7 +96,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video, featured = false }) => {
           <div className="relative aspect-video cursor-pointer group" onClick={() => setPlaying(true)}>
             {playing ? (
               <iframe
-                className="w-full h-full"
+                className="absolute inset-0 w-full h-full border-0"
                 src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
                 title={video.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -161,13 +161,13 @@ const VideoCard: React.FC<VideoCardProps> = ({ video, featured = false }) => {
         onClick={() => setPlaying(true)}
       >
         {playing ? (
-          <iframe
-            className="w-full h-full"
-            src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
-            title={video.title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+              <iframe
+                className="absolute inset-0 w-full h-full border-0"
+                src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+                title={video.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
         ) : (
           <>
             <OptimizedImage

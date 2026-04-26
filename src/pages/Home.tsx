@@ -366,7 +366,7 @@ export default function Home() {
                   <iframe
                     src={`https://www.youtube.com/embed/${latestSermon.youtubeId}`}
                     title={latestSermon.title}
-                    className="w-full h-full border-none"
+                    className="absolute inset-0 w-full h-full border-none"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
