@@ -195,59 +195,59 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen font-sans selection:bg-green-500/30">
+    <div className="bg-hog-black text-hog-text-light min-h-screen font-sans selection:bg-hog-green-100">
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[100dvh] flex flex-col justify-end px-6 md:px-12 lg:px-8 pb-16 md:pb-24 overflow-hidden">
+      <section className="hog-section-black relative min-h-[100dvh] flex flex-col justify-end pb-16 md:pb-24 overflow-hidden">
         <video
           autoPlay
           muted
           loop
           playsInline
           src="/hero-bg.mp4"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-40 brightness-110 contrast-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-hog-black/20 via-hog-black/40 to-hog-black pointer-events-none z-10" />
 
-        <div className="relative z-20 max-w-7xl mx-auto w-full">
-          <p className="text-[11px] font-bold tracking-[0.22em] uppercase text-green-400 mb-5 flex items-center gap-3">
-            <span className="w-8 h-[1px] bg-green-600"></span> Welcome to
+        <div className="relative z-20 max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-8">
+          <p className="hog-eyebrow mb-5 flex items-center gap-3">
+            <span className="w-8 h-[1px] bg-hog-green-400"></span> Welcome to
           </p>
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.05] tracking-tight text-white max-w-4xl">
+          <h1 className="hog-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl max-w-4xl">
             RCCG<br />
-            House of <em className="not-italic bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Grace</em>
+            House of <em className="not-italic hog-gradient-text">Grace</em>
           </h1>
-          <p className="text-gray-300 text-lg md:text-xl max-w-lg leading-relaxed mt-6 mb-10 font-medium">
+          <p className="hog-body text-lg md:text-xl max-w-lg mt-6 mb-10">
             A place where grace is not just our name — it is the atmosphere you breathe and the foundation you stand on.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link to="/connect" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] flex items-center justify-center text-sm tracking-wide uppercase">
+            <Link to="/connect" className="hog-btn-primary">
               Plan Your Visit
             </Link>
-            <Link to="/about" className="bg-green-900/20 border border-green-500/30 px-8 py-4 rounded-full font-bold hover:bg-green-900/40 transition-all duration-300 text-green-300 text-sm tracking-wide uppercase">
+            <Link to="/about" className="hog-btn-outline-dark">
               Who We Are
             </Link>
           </div>
         </div>
 
         <div className="absolute bottom-10 right-6 md:right-12 lg:right-24 z-20 flex flex-col items-center gap-2 opacity-60">
-          <div className="w-[1px] h-12 bg-gradient-to-b from-green-600 to-transparent animate-pulse" />
-          <span className="text-[10px] tracking-[0.2em] uppercase text-green-400" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
+          <div className="w-[1px] h-12 bg-gradient-to-b from-hog-green-400 to-transparent animate-pulse" />
+          <span className="text-[10px] tracking-[0.2em] uppercase text-hog-green-400" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
         </div>
       </section>
 
       {/* ── Welcome / Pastor Message ──────────────────────────────────────────── */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-zinc-700 w-full">
+      <section className="hog-section-cream section w-full">
         <FadeSection>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative aspect-[4/5] max-w-md w-full mx-auto lg:mx-0 rounded-3xl overflow-hidden shadow-sm border border-zinc-800">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+            <div className="relative aspect-[4/5] max-w-md w-full mx-auto lg:mx-0 rounded-3xl overflow-hidden shadow-card border border-hog-cream-deep">
               <img src="/IMG_6384.jpg" alt="Welcome to RCCG House of Grace" className="absolute inset-0 w-full h-full object-cover" />
             </div>
             <div>
-              <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4">A Word From Our Pastor</p>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8">YOU ARE WELCOME<br />HOME.</h2>
-              <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mb-8 rounded-full" />
-              <div className="text-zinc-500 text-lg leading-relaxed space-y-6">
+              <p className="hog-eyebrow">A Word From Our Pastor</p>
+              <h2 className="hog-heading text-4xl sm:text-5xl lg:text-6xl mb-8">YOU ARE WELCOME<br />HOME.</h2>
+              <div className="hog-rule" />
+              <div className="hog-body space-y-6">
                 <p>
                   Whether you are joining us for the first time or you have been a part of this family for years, I want you to know that you are not here by accident. God has a purpose for every step that led you through our doors.
                 </p>
@@ -258,9 +258,9 @@ export default function Home() {
                   Come as you are. You will find a family that loves you, welcomes you, and walks with you into all that God has for your life.
                 </p>
               </div>
-              <div className="mt-12 pt-8 border-t border-zinc-800">
-                <p className="text-xl font-bold bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent italic">Pastor — ABIOBUN OLUWATOSIN</p>
-                <p className="text-xs tracking-widest uppercase text-gray-500 mt-2 font-semibold">Zonal Pastor · RCCG House of Grace</p>
+              <div className="mt-12 pt-8 border-t border-hog-cream-deep">
+                <p className="text-xl font-bold hog-gradient-text italic">Pastor — ABIODUN OLUWATOSIN</p>
+                <p className="text-[10px] tracking-widest uppercase hog-text-muted mt-2 font-bold">Zonal Pastor · RCCG House of Grace</p>
               </div>
             </div>
           </div>
@@ -268,136 +268,163 @@ export default function Home() {
       </section>
 
       {/* ── Identity Pillars ──────────────────────────────────────────────────── */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-zinc-700 w-full">
-        <FadeSection>
-          <p className="text-emerald-600 text-sm font-bold uppercase tracking-widest mb-4 text-center">Who We Are</p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-12 md:mb-16 text-center">Grace · Fire · Purpose</h2>
-        </FadeSection>
-        <FadeSection delay={120}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {pillars.map((p) => (
-              <div key={p.word} className="bg-zinc-900 border border-zinc-800 p-10 rounded-3xl hover:bg-zinc-800 transition-all group">
-                <p className="text-6xl font-bold text-zinc-800 group-hover:text-green-400/20 transition-colors mb-4">{p.letter}</p>
-                <h3 className="text-2xl font-bold mb-4">{p.word}</h3>
-                <p className="text-zinc-500 leading-relaxed">{p.line}</p>
-              </div>
-            ))}
-          </div>
-        </FadeSection>
+      <section className="hog-section-forest section w-full">
+        <div className="max-w-7xl mx-auto">
+          <FadeSection>
+            <p className="hog-eyebrow text-center">Who We Are</p>
+            <h2 className="hog-heading text-4xl sm:text-5xl md:text-6xl text-center mb-12 md:mb-16">Grace · Fire · Purpose</h2>
+          </FadeSection>
+          <FadeSection delay={120}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {pillars.map((p) => (
+                <div key={p.word} className="hog-card p-10 group">
+                  <p className="text-6xl font-bold text-white/10 group-hover:text-white/20 transition-colors mb-4">{p.letter}</p>
+                  <h3 className="text-2xl font-bold mb-4">{p.word}</h3>
+                  <p className="hog-body text-sm">{p.line}</p>
+                </div>
+              ))}
+            </div>
+          </FadeSection>
+        </div>
       </section>
 
       {/* ── Service Times ─────────────────────────────────────────────────────── */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-zinc-700 w-full">
-        <FadeSection>
-          <p className="text-orange-500 text-sm font-bold uppercase tracking-widest mb-4">Join Us</p>
-          <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-8">Worship With Us</h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-orange-400 to-red-500 mb-12 rounded-full" />
-        </FadeSection>
-        <FadeSection delay={100}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {serviceTimes.map((s) => (
-              <div key={s.name} className="group">
-                {s.image && (
-                  <div className="relative aspect-video mb-6 rounded-2xl overflow-hidden border border-zinc-800">
-                    <img src={s.image} alt={s.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+      <section className="hog-section-white section w-full">
+        <div className="max-w-7xl mx-auto">
+          <FadeSection>
+            <p className="hog-eyebrow">Join Us</p>
+            <h2 className="hog-heading text-4xl sm:text-5xl mb-8">Worship With Us</h2>
+            <div className="hog-rule" />
+          </FadeSection>
+          <FadeSection delay={100}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {serviceTimes.map((s) => (
+                <Link 
+                  key={s.name} 
+                  to={s.name.includes("Kingdom Cinema") ? "/cinema" : "/events"}
+                  className="hog-card bg-white border-hog-green-100 p-8 flex flex-col group hover:shadow-green-md hover:-translate-y-2 transition-all duration-300"
+                >
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="hog-badge">{s.day}</span>
+                    <span className="text-xs font-black tracking-widest text-hog-green-600/50">{s.time}</span>
                   </div>
-                )}
-                <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-green-500 mb-2">{s.day} · {s.time}</p>
-                <p className="text-lg font-bold text-white mb-4">{s.name}</p>
-                <p className="text-zinc-500 leading-relaxed text-sm">{s.description}</p>
-              </div>
-            ))}
-          </div>
-        </FadeSection>
+
+                  {s.image && (
+                    <div className="relative aspect-video mb-6 rounded-xl overflow-hidden border border-hog-green-100 shadow-sm">
+                      <img src={s.image} alt={s.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    </div>
+                  )}
+                  
+                  <div className="flex-1">
+                    <h3 className="text-xl font-black text-hog-text-dark mb-4 font-display group-hover:text-hog-green-600 transition-colors leading-tight">
+                      {s.name}
+                    </h3>
+                    <p className="hog-body text-sm line-clamp-3">
+                      {s.description}
+                    </p>
+                  </div>
+
+                  <div className="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-hog-green-600 opacity-0 group-hover:opacity-100 transition-all">
+                    Find Out More <ChevronRight className="w-3 h-3" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </FadeSection>
+        </div>
       </section>
 
       {/* ── Latest Sermon ─────────────────────────────────────────────────────── */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-zinc-700 w-full">
-        <FadeSection>
-          <p className="text-green-400 text-sm font-bold uppercase tracking-widest mb-4">Hear The Word</p>
-          <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-8">Latest Sermon</h2>
-          <div className="w-12 h-1 bg-gradient-to-r from-green-400 to-emerald-500 mb-12 rounded-full" />
-        </FadeSection>
-        <FadeSection delay={120}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="relative aspect-video rounded-3xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl">
-              {!latestSermon.youtubeId ? (
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-green-400/50">
-                  <div className="w-16 h-16 rounded-full border border-green-600/30 flex items-center justify-center text-2xl">▶</div>
-                  <span className="text-xs tracking-widest uppercase font-bold text-gray-500">Loading Latest Message...</span>
-                </div>
-              ) : (
-                <iframe
-                  src={`https://www.youtube.com/embed/${latestSermon.youtubeId}`}
-                  title={latestSermon.title}
-                  className="w-full h-full border-none"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              )}
+      <section className="hog-section-black-soft section w-full">
+        <div className="max-w-7xl mx-auto">
+          <FadeSection>
+            <p className="hog-eyebrow">Hear The Word</p>
+            <h2 className="hog-heading text-4xl sm:text-5xl mb-8">Latest Sermon</h2>
+            <div className="hog-rule" />
+          </FadeSection>
+          <FadeSection delay={120}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              <div className="relative aspect-video rounded-3xl overflow-hidden border border-hog-black-border bg-hog-black-card shadow-lg">
+                {!latestSermon.youtubeId ? (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-hog-green-400/50">
+                    <div className="w-16 h-16 rounded-full border border-hog-green-100 flex items-center justify-center text-2xl">▶</div>
+                    <span className="text-xs tracking-widest uppercase font-bold text-hog-text-dim">Loading Latest Message...</span>
+                  </div>
+                ) : (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${latestSermon.youtubeId}`}
+                    title={latestSermon.title}
+                    className="w-full h-full border-none"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                )}
+              </div>
+              <div>
+                <p className="hog-eyebrow text-xs mb-4">{latestSermon.date}</p>
+                <h3 className="hog-heading text-3xl md:text-4xl mb-4">{latestSermon.title}</h3>
+                <p className="hog-text-dim font-medium mb-2">{latestSermon.preacher}</p>
+                <p className="text-hog-green-400 italic mb-6">{latestSermon.scripture}</p>
+                <p className="hog-body text-sm mb-8">{latestSermon.description}</p>
+                <Link to="/sermons" className="hog-btn-outline-dark">
+                  View All Sermons
+                </Link>
+              </div>
             </div>
-            <div>
-              <p className="text-green-400 text-xs font-bold tracking-widest uppercase mb-4">{latestSermon.date}</p>
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">{latestSermon.title}</h3>
-              <p className="text-zinc-500 font-medium mb-2">{latestSermon.preacher}</p>
-              <p className="text-emerald-600 italic mb-6">{latestSermon.scripture}</p>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-8">{latestSermon.description}</p>
-              <Link to="/sermons" className="bg-green-900/20 border border-green-500/30 px-8 py-4 rounded-full font-bold hover:bg-green-900/40 transition-all duration-300 text-green-300 text-sm tracking-wide uppercase">
-                View All Sermons
-              </Link>
-            </div>
-          </div>
-        </FadeSection>
+          </FadeSection>
+        </div>
       </section>
 
       {/* ── Upcoming Events ───────────────────────────────────────────────────── */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto border-b border-zinc-700 w-full">
-        <FadeSection>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-            <div>
-              <p className="text-orange-500 text-sm font-bold uppercase tracking-widest mb-4">What's Coming Up</p>
-              <h2 className="text-4xl sm:text-5xl font-bold leading-tight">Upcoming Events</h2>
-            </div>
-            <Link to="/events" className="text-white hover:text-orange-500 transition-colors font-bold flex items-center gap-2">
-              View All <ChevronRight className="w-5 h-5" />
-            </Link>
-          </div>
-          <div className="w-12 h-1 bg-gradient-to-r from-orange-400 to-red-500 mb-12 rounded-full" />
-        </FadeSection>
-        <FadeSection delay={120}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {events.map((ev, i) => (
-              <div key={i} className="bg-zinc-900 border border-zinc-800 rounded-3xl hover:border-orange-300 transition-all relative overflow-hidden group flex flex-col">
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-400 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
-                {ev.image && (
-                  <div className="w-full aspect-video overflow-hidden border-b border-zinc-800">
-                    <img src={ev.image} alt={ev.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-                )}
-                <div className="p-8 md:p-10 flex flex-col flex-1">
-                  <div className="flex items-baseline gap-2 mb-6">
-                    <span className="text-4xl font-bold text-orange-500">{ev.date}</span>
-                    <span className="text-xs font-bold tracking-widest uppercase text-orange-500/70">{ev.month}</span>
-                    {ev.time && <span className="ml-auto text-[10px] font-bold tracking-widest uppercase text-zinc-500">{ev.time}</span>}
-                  </div>
-                  <div>
-                    <span className="inline-block px-3 py-1 border border-orange-500/30 rounded-full text-[10px] tracking-widest uppercase text-orange-400 mb-4 bg-orange-500/10">{ev.type}</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">{ev.title}</h3>
-                  <p className="text-zinc-500 leading-relaxed text-sm flex-1">{ev.description}</p>
-                </div>
+      <section className="hog-section-green-tint section w-full">
+        <div className="max-w-7xl mx-auto">
+          <FadeSection>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+              <div>
+                <p className="hog-eyebrow">What's Coming Up</p>
+                <h2 className="hog-heading text-4xl sm:text-5xl">Upcoming Events</h2>
               </div>
-            ))}
-          </div>
-        </FadeSection>
+              <Link to="/events" className="text-hog-green-600 hover:text-hog-green-400 transition-colors font-bold flex items-center gap-2">
+                View All <ChevronRight className="w-5 h-5" />
+              </Link>
+            </div>
+            <div className="hog-rule" />
+          </FadeSection>
+          <FadeSection delay={120}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {events.map((ev, i) => (
+                <div key={i} className="hog-card relative overflow-hidden group flex flex-col">
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-hog-green-400 to-hog-green-600 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
+                  {ev.image && (
+                    <div className="w-full aspect-video overflow-hidden border-b border-hog-green-100">
+                      <img src={ev.image} alt={ev.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                  )}
+                  <div className="p-8 md:p-10 flex flex-col flex-1">
+                    <div className="flex items-baseline gap-2 mb-6">
+                      <span className="text-4xl font-bold text-hog-green-600">{ev.date}</span>
+                      <span className="text-xs font-bold tracking-widest uppercase text-hog-green-600/70">{ev.month}</span>
+                      {ev.time && <span className="ml-auto text-[10px] font-bold tracking-widest uppercase hog-text-muted">{ev.time}</span>}
+                    </div>
+                    <div>
+                      <span className="hog-badge mb-4">{ev.type}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-hog-text-dark">{ev.title}</h3>
+                    <p className="hog-body text-sm flex-1">{ev.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </FadeSection>
+        </div>
       </section>
 
       {/* ── Newsletter ────────────────────────────────────────────────────────── */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto w-full">
+      <section className="hog-section-black section w-full">
         <FadeSection>
-          <div className="bg-gradient-to-br from-zinc-900 to-black border border-green-500/30 rounded-3xl p-10 md:p-16 text-center max-w-4xl mx-auto shadow-sm">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Join Our Mailing List</h2>
-            <p className="text-zinc-500 mb-10 max-w-lg mx-auto">
+          <div className="hog-card p-10 md:p-16 text-center max-w-4xl mx-auto">
+            <h2 className="hog-heading text-3xl md:text-5xl mb-6">Join Our Mailing List</h2>
+            <p className="hog-body mb-10 max-w-lg mx-auto">
               Get updates on sermons, events, and church news delivered directly to your inbox.
             </p>
             {!subscribed ? (
@@ -408,28 +435,28 @@ export default function Home() {
                   value={emailInput}
                   onChange={(e) => setEmailInput(e.target.value)}
                   required
-                  className="flex-1 bg-black border border-zinc-700 rounded-full px-6 py-4 focus:outline-none focus:border-green-400 text-white placeholder:text-zinc-500"
+                  className="hog-input-dark flex-1 px-6 py-4"
                 />
-                <button type="submit" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] flex items-center justify-center text-sm tracking-wide uppercase">
+                <button type="submit" className="hog-btn-primary">
                   Subscribe
                 </button>
               </form>
             ) : (
-              <p className="text-green-400 font-bold">✦ Thank you — you're on the list. God bless you.</p>
+              <p className="text-hog-green-400 font-bold">✦ Thank you — you're on the list. God bless you.</p>
             )}
-            <p className="text-xs text-gray-500 mt-6">No spam, ever. Unsubscribe at any time.</p>
+            <p className="text-xs text-hog-text-ghost mt-6">No spam, ever. Unsubscribe at any time.</p>
           </div>
         </FadeSection>
       </section>
 
       {/* ── RCCG Affiliation ──────────────────────────────────────────────────── */}
-      <div className="border-t border-zinc-700 py-8 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div className="border-t border-hog-black-border py-8 px-6 md:px-12 lg:px-8 max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4">
-          <span className="px-3 py-1 border border-zinc-700 rounded-full text-[10px] tracking-widest uppercase text-gray-500">A Parish of RCCG</span>
-          <span className="text-xs text-gray-500 font-medium">Zonal HQ · Lagos Province 15</span>
+          <span className="px-3 py-1 border border-hog-black-border rounded-full text-[10px] tracking-widest uppercase text-hog-text-ghost">A Parish of RCCG</span>
+          <span className="text-xs text-hog-text-ghost font-medium">Zonal HQ · Lagos Province 15</span>
         </div>
         <div className="flex gap-6">
-          <a href="https://www.rccg.org" target="_blank" rel="noreferrer" className="text-xs font-bold tracking-widest uppercase text-gray-500 hover:text-white transition-colors">RCCG HQ ↗</a>
+          <a href="https://www.rccg.org" target="_blank" rel="noreferrer" className="text-xs font-bold tracking-widest uppercase text-hog-text-ghost hover:text-hog-green-400 transition-colors">RCCG HQ ↗</a>
         </div>
       </div>
     </div>

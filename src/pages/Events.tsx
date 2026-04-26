@@ -7,7 +7,7 @@ const regularPrograms = [
     day: "Every Sunday",
     time: "7:45 AM - 9:00 AM",
     description: "Join our creative expression of the word of God through film, visuals, and storytelling.",
-    accent: "from-green-500 to-emerald-500",
+    accent: "text-hog-green-500",
     image: "/Kingdom.Cinema 2.jpg",
   },
   {
@@ -15,55 +15,64 @@ const regularPrograms = [
     day: "Every Sunday",
     time: "9:00 AM - 9:30 AM",
     description: "Interactive study of God's Word to build a strong foundation for your faith.",
-    accent: "from-orange-500 to-red-500",
+    accent: "text-hog-green-500",
   },
   {
     name: "Celebration Service",
     day: "Every Sunday",
     time: "9:35 AM - 11:00 AM",
     description: "Experience dynamic worship, powerful preaching, and heartfelt fellowship.",
-    accent: "from-green-500 to-emerald-500",
+    accent: "text-hog-green-500",
   },
   {
     name: "Digging Deep",
     day: "Every Tuesday",
     time: "6:30 PM - 8:00 PM",
     description: "A deep dive into the Bible to grow in wisdom and understanding of scripture.",
-    accent: "from-green-500 to-emerald-500",
+    accent: "text-hog-green-500",
   },
   {
     name: "Faith Clinic",
     day: "Every Thursday",
     time: "6:30 PM - 8:00 PM",
     description: "A time of intense prayer, healing, and spiritual empowerment.",
-    accent: "from-orange-500 to-red-500",
+    accent: "text-hog-green-500",
   },
   {
     name: "Zion Hour",
     day: "3rd Saturday",
     time: "7:00 AM - 9:00 AM",
     description: "Early morning prophetic encounter to set the pace for your month.",
-    accent: "from-orange-500 to-red-500",
+    accent: "text-hog-green-500",
   },
 ];
 
 const upcomingEvents = [
+  {
+    title: "Kingdom Cinema",
+    date: "Saturdays",
+    time: "4:00 PM",
+    type: "Cinema",
+    description: "Experience the power of storytelling and faith-based cinema. Join us for an inspiring movie experience that brings the Word to life.",
+    accent: "text-hog-green-500",
+    image: "/Kingdom.Cinema 2.jpg",
+  },
   {
     title: "Thanksgiving Sunday",
     date: "1st Sunday",
     time: "9:35 AM",
     type: "Thanksgiving",
     description: "Join us every first Sunday of the month as we lift up our voices in gratitude and celebrate God's faithfulness in our lives.",
-    accent: "from-green-500 to-emerald-500",
+    accent: "text-hog-green-500",
     image: "/Thanksgiving Post.png",
   },
   {
-    title: "Monthly Holy Ghost Service (May Edition)",
+    title: "Monthly Holy Ghost Service",
     date: "1st Friday",
     time: "6:00 PM",
     type: "Prayer",
-    description: "Theme: 'Excellent Counsel'. A powerful night of worship, the Word, and divine encounters with the Holy Spirit. Join us onsite or connect from anywhere as we experience God's guidance and grace.",
-    accent: "from-orange-500 to-red-500",
+    description: "Theme: 'Excellent Counsel'. A powerful night of worship, the Word, and divine encounters with the Holy Spirit.",
+    accent: "text-hog-green-500",
     image: "https://www.rccg.org/wp-content/uploads/2026/04/banner-1024x512.jpg",
   },
   {
@@ -72,7 +81,7 @@ const upcomingEvents = [
     time: "TBA",
     type: "Special",
     description: "Stay tuned for updates on our upcoming Zonal gathering, featuring guest ministers and transformative worship sessions.",
-    accent: "from-green-500 to-emerald-500",
+    accent: "text-hog-green-500",
   },
 ];
 
@@ -99,26 +108,28 @@ const rccgEvents = [
 
 export default function Events() {
   return (
-    <div className="bg-black text-white min-h-screen font-sans">
+    <div className="bg-hog-black text-hog-text-light min-h-screen font-sans selection:bg-hog-green-100">
 
       {/* ── Hero ── */}
-      <section className="relative py-32 px-6 md:px-20 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-900 via-black to-black pointer-events-none" />
-        <div className="relative z-10 max-w-3xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-4">
+      <section className="hog-section-black relative pt-48 pb-32 overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2000&auto=format&fit=crop" 
+          alt="Events background" 
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 brightness-125 contrast-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-hog-black/20 via-hog-black/40 to-transparent pointer-events-none z-10" />
+        <div className="relative z-10 container-wide text-center">
+          <p className="hog-eyebrow mb-4">
             What's Happening
           </p>
-          <h1
-            className="text-5xl md:text-7xl font-bold mb-6"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-          >
+          <h1 className="hog-heading text-4xl sm:text-6xl md:text-7xl mb-6">
             Events &{" "}
-            <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+            <span className="text-hog-green-400">
               Programmes
             </span>
           </h1>
-          <div className="w-12 h-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mx-auto mb-6" />
-          <p className="text-zinc-500 text-lg leading-relaxed">
+          <div className="hog-rule mx-auto mb-6" />
+          <p className="hog-body text-lg max-w-2xl mx-auto">
             There is always something happening at House of Grace. From weekly
             services to special programmes, find an event and come and
             experience God with us.
@@ -127,51 +138,40 @@ export default function Events() {
       </section>
 
       {/* ── Regular Programs ── */}
-      <section className="px-6 md:px-20 pb-20">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-2">
+      <section className="hog-section-cream py-20">
+        <div className="container-wide">
+          <p className="hog-eyebrow mb-2">
             Weekly Schedule
           </p>
-          <h2
-            className="text-3xl font-bold mb-10 text-white"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-          >
+          <h2 className="hog-heading text-3xl mb-10">
             Regular Programmes
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 gap-8">
             {regularPrograms.map((prog) => (
               <div
                 key={prog.name}
-                className="bg-black border border-zinc-700 shadow-sm rounded-3xl hover:shadow-md hover:border-green-500/30 transition flex flex-col group overflow-hidden"
+                className="hog-card flex flex-col group overflow-hidden"
               >
                 {(prog as any).image && (
-                  <div className="w-full aspect-video overflow-hidden border-b border-zinc-800">
-                    <img src={(prog as any).image} alt={prog.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="w-full aspect-video overflow-hidden border-b border-hog-green-100/10">
+                    <img src={(prog as any).image} alt={prog.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   </div>
                 )}
-                <div className="p-8 flex gap-6 items-start">
-                <div className="shrink-0 text-center w-28">
-                  <div
-                    className={`text-[10px] font-bold uppercase tracking-widest bg-gradient-to-r ${prog.accent} bg-clip-text text-transparent`}
-                  >
+                <div className="p-8 flex flex-col sm:flex-row gap-8 items-start">
+                <div className="shrink-0 text-left sm:text-center w-full sm:w-32">
+                  <div className={`text-[10px] font-black uppercase tracking-widest ${prog.accent} mb-1`}>
                     {prog.day}
                   </div>
-                  <div
-                    className="text-lg md:text-xl font-bold mt-1 text-white"
-                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                  >
+                  <div className="text-xl font-black text-hog-text-dark font-display">
                     {prog.time}
                   </div>
                 </div>
-                <div>
-                  <div className={`w-8 h-0.5 bg-gradient-to-r ${prog.accent} rounded-full mb-3`} />
-                  <h3
-                    className="font-bold text-lg mb-2 text-white group-hover:text-green-300 transition"
-                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                  >
+                <div className="flex-1">
+                  <div className="w-8 h-1 bg-hog-green-500 rounded-full mb-4" />
+                  <h3 className="font-bold text-xl mb-2 text-hog-text-dark group-hover:text-hog-green-600 transition font-display">
                     {prog.name}
                   </h3>
-                  <p className="text-zinc-500 text-sm leading-relaxed">
+                  <p className="hog-body text-sm">
                     {prog.description}
                   </p>
                 </div>
@@ -183,47 +183,39 @@ export default function Events() {
       </section>
 
       {/* ── Upcoming Events ── */}
-      <section className="px-6 md:px-20 pb-20">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-2">
+      <section className="hog-section-white py-20">
+        <div className="container-wide">
+          <p className="hog-eyebrow mb-2">
             Coming Up
           </p>
-          <h2
-            className="text-3xl font-bold mb-10 text-white"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-          >
+          <h2 className="hog-heading text-3xl mb-10">
             Upcoming Events
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
             {upcomingEvents.map((ev, i) => (
               <div
                 key={i}
-                className="bg-black border border-zinc-700 shadow-sm rounded-3xl hover:shadow-md hover:border-green-500/30 transition flex flex-col group overflow-hidden"
+                className="hog-card flex flex-col group overflow-hidden"
               >
                 {(ev as any).image && (
-                  <div className="w-full aspect-video overflow-hidden border-b border-zinc-800">
-                    <img src={(ev as any).image} alt={ev.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="w-full aspect-video overflow-hidden border-b border-hog-green-100/10">
+                    <img src={(ev as any).image} alt={ev.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   </div>
                 )}
-                <div className="p-8 flex flex-col gap-4 flex-1">
+                <div className="p-8 flex flex-col gap-5 flex-1">
                   <div>
-                    <span
-                      className={`text-xs font-bold uppercase tracking-widest bg-gradient-to-r ${ev.accent} bg-clip-text text-transparent`}
-                    >
+                    <span className={`text-[10px] font-black uppercase tracking-widest ${ev.accent}`}>
                       {ev.type}
                     </span>
-                    <h3
-                      className="text-xl font-bold mt-2 mb-1 text-white group-hover:text-green-300 transition"
-                      style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                    >
+                    <h3 className="text-2xl font-bold mt-2 mb-2 text-hog-text-dark group-hover:text-hog-green-600 transition font-display leading-tight">
                       {ev.title}
                     </h3>
-                    <p className="text-gray-500 text-xs font-medium">
+                    <p className="text-hog-text-ghost text-xs font-bold tracking-widest uppercase">
                       {ev.date} · {ev.time}
                     </p>
                   </div>
-                  <div className={`w-10 h-0.5 bg-gradient-to-r ${ev.accent} rounded-full`} />
-                  <p className="text-zinc-500 text-sm leading-relaxed flex-1">
+                  <div className="w-10 h-1 bg-hog-green-500 rounded-full" />
+                  <p className="hog-body text-sm flex-1 leading-relaxed">
                     {ev.description}
                   </p>
                 </div>
@@ -234,47 +226,41 @@ export default function Events() {
       </section>
 
       {/* ── RCCG HQ Events ── */}
-      <section className="px-6 md:px-20 pb-28">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-2">
+      <section className="hog-section-black py-20 pb-32">
+        <div className="container-wide">
+          <p className="hog-eyebrow text-hog-green-400 mb-2">
             The Bigger Family
           </p>
-          <h2
-            className="text-3xl font-bold mb-4 text-white"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-          >
+          <h2 className="hog-heading text-3xl mb-4">
             RCCG Global Events
           </h2>
-          <p className="text-zinc-500 text-sm mb-10 max-w-xl leading-relaxed">
+          <p className="hog-body text-sm mb-12 max-w-xl opacity-80">
             As part of the worldwide RCCG family, House of Grace participates
             in the major annual gatherings that draw millions of believers from
             across the globe.
           </p>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
             {rccgEvents.map((ev) => (
               <a
                 key={ev.title}
                 href={ev.link}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-black border border-zinc-700 shadow-sm rounded-3xl p-8 hover:shadow-md hover:border-green-500/30 transition flex flex-col gap-4 group"
+                className="hog-card bg-hog-black-card border-hog-black-border p-8 md:p-10 flex flex-col gap-6 group"
               >
                 <div className="flex justify-between items-center">
-                  <span className="text-xs font-bold uppercase tracking-widest text-gray-500">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-hog-text-ghost">
                     {ev.month}
                   </span>
-                  <span className="text-green-400 text-xs group-hover:translate-x-1 transition-transform">
+                  <span className="text-hog-green-400 text-xs group-hover:translate-x-1 transition-transform">
                     ↗
                   </span>
                 </div>
-                <div className="w-10 h-0.5 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full" />
-                <h3
-                  className="font-bold text-lg text-white group-hover:text-green-400 transition"
-                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                >
+                <div className="w-10 h-1 bg-hog-green-500 rounded-full" />
+                <h3 className="font-bold text-xl text-hog-text-light group-hover:text-hog-green-400 transition font-display">
                   {ev.title}
                 </h3>
-                <p className="text-zinc-500 text-sm leading-relaxed">{ev.desc}</p>
+                <p className="text-hog-text-ghost text-sm leading-relaxed">{ev.desc}</p>
               </a>
             ))}
           </div>

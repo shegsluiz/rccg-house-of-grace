@@ -27,11 +27,11 @@ const contactDetails = [
 ];
 
 const socialLinks = [
-  { name: "Instagram", handle: "@rccghoga14", url: "https://www.instagram.com/rccghoga14/", color: "from-green-500 to-emerald-500" },
-  { name: "Facebook", handle: "RCCG House of Grace", url: "https://www.facebook.com/rccghoga14", color: "from-green-500 to-emerald-500" },
-  { name: "TikTok", handle: "@rccghouseofgracelp15", url: "https://www.tiktok.com/@rccghouseofgracelp15", color: "from-green-500 to-emerald-500" },
-  { name: "YouTube", handle: "@rccghouseofgrace5858", url: "https://www.youtube.com/@rccghouseofgrace5858", color: "from-orange-500 to-red-500" },
-  { name: "WhatsApp Community", handle: "Join our group", url: "https://wa.me/", color: "from-orange-500 to-red-500" },
+  { name: "Instagram", handle: "@rccghoga14", url: "https://www.instagram.com/rccghoga14/", color: "bg-hog-green-500" },
+  { name: "Facebook", handle: "RCCG House of Grace", url: "https://www.facebook.com/rccghoga14", color: "bg-hog-green-500" },
+  { name: "TikTok", handle: "@rccghouseofgracelp15", url: "https://www.tiktok.com/@rccghouseofgracelp15", color: "bg-hog-green-500" },
+  { name: "YouTube", handle: "@rccghouseofgrace5858", url: "https://www.youtube.com/@rccghouseofgrace5858", color: "bg-hog-green-500" },
+  { name: "WhatsApp Community", handle: "Join our group", url: "https://wa.me/", color: "bg-hog-green-500" },
 ];
 
 const cellGroups = [
@@ -73,26 +73,23 @@ export default function Connect() {
   };
 
   return (
-    <div className="bg-black text-white min-h-screen font-sans">
+    <div className="bg-hog-black text-hog-text-light min-h-screen font-sans selection:bg-hog-green-100">
 
       {/* ── Hero ── */}
-      <section className="relative py-32 px-6 md:px-20 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-900 via-black to-black pointer-events-none" />
-        <div className="relative z-10 max-w-3xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-4">
+      <section className="hog-section-black relative pt-48 pb-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-hog-green-800/10 via-hog-black/60 to-transparent pointer-events-none" />
+        <div className="relative z-10 container-wide text-center">
+          <p className="hog-eyebrow mb-4">
             We'd Love To Hear From You
           </p>
-          <h1
-            className="text-5xl md:text-7xl font-bold mb-6"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-          >
+          <h1 className="hog-heading text-4xl sm:text-6xl md:text-7xl mb-6">
             Get{" "}
-            <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+            <span className="text-hog-green-400">
               Connected
             </span>
           </h1>
-          <div className="w-12 h-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mx-auto mb-6" />
-          <p className="text-zinc-500 text-lg leading-relaxed">
+          <div className="hog-rule mx-auto mb-6" />
+          <p className="hog-body text-lg max-w-2xl mx-auto">
             Whether you are new, have a question, or want to get more involved
             — we are here and we'd love to connect with you.
           </p>
@@ -100,41 +97,35 @@ export default function Connect() {
       </section>
 
       {/* ── New Here? ── */}
-      <section className="px-6 md:px-20 pb-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-zinc-900 border border-zinc-700 rounded-3xl p-10 md:p-14 grid md:grid-cols-2 gap-10 items-center shadow-sm">
+      <section className="hog-section-cream py-20">
+        <div className="container-wide">
+          <div className="hog-card p-8 sm:p-12 md:p-16 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-3">
+              <p className="hog-eyebrow mb-3">
                 First Time Visiting?
               </p>
-              <h2
-                className="text-3xl md:text-4xl font-bold mb-4 leading-tight text-white"
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-              >
+              <h2 className="hog-heading text-3xl md:text-4xl mb-6">
                 Here is what to expect when you visit us
               </h2>
-              <p className="text-zinc-500 leading-relaxed text-sm">
+              <p className="hog-body text-sm">
                 We want your first visit to feel warm, easy, and memorable.
                 From the moment you arrive, you will be welcomed by friendly
                 faces who are genuinely glad you are here.
               </p>
             </div>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-6">
               {[
                 { num: "01", title: "Arrive & Be Welcomed", body: "Our welcome team will greet you at the door and help you find your seat. No need to dress a certain way — come as you are." },
                 { num: "02", title: "Worship & The Word", body: "Experience vibrant praise and worship followed by a practical, Bible-based message that speaks to your everyday life." },
                 { num: "03", title: "Meet The Family", body: "After service, take a moment to connect with our pastoral team and members. We have a space set aside just for first-timers." },
               ].map((step) => (
-                <div key={step.num} className="flex gap-4 items-start bg-black p-6 rounded-2xl border border-zinc-800 shadow-sm">
-                  <span
-                    className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent shrink-0"
-                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                  >
+                <div key={step.num} className="flex gap-5 items-start bg-hog-green-100/5 p-6 rounded-2xl border border-hog-green-100/10">
+                  <span className="text-3xl font-black text-hog-green-600/30 shrink-0 font-display">
                     {step.num}
                   </span>
                   <div>
-                    <h3 className="font-bold text-white text-sm mb-1">{step.title}</h3>
-                    <p className="text-zinc-500 text-sm leading-relaxed">{step.body}</p>
+                    <h3 className="font-bold text-hog-text-dark text-base mb-1">{step.title}</h3>
+                    <p className="hog-body text-sm">{step.body}</p>
                   </div>
                 </div>
               ))}
@@ -144,42 +135,39 @@ export default function Connect() {
       </section>
 
       {/* ── Contact Info & Form ── */}
-      <section className="px-6 md:px-20 pb-20">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+      <section className="hog-section-white py-20">
+        <div className="container-wide grid grid-cols-1 lg:grid-cols-2 gap-16">
 
           {/* Contact details */}
           <div>
-            <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-2">
+            <p className="hog-eyebrow mb-2">
               Find Us
             </p>
-            <h2
-              className="text-3xl font-bold mb-8 text-white"
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-            >
+            <h2 className="hog-heading text-3xl mb-8">
               Contact Information
             </h2>
-            <div className="flex flex-col gap-4 mb-10">
+            <div className="flex flex-col gap-5 mb-12">
               {contactDetails.map((item) => (
                 <div
                   key={item.label}
-                  className="bg-black border border-zinc-700 shadow-sm rounded-2xl p-5 flex gap-4 items-start hover:shadow-md hover:border-green-500/30 transition"
+                  className="hog-card p-6 flex gap-5 items-start group"
                 >
-                  <span className="text-xl">{item.icon}</span>
+                  <span className="text-2xl group-hover:scale-110 transition duration-300">{item.icon}</span>
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">
+                    <p className="text-[10px] font-black uppercase tracking-widest text-hog-text-ghost mb-1">
                       {item.label}
                     </p>
-                    <p className="text-white text-sm font-medium">{item.value}</p>
+                    <p className="text-hog-text-dark text-base font-bold">{item.value}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Map */}
-            <div className="rounded-3xl overflow-hidden border border-zinc-700 bg-zinc-900 shadow-sm h-64 md:h-80 w-full relative">
+            <div className="rounded-3xl overflow-hidden border border-hog-green-100/20 bg-white shadow-2xl h-64 md:h-80 w-full relative">
               <iframe
                 src="https://maps.google.com/maps?q=RCCG%20House%20of%20Grace,%2052,%20Ajibola%20Crescent,%20Alapere,%20Ketu,%20Lagos&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                className="absolute inset-0 w-full h-full"
+                className="absolute inset-0 w-full h-full grayscale invert contrast-[90%] opacity-90"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -189,43 +177,42 @@ export default function Connect() {
           </div>
 
           {/* Contact form */}
-          <div className="bg-black border border-zinc-700 shadow-sm rounded-3xl p-8 lg:p-10">
-            <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-2">
+          <div className="hog-card p-8 sm:p-10 lg:p-12">
+            <p className="hog-eyebrow mb-2">
               Send A Message
             </p>
-            <h2
-              className="text-3xl font-bold mb-8 text-white"
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-            >
+            <h2 className="hog-heading text-3xl mb-8">
               We'll Get Back To You
             </h2>
             {!sent ? (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                <input
-                  name="name"
-                  type="text"
-                  placeholder="Your full name"
-                  required
-                  value={form.name}
-                  onChange={handleChange}
-                  className="bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-4 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition"
-                />
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="Email address"
-                  required
-                  value={form.email}
-                  onChange={handleChange}
-                  className="bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-4 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition"
-                />
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <input
+                    name="name"
+                    type="text"
+                    placeholder="Your full name"
+                    required
+                    value={form.name}
+                    onChange={handleChange}
+                    className="bg-hog-green-100/5 border border-hog-green-100/20 rounded-2xl px-6 py-4 text-hog-text-dark placeholder-hog-text-ghost text-sm focus:outline-none focus:border-hog-green-500 focus:ring-1 focus:ring-hog-green-500 transition"
+                  />
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="Email address"
+                    required
+                    value={form.email}
+                    onChange={handleChange}
+                    className="bg-hog-green-100/5 border border-hog-green-100/20 rounded-2xl px-6 py-4 text-hog-text-dark placeholder-hog-text-ghost text-sm focus:outline-none focus:border-hog-green-500 focus:ring-1 focus:ring-hog-green-500 transition"
+                  />
+                </div>
                 <input
                   name="phone"
                   type="tel"
                   placeholder="Phone number (optional)"
                   value={form.phone}
                   onChange={handleChange}
-                  className="bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-4 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition"
+                  className="bg-hog-green-100/5 border border-hog-green-100/20 rounded-2xl px-6 py-4 text-hog-text-dark placeholder-hog-text-ghost text-sm focus:outline-none focus:border-hog-green-500 focus:ring-1 focus:ring-hog-green-500 transition"
                 />
                 <textarea
                   name="message"
@@ -234,25 +221,28 @@ export default function Connect() {
                   rows={5}
                   value={form.message}
                   onChange={handleChange}
-                  className="bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-4 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition resize-none"
+                  className="bg-hog-green-100/5 border border-hog-green-100/20 rounded-2xl px-6 py-4 text-hog-text-dark placeholder-hog-text-ghost text-sm focus:outline-none focus:border-hog-green-500 focus:ring-1 focus:ring-hog-green-500 transition resize-none"
                 />
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-full bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold text-sm hover:opacity-90 shadow-md transition mt-2"
+                  className="hog-btn-primary w-full py-4.5 text-sm mt-2"
                 >
                   Send Message →
                 </button>
               </form>
             ) : (
-              <div className="bg-green-900/20 border border-green-100 rounded-2xl p-10 text-center">
-                <p className="text-3xl mb-4">🙏</p>
-                <h3 className="text-xl font-bold mb-2 text-white" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+              <div className="bg-hog-green-100/10 border border-hog-green-100/20 rounded-2xl p-10 text-center">
+                <p className="text-4xl mb-4">🙏</p>
+                <h3 className="text-xl font-bold mb-2 text-hog-text-dark font-display">
                   Thank you!
                 </h3>
-                <p className="text-zinc-500 text-sm leading-relaxed">
-                  Your message has been received. A member of our team will be
-                  in touch with you shortly. God bless you.
-                </p>
+                <p className="hog-body text-sm">Your message has been sent successfully. We will get back to you shortly.</p>
+                <button
+                  onClick={() => setSent(false)}
+                  className="mt-6 text-hog-green-600 font-black text-xs uppercase tracking-widest hover:underline"
+                >
+                  Send another message
+                </button>
               </div>
             )}
           </div>
@@ -260,79 +250,72 @@ export default function Connect() {
       </section>
 
       {/* ── Cell Groups ── */}
-      <section className="px-6 md:px-20 pb-20">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-2">
+      <section className="hog-section-cream py-20">
+        <div className="container-wide">
+          <p className="hog-eyebrow mb-2">
             Grow Together
           </p>
-          <h2
-            className="text-3xl font-bold mb-4 text-white"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-          >
+          <h2 className="hog-heading text-3xl mb-4">
             Cell Groups & Fellowships
           </h2>
-          <p className="text-zinc-500 text-sm mb-10 max-w-xl leading-relaxed">
+          <p className="hog-body text-sm mb-10 max-w-xl">
             Life is better in community. Our cell groups meet weekly in homes
             and venues across the zone — for prayer, the Word, and genuine
             fellowship.
           </p>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
             {cellGroups.map((group) => (
               <div
                 key={group.name}
-                className="bg-black border border-zinc-700 shadow-sm rounded-3xl p-6 hover:shadow-md hover:border-green-500/30 transition"
+                className="hog-card p-8 group"
               >
-                <div className="w-10 h-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-5" />
-                <h3
-                  className="font-bold text-lg mb-3 text-white"
-                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-                >
+                <div className="w-12 h-1.5 bg-hog-green-500 rounded-full mb-6" />
+                <h3 className="font-bold text-xl mb-4 text-hog-text-dark font-display">
                   {group.name}
                 </h3>
-                <div className="flex flex-col gap-2 text-sm text-zinc-500">
-                  <p className="flex items-center gap-2"><span className="text-zinc-500">📅</span> {group.day} · {group.time}</p>
-                  <p className="flex items-center gap-2"><span className="text-zinc-500">👤</span> {group.leader}</p>
-                  <p className="flex items-center gap-2"><span className="text-zinc-500">📍</span> {group.area}</p>
+                <div className="flex flex-col gap-3 text-sm text-hog-text-dark/70">
+                  <p className="flex items-center gap-3"><span className="text-hog-green-600 text-xs font-black">📅</span> {group.day} · {group.time}</p>
+                  <p className="flex items-center gap-3"><span className="text-hog-green-600 text-xs font-black">👤</span> {group.leader}</p>
+                  <p className="flex items-center gap-3"><span className="text-hog-green-600 text-xs font-black">📍</span> {group.area}</p>
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-zinc-500 text-xs mt-6 italic">
+          <p className="text-hog-text-ghost text-[10px] mt-8 italic">
             * Update cell group details via antigravity.
           </p>
         </div>
       </section>
 
       {/* ── Social Media ── */}
-      <section className="px-6 md:px-20 pb-28">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-bold uppercase tracking-widest text-green-300 mb-2">
+      <section className="hog-section-black py-20">
+        <div className="container-wide">
+          <p className="hog-eyebrow text-hog-green-400 mb-2">
             Stay Connected
           </p>
-          <h2
-            className="text-3xl font-bold mb-10 text-white"
-            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-          >
+          <h2 className="hog-heading text-3xl mb-12">
             Follow Us Online
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
             {socialLinks.map((s) => (
               <a
                 key={s.name}
                 href={s.url}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-black border border-zinc-700 shadow-sm rounded-3xl p-6 hover:shadow-md hover:border-green-500/30 transition flex flex-col gap-3 group"
+                className="hog-card bg-hog-black-card border-hog-black-border p-8 flex flex-col gap-4 group"
               >
-                <div className={`w-8 h-1 bg-gradient-to-r ${s.color} rounded-full`} />
-                <p className="font-bold text-sm text-white group-hover:text-green-400 transition">
-                  {s.name}
-                </p>
-                <p className="text-gray-500 text-xs">{s.handle}</p>
+                <div className={`w-10 h-1.5 ${s.color} rounded-full`} />
+                <div>
+                  <p className="font-bold text-base text-hog-text-light group-hover:text-hog-green-400 transition font-display">
+                    {s.name}
+                  </p>
+                  <p className="text-hog-text-ghost text-[10px] font-black uppercase tracking-tighter mt-1">{s.handle}</p>
+                </div>
               </a>
             ))}
           </div>
-          <p className="text-zinc-500 text-xs mt-6 italic">
+          <p className="text-hog-text-ghost text-[10px] mt-10 italic">
             * Update social media handles and URLs via antigravity.
           </p>
         </div>

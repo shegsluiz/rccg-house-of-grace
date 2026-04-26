@@ -35,9 +35,9 @@ export default function Layout() {
   };
 
   return (
-    <div className="min-h-screen bg-black font-sans text-white selection:bg-green-500/30 overflow-x-hidden flex flex-col items-center">
+    <div className="min-h-screen bg-hog-black font-sans text-hog-text-light selection:bg-hog-green-100 overflow-x-hidden flex flex-col items-center">
       {/* Navigation */}
-      <header className="w-full absolute top-0 left-0 z-50 bg-black/95 backdrop-blur-md border-b border-zinc-800 pt-2 pb-2 shadow-sm">
+      <header className="w-full absolute top-0 left-0 z-50 bg-hog-black/80 backdrop-blur-md border-b border-hog-black-border pt-2 pb-2 shadow-lg">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12 py-5">
           {/* Logo */}
           <Link to="/">
@@ -46,8 +46,8 @@ export default function Layout() {
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center gap-3 cursor-pointer shrink-0 z-50"
             >
-              <img src="/logo.png" alt="RCCG House of Grace Logo" className="h-16 md:h-20 w-auto object-contain drop-shadow-md" />
-              <span className="font-extrabold text-sm sm:text-lg md:text-xl tracking-tight">RCCG, HOUSE OF GRACE</span>
+              <img src="/logo.png" alt="RCCG House of Grace Logo" className="h-16 md:h-20 w-auto object-contain drop-shadow-sm" />
+              <span className="font-extrabold text-sm sm:text-lg md:text-xl tracking-tight text-hog-text-light">RCCG, HOUSE OF GRACE</span>
             </motion.div>
           </Link>
 
@@ -55,13 +55,13 @@ export default function Layout() {
           <motion.nav 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="hidden md:flex items-center gap-6 bg-zinc-900 border border-zinc-700 px-8 py-2.5 rounded-full backdrop-blur-md absolute left-1/2 -translate-x-1/2"
+            className="hidden md:flex items-center gap-6 bg-hog-black-card/80 border border-hog-black-border px-8 py-2.5 rounded-full backdrop-blur-md absolute left-1/2 -translate-x-1/2"
           >
             {navLinks.map((item) => (
               <Link 
                 key={item.name} 
                 to={item.path} 
-                className={`text-sm font-medium transition-colors ${isActive(item.path) ? 'text-green-400 font-bold' : 'text-gray-500 hover:text-white'}`}
+                className={`text-sm font-medium transition-colors ${isActive(item.path) ? 'text-hog-green-400 font-bold' : 'text-hog-text-dim hover:text-hog-green-400'}`}
               >
                 {item.name}
               </Link>
@@ -74,10 +74,10 @@ export default function Layout() {
             animate={{ opacity: 1, x: 0 }}
             className="hidden md:flex items-center gap-4"
           >
-            <button className="px-5 py-2 bg-green-900/20 text-green-300 rounded-full text-sm font-medium hover:bg-green-900/40 transition-all">
+            <Link to="/connect" className="hog-btn-primary py-2 px-6">
               Join Us
-            </button>
-            <Link to="/kingdom-cinema" className="px-5 py-2 border border-zinc-700 text-gray-300 rounded-full text-sm font-medium hover:bg-zinc-900 transition-all inline-block">
+            </Link>
+            <Link to="/kingdom-cinema" className="hog-btn-outline-dark py-2 px-6">
               Kingdom Cinema
             </Link>
           </motion.div>
@@ -86,7 +86,7 @@ export default function Layout() {
           <div className="md:hidden flex items-center z-50">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-gray-300 hover:bg-zinc-800 rounded-lg transition-colors"
+              className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -97,19 +97,19 @@ export default function Layout() {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, x: "100%" }}
+               initial={{ opacity: 0, x: "100%" }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "100%" }}
               transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-              className="fixed inset-0 bg-black flex flex-col md:hidden z-[100] overflow-y-auto"
+              className="fixed inset-0 bg-hog-black flex flex-col md:hidden z-[100] overflow-y-auto"
             >
               {/* Header inside mobile menu */}
               <div className="flex justify-between items-center p-6">
                 {/* Half circle logo matching mockup */}
-                <div className="w-6 h-12 bg-zinc-900 rounded-r-full" /> 
+                <div className="w-6 h-12 bg-hog-black-card rounded-r-full" /> 
                 <button 
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 text-zinc-900 hover:bg-zinc-100 rounded-full transition-colors"
+                  className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors"
                 >
                   <X className="w-7 h-7" />
                 </button>
@@ -122,26 +122,26 @@ export default function Layout() {
                     key={item.name} 
                     to={item.path} 
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex justify-between items-center text-zinc-900 font-medium transition-colors group"
+                    className="flex justify-between items-center text-hog-text-light font-medium transition-colors group"
                   >
                     <span className="text-xl">{item.name}</span>
-                    <ChevronRight className="w-5 h-5 text-zinc-400 group-hover:text-zinc-900 transition-colors" />
+                    <ChevronRight className="w-5 h-5 text-hog-text-ghost group-hover:text-hog-green-400 transition-colors" />
                   </Link>
                 ))}
                 <Link 
                   to="/kingdom-cinema" 
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex justify-between items-center text-zinc-900 font-medium transition-colors group"
+                  className="flex justify-between items-center text-hog-text-light font-medium transition-colors group"
                 >
                   <span className="text-xl">Kingdom Cinema</span>
-                  <ChevronRight className="w-5 h-5 text-zinc-400 group-hover:text-zinc-900 transition-colors" />
+                  <ChevronRight className="w-5 h-5 text-hog-text-ghost group-hover:text-hog-green-400 transition-colors" />
                 </Link>
 
                 <div className="pt-6">
                   <Link
                     to="/connect"
                     onClick={() => setIsMobileMenuOpen(false)} 
-                    className="w-full bg-zinc-900 text-white py-4 rounded-xl font-medium text-lg hover:bg-zinc-800 transition-colors flex items-center justify-center"
+                    className="hog-btn-primary w-full py-4 text-lg"
                   >
                     Plan Your Visit
                   </Link>
@@ -149,11 +149,11 @@ export default function Layout() {
               </div>
 
               {/* Social Links at the bottom */}
-              <div className="flex justify-center gap-8 pb-10 pt-4 text-zinc-400">
-                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="hover:text-zinc-900 transition-colors text-sm font-medium">Facebook</a>
-                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="hover:text-zinc-900 transition-colors text-sm font-medium">Instagram</a>
-                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="hover:text-zinc-900 transition-colors text-sm font-medium">TikTok</a>
-                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="hover:text-zinc-900 transition-colors text-sm font-medium">YouTube</a>
+              <div className="flex justify-center gap-8 pb-10 pt-4 text-warm-400">
+                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="hover:text-sunrise-600 transition-colors text-sm font-medium">Facebook</a>
+                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="hover:text-sunrise-600 transition-colors text-sm font-medium">Instagram</a>
+                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="hover:text-sunrise-600 transition-colors text-sm font-medium">TikTok</a>
+                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="hover:text-sunrise-600 transition-colors text-sm font-medium">YouTube</a>
               </div>
             </motion.div>
           )}
@@ -166,25 +166,25 @@ export default function Layout() {
       </div>
 
       {/* Footer Navigation */}
-      <footer className="w-full bg-zinc-900 pt-16 pb-12 md:pb-20 px-6 md:px-12 lg:px-8 border-t border-zinc-700 mt-auto relative overflow-hidden">
+      <footer className="w-full bg-hog-black pt-16 pb-12 md:pb-20 px-6 md:px-12 lg:px-8 border-t border-hog-black-border mt-auto relative overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 md:gap-8 items-start">
           {/* Col 1: Logo */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
               <img src="/logo.png" alt="RCCG House of Grace Logo" className="h-20 md:h-24 w-auto object-contain drop-shadow-md" />
-              <span className="font-extrabold text-xl md:text-2xl tracking-tight whitespace-nowrap leading-tight">RCCG, HOUSE OF GRACE</span>
+              <span className="font-extrabold text-xl md:text-2xl tracking-tight whitespace-nowrap leading-tight text-hog-text-light">RCCG, HOUSE OF GRACE</span>
             </div>
           </div>
 
           {/* Center Column: Menu Links */}
           <div className="flex flex-col gap-6">
-            <h4 className="text-xl font-semibold tracking-tight">Quick Links</h4>
+            <h4 className="text-xl font-bold tracking-tight text-hog-green-400">Quick Links</h4>
             <div className="flex flex-col space-y-4">
               {navLinks.map((item) => (
                 <Link 
                   key={item.name} 
                   to={item.path} 
-                  className="text-gray-500 hover:text-white transition-colors w-fit underline-offset-4 hover:underline"
+                  className="text-hog-text-dim hover:text-hog-green-400 transition-colors w-fit underline-offset-4 hover:underline"
                 >
                   {item.name}
                 </Link>
@@ -196,31 +196,31 @@ export default function Layout() {
           <div className="flex flex-col gap-12">
             {/* Contact Us */}
             <div className="flex flex-col gap-6">
-              <h4 className="text-xl font-semibold tracking-tight">Contact Us</h4>
+              <h4 className="text-xl font-bold tracking-tight text-hog-green-400">Contact Us</h4>
               <div className="space-y-4">
-                <a href="mailto:rccghouseofgracemedia@gmail.com" className="text-gray-500 hover:text-white transition-colors block underline-offset-4 hover:underline">
+                <a href="mailto:rccghouseofgracemedia@gmail.com" className="text-hog-text-dim hover:text-hog-green-400 transition-colors block underline-offset-4 hover:underline">
                   rccghouseofgracemedia@gmail.com
                 </a>
-                <p className="text-gray-500 block whitespace-nowrap leading-relaxed">
+                <p className="text-hog-text-dim block whitespace-nowrap leading-relaxed">
                   52, Ajibola Crescent, Alapere, Ketu, Lagos
                 </p>
               </div>
             </div>
 
             {/* Our Social */}
-            <div className="flex flex-col gap-6">
-              <h4 className="text-xl font-semibold tracking-tight">Our Social</h4>
+             <div className="flex flex-col gap-6">
+              <h4 className="text-xl font-bold tracking-tight text-hog-green-400">Our Social</h4>
               <div className="flex gap-4">
-                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="p-2 -ml-2 text-gray-500 hover:text-white hover:bg-zinc-800 rounded-full transition-all">
+                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="p-2 -ml-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="p-2 text-gray-500 hover:text-white hover:bg-zinc-800 rounded-full transition-all">
+                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
                   <TikTokIcon className="w-5 h-5" />
                 </a>
-                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="p-2 text-gray-500 hover:text-white hover:bg-zinc-800 rounded-full transition-all">
+                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
                   <Youtube className="w-5 h-5" />
                 </a>
-                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="p-2 text-gray-500 hover:text-white hover:bg-zinc-800 rounded-full transition-all">
+                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
                   <Instagram className="w-5 h-5" />
                 </a>
               </div>
