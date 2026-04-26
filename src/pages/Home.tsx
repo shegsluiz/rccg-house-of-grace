@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef, ReactNode } from "react";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { OptimizedImage } from "../components/OptimizedImage";
