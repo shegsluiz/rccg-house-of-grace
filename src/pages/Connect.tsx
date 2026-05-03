@@ -286,6 +286,7 @@ export default function Connect() {
             <div className="rounded-3xl overflow-hidden border border-hog-green-100/20 bg-white shadow-2xl h-64 md:h-80 w-full relative">
               <iframe
                 src="https://maps.google.com/maps?q=RCCG%20House%20of%20Grace,%2052,%20Ajibola%20Crescent,%20Alapere,%20Ketu,%20Lagos&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                title="RCCG House of Grace Location"
                 className="absolute inset-0 w-full h-full grayscale invert contrast-[90%] opacity-90"
                 style={{ border: 0 }}
                 allowFullScreen

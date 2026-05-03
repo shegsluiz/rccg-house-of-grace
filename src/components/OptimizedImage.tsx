@@ -21,7 +21,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   ...props
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [currentSrc, setCurrentSrc] = useState<string>("");
+  const [currentSrc, setCurrentSrc] = useState<string>(src);
 
   useEffect(() => {
     // Check if the browser supports WebP
