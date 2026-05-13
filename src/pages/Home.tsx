@@ -447,15 +447,18 @@ export default function Home() {
             </p>
             {!subscribed ? (
               <form className="flex flex-col sm:flex-row max-w-md mx-auto gap-4" onSubmit={handleSubscribe}>
+                <label htmlFor="newsletter-email" className="sr-only">Email Address</label>
                 <input
+                  id="newsletter-email"
                   type="email"
                   placeholder="Your email address"
                   value={emailInput}
                   onChange={(e) => setEmailInput(e.target.value)}
                   required
                   className="hog-input-dark flex-1 px-6 py-4"
+                  aria-label="Email address for newsletter"
                 />
-                <button type="submit" className="hog-btn-primary">
+                <button type="submit" className="hog-btn-primary focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-hog-green-400 focus:outline-none focus-visible:ring-offset-hog-black">
                   Subscribe
                 </button>
               </form>
