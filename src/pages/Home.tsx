@@ -449,6 +449,7 @@ export default function Home() {
               <form className="flex flex-col sm:flex-row max-w-md mx-auto gap-4" onSubmit={handleSubscribe}>
                 <input
                   type="email"
+                  aria-label="Email address"
                   placeholder="Your email address"
                   value={emailInput}
                   onChange={(e) => setEmailInput(e.target.value)}
