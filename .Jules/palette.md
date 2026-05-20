@@ -1,0 +1,3 @@
+## 2026-05-20 - Accessible Icon Buttons
+**Learning:** Found multiple instances where icon-only buttons (like mobile menu toggles) and links (footer social links) lacked descriptive screen reader text and visual focus indicators. Additionally, the SVG icons themselves were missing `aria-hidden="true"`, which could result in screen readers reading out meaningless visual structure.
+**Action:** Always add descriptive `aria-label` attributes and explicit `focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none` styling to icon-only interactive elements. Furthermore, always mark decorative SVGs within these elements with `aria-hidden="true"` to hide them from the accessibility tree.
