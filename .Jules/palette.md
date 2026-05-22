@@ -1,0 +1,3 @@
+## 2024-05-22 - Icon-Only Button and Link Accessibility
+**Learning:** Found multiple instances where SVGs inside icon-only buttons or links lack `aria-hidden="true"`, causing screen readers to improperly announce them, and missing `aria-label`s fail to convey the action. Additionally, links with `target="_blank"` missing `rel="noopener noreferrer"` pose security risks.
+**Action:** When adding or updating icon-only buttons or links, ensure the interactive element has a descriptive `aria-label`, standard focus classes (`focus-visible:ring-2 focus-visible:ring-[color] focus:outline-none`), and that the SVG itself has `aria-hidden="true"`. Also, enforce `rel="noopener noreferrer"` on all external links.
