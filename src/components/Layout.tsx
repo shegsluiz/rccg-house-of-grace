@@ -87,6 +87,8 @@ export default function Layout() {
           <div className="md:hidden flex items-center z-50">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen}
               className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -112,6 +114,7 @@ export default function Layout() {
               <div className="w-6 h-12 bg-hog-black-card rounded-r-full" /> 
               <button 
                 onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Close menu"
                 className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors"
               >
                 <X className="w-7 h-7" />
@@ -128,7 +131,7 @@ export default function Layout() {
                   className="flex justify-between items-center text-hog-text-light font-medium transition-colors group"
                 >
                   <span className="text-xl">{item.name}</span>
-                  <ChevronRight className="w-5 h-5 text-hog-text-ghost group-hover:text-hog-green-400 transition-colors" />
+                  <ChevronRight aria-hidden="true" className="w-5 h-5 text-hog-text-ghost group-hover:text-hog-green-400 transition-colors" />
                 </Link>
               ))}
               <Link 
@@ -137,7 +140,7 @@ export default function Layout() {
                 className="flex justify-between items-center text-hog-text-light font-medium transition-colors group"
               >
                 <span className="text-xl">Kingdom Cinema</span>
-                <ChevronRight className="w-5 h-5 text-hog-text-ghost group-hover:text-hog-green-400 transition-colors" />
+                <ChevronRight aria-hidden="true" className="w-5 h-5 text-hog-text-ghost group-hover:text-hog-green-400 transition-colors" />
               </Link>
 
               <div className="pt-6">
@@ -213,17 +216,17 @@ export default function Layout() {
              <div className="flex flex-col gap-6">
               <h4 className="text-xl font-bold tracking-tight text-hog-green-400">Our Social</h4>
               <div className="flex gap-4">
-                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="p-2 -ml-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
-                  <Facebook className="w-5 h-5" />
+                <a aria-label="Facebook" href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="p-2 -ml-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
+                  <Facebook aria-hidden="true" className="w-5 h-5" />
                 </a>
-                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
-                  <TikTokIcon className="w-5 h-5" />
+                <a aria-label="TikTok" href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
+                  <TikTokIcon aria-hidden="true" className="w-5 h-5" />
                 </a>
-                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
-                  <Youtube className="w-5 h-5" />
+                <a aria-label="YouTube" href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
+                  <Youtube aria-hidden="true" className="w-5 h-5" />
                 </a>
-                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
-                  <Instagram className="w-5 h-5" />
+                <a aria-label="Instagram" href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
+                  <Instagram aria-hidden="true" className="w-5 h-5" />
                 </a>
               </div>
             </div>
