@@ -1,0 +1,3 @@
+## 2024-05-15 - ARIA Labels and Hidden Icons for Icon-Only Buttons
+**Learning:** Icon-only interactive elements (like menu toggles or social links) are inaccessible to screen readers without descriptive text. Adding `aria-label` provides this text, but the inner SVG icons can still cause redundant or confusing announcements if not hidden.
+**Action:** Always use `aria-label` on the parent interactive element and add `aria-hidden="true"` to any decorative SVGs or icons inside it. Ensure clear focus states like `focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none` for keyboard navigation.
