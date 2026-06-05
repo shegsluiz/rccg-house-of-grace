@@ -1,0 +1,3 @@
+## 2024-06-05 - Accessible Icon-Only Elements
+**Learning:** Icon-only buttons and links (like menu toggles and social icons) require a specific combination of attributes to be fully accessible: `aria-label` for screen reader announcement, `aria-hidden="true"` on the nested `<svg>` or icon component to prevent redundant or confusing reading, and clear `focus-visible` styles for keyboard navigation.
+**Action:** Always apply `aria-label`, `focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none`, and `aria-hidden="true"` on the child icon for all icon-only interactive elements across the application. Also use `rel="noopener noreferrer"` instead of just `rel="noreferrer"` on external links.
