@@ -41,7 +41,7 @@ export default function Layout() {
       <header className="w-full absolute top-0 left-0 z-50 bg-hog-black/80 backdrop-blur-md border-b border-hog-black-border pt-2 pb-2 shadow-lg">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12 py-5">
           {/* Logo */}
-          <Link to="/">
+          <Link to="/" className="focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none rounded-lg" aria-label="Go to homepage">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -62,7 +62,7 @@ export default function Layout() {
               <Link 
                 key={item.name} 
                 to={item.path} 
-                className={`text-sm font-medium transition-colors ${isActive(item.path) ? 'text-hog-green-400 font-bold' : 'text-hog-text-dim hover:text-hog-green-400'}`}
+                className={`text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none rounded-md px-2 py-1 ${isActive(item.path) ? 'text-hog-green-400 font-bold' : 'text-hog-text-dim hover:text-hog-green-400'}`}
               >
                 {item.name}
               </Link>
@@ -75,10 +75,10 @@ export default function Layout() {
             animate={{ opacity: 1, x: 0 }}
             className="hidden md:flex items-center gap-4"
           >
-            <Link to="/connect" className="hog-btn-primary py-2 px-6">
+            <Link to="/connect" className="hog-btn-primary py-2 px-6 focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none focus-visible:ring-offset-2 focus-visible:ring-offset-hog-black">
               Join Us
             </Link>
-            <Link to="/kingdom-cinema" className="hog-btn-outline-dark py-2 px-6">
+            <Link to="/kingdom-cinema" className="hog-btn-outline-dark py-2 px-6 focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none focus-visible:ring-offset-2 focus-visible:ring-offset-hog-black">
               Kingdom Cinema
             </Link>
           </motion.div>
@@ -87,9 +87,11 @@ export default function Layout() {
           <div className="md:hidden flex items-center z-50">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors"
+              className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -112,9 +114,10 @@ export default function Layout() {
               <div className="w-6 h-12 bg-hog-black-card rounded-r-full" /> 
               <button 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors"
+                className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none"
+                aria-label="Close menu"
               >
-                <X className="w-7 h-7" />
+                <X className="w-7 h-7" aria-hidden="true" />
               </button>
             </div>
 
@@ -125,26 +128,26 @@ export default function Layout() {
                   key={item.name} 
                   to={item.path} 
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex justify-between items-center text-hog-text-light font-medium transition-colors group"
+                  className="flex justify-between items-center text-hog-text-light font-medium transition-colors group focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none rounded-md px-2 -mx-2 py-1"
                 >
                   <span className="text-xl">{item.name}</span>
-                  <ChevronRight className="w-5 h-5 text-hog-text-ghost group-hover:text-hog-green-400 transition-colors" />
+                  <ChevronRight className="w-5 h-5 text-hog-text-ghost group-hover:text-hog-green-400 transition-colors" aria-hidden="true" />
                 </Link>
               ))}
               <Link 
                 to="/kingdom-cinema" 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex justify-between items-center text-hog-text-light font-medium transition-colors group"
+                className="flex justify-between items-center text-hog-text-light font-medium transition-colors group focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none rounded-md px-2 -mx-2 py-1"
               >
                 <span className="text-xl">Kingdom Cinema</span>
-                <ChevronRight className="w-5 h-5 text-hog-text-ghost group-hover:text-hog-green-400 transition-colors" />
+                <ChevronRight className="w-5 h-5 text-hog-text-ghost group-hover:text-hog-green-400 transition-colors" aria-hidden="true" />
               </Link>
 
               <div className="pt-6">
                 <Link
                   to="/connect"
                   onClick={() => setIsMobileMenuOpen(false)} 
-                  className="hog-btn-primary w-full py-4 text-lg"
+                  className="hog-btn-primary w-full py-4 text-lg focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none"
                 >
                   Plan Your Visit
                 </Link>
@@ -153,10 +156,10 @@ export default function Layout() {
 
             {/* Social Links at the bottom */}
             <div className="flex justify-center gap-8 pb-10 pt-4 text-hog-text-dim">
-              <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium">Facebook</a>
-              <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium">Instagram</a>
-              <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium">TikTok</a>
-              <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium">YouTube</a>
+              <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noopener noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none rounded-sm px-2 py-1">Facebook</a>
+              <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noopener noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none rounded-sm px-2 py-1">Instagram</a>
+              <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noopener noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none rounded-sm px-2 py-1">TikTok</a>
+              <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noopener noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none rounded-sm px-2 py-1">YouTube</a>
             </div>
           </motion.div>
         )}
@@ -186,7 +189,7 @@ export default function Layout() {
                 <Link 
                   key={item.name} 
                   to={item.path} 
-                  className="text-hog-text-dim hover:text-hog-green-400 transition-colors w-fit underline-offset-4 hover:underline"
+                  className="text-hog-text-dim hover:text-hog-green-400 transition-colors w-fit underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none rounded-sm px-1 -mx-1"
                 >
                   {item.name}
                 </Link>
@@ -200,10 +203,10 @@ export default function Layout() {
             <div className="flex flex-col gap-6">
               <h4 className="text-xl font-bold tracking-tight text-hog-green-400">Contact Us</h4>
               <div className="space-y-4">
-                <a href="mailto:rccghouseofgracemedia@gmail.com" className="text-hog-text-dim hover:text-hog-green-400 transition-colors block underline-offset-4 hover:underline">
+                <a href="mailto:rccghouseofgracemedia@gmail.com" className="text-hog-text-dim hover:text-hog-green-400 transition-colors block underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none rounded-sm px-1 -mx-1 w-fit">
                   rccghouseofgracemedia@gmail.com
                 </a>
-                <p className="text-hog-text-dim block whitespace-nowrap leading-relaxed">
+                <p className="text-hog-text-dim block whitespace-nowrap leading-relaxed px-1 -mx-1">
                   52, Ajibola Crescent, Alapere, Ketu, Lagos
                 </p>
               </div>
@@ -213,17 +216,17 @@ export default function Layout() {
              <div className="flex flex-col gap-6">
               <h4 className="text-xl font-bold tracking-tight text-hog-green-400">Our Social</h4>
               <div className="flex gap-4">
-                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="p-2 -ml-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
-                  <Facebook className="w-5 h-5" />
+                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noopener noreferrer" className="p-2 -ml-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none" aria-label="Visit our Facebook page">
+                  <Facebook className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
-                  <TikTokIcon className="w-5 h-5" />
+                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noopener noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none" aria-label="Visit our TikTok page">
+                  <TikTokIcon className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
-                  <Youtube className="w-5 h-5" />
+                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noopener noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none" aria-label="Visit our YouTube channel">
+                  <Youtube className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
-                  <Instagram className="w-5 h-5" />
+                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noopener noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none" aria-label="Visit our Instagram page">
+                  <Instagram className="w-5 h-5" aria-hidden="true" />
                 </a>
               </div>
             </div>
