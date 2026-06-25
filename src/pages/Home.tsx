@@ -449,13 +449,14 @@ export default function Home() {
               <form className="flex flex-col sm:flex-row max-w-md mx-auto gap-4" onSubmit={handleSubscribe}>
                 <input
                   type="email"
+                  aria-label="Your email address"
                   placeholder="Your email address"
                   value={emailInput}
                   onChange={(e) => setEmailInput(e.target.value)}
                   required
-                  className="hog-input-dark flex-1 px-6 py-4"
+                  className="hog-input-dark flex-1 px-6 py-4 focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none"
                 />
-                <button type="submit" className="hog-btn-primary">
+                <button type="submit" className="hog-btn-primary focus-visible:ring-2 focus-visible:ring-hog-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-hog-black">
                   Subscribe
                 </button>
               </form>

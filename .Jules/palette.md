@@ -1,0 +1,4 @@
+
+## 2026-06-25 - Accessibility Patterns for Navigation and Inputs
+**Learning:** Using `aria-expanded` dynamically for mobile menu toggle buttons alongside explicit `aria-hidden="true"` on SVG elements significantly improves screen reader clarity, avoiding ambiguous announcement of decorative icons. Additionally, inputs must ensure they use `focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none` instead of basic outlines to visually aid keyboard users navigating via Tab in this project.
+**Action:** When working on navigation menus, ensure the menu open/close buttons have appropriate `aria-label` and dynamic `aria-expanded` state. For all interactive controls like buttons and inputs, remove default outlines with `focus:outline-none` and apply `focus-visible:ring-2` to support the project's accessibility and visual focus standard.
