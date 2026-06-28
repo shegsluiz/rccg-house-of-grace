@@ -87,9 +87,12 @@ export default function Layout() {
           <div className="md:hidden flex items-center z-50">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors"
+              className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-menu"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -100,6 +103,7 @@ export default function Layout() {
       <AnimatePresence mode="wait">
         {isMobileMenuOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
@@ -112,9 +116,10 @@ export default function Layout() {
               <div className="w-6 h-12 bg-hog-black-card rounded-r-full" /> 
               <button 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors"
+                className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400"
+                aria-label="Close menu"
               >
-                <X className="w-7 h-7" />
+                <X className="w-7 h-7" aria-hidden="true" />
               </button>
             </div>
 
