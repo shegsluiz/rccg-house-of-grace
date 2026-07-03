@@ -1,0 +1,3 @@
+## 2024-05-15 - [Accessible Icon Navigation]
+ **Learning:** Icon-only interactive elements (like mobile menu toggles and social links) require explicit `aria-label`s, proper `focus-visible` styling for keyboard navigation, and `aria-hidden="true"` on the internal decorative SVGs/icons to prevent screen readers from announcing confusing graphic semantics. Dynamic menu toggles also benefit from `aria-expanded` and `aria-controls` to properly communicate their state and target.
+ **Action:** Always pair icon-only buttons/links with descriptive `aria-label`s, add `focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none`, and hide the internal `lucide-react` icons or custom SVGs using `aria-hidden="true"`.
