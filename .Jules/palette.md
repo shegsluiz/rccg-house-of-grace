@@ -1,0 +1,3 @@
+## 2024-07-05 - Missing ARIA labels and focus states on Mobile Menu and Footer Social Links
+**Learning:** In the Layout component, key icon-only interactive elements (like the mobile menu toggle and footer social links) lacked descriptive `aria-label`s, `aria-expanded` attributes, and visual focus indicators (`focus-visible`). The raw SVGs also lacked `aria-hidden="true"`, causing potential screen reader confusion.
+**Action:** Always verify that all icon-only buttons and links have descriptive `aria-label`s, hide inner SVGs with `aria-hidden="true"`, and include explicit `focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none` classes to ensure full keyboard navigation support and screen reader accessibility.
