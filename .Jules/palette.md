@@ -1,0 +1,3 @@
+## 2025-07-07 - Accessible Icon Buttons
+**Learning:** When making icon-only buttons accessible, decorative SVGs must have `aria-hidden="true"` so screen readers ignore them, while the parent button or link needs an `aria-label` to provide the meaning. Additionally, keyboard accessibility requires a distinct focus state, which can be achieved gracefully using `focus-visible:ring-2 focus:outline-none` utility classes.
+**Action:** When creating new interactive elements, immediately check if they are icon-only and ensure ARIA labels and focus states are included. Check custom SVG components to ensure they accept an `aria-hidden` prop.
