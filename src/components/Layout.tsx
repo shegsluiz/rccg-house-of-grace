@@ -87,9 +87,11 @@ export default function Layout() {
           <div className="md:hidden flex items-center z-50">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors"
+              className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none"
+              aria-expanded={isMobileMenuOpen}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -112,9 +114,11 @@ export default function Layout() {
               <div className="w-6 h-12 bg-hog-black-card rounded-r-full" /> 
               <button 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors"
+                className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none"
+                aria-label="Close menu"
+                aria-expanded={isMobileMenuOpen}
               >
-                <X className="w-7 h-7" />
+                <X className="w-7 h-7" aria-hidden="true" />
               </button>
             </div>
 
