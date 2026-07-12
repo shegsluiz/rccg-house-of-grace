@@ -1,0 +1,3 @@
+## 2026-07-12 - Accessible Mobile Menu Toggle Buttons
+**Learning:** Icon-only navigation toggles often lack clear semantics and keyboard accessibility. A pattern of omitting `aria-label`, `aria-expanded` attributes, and explicit `focus-visible` styles was discovered. Providing dynamic ARIA attributes indicating the state of the menu and explicit focus rings significantly improves keyboard and screen reader usability.
+**Action:** Ensure all interactive icon-only buttons receive descriptive `aria-label`s, appropriate state attributes like `aria-expanded` when controlling menus, and clear `focus-visible` states.
