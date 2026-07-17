@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { 
   Menu, X, Facebook, Instagram, Youtube, ChevronRight
@@ -6,8 +6,8 @@ import {
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { OptimizedImage } from "./OptimizedImage";
 
-const TikTokIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
   </svg>
 );
@@ -87,9 +87,11 @@ export default function Layout() {
           <div className="md:hidden flex items-center z-50">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors"
+              aria-expanded={isMobileMenuOpen}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -112,9 +114,10 @@ export default function Layout() {
               <div className="w-6 h-12 bg-hog-black-card rounded-r-full" /> 
               <button 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors"
+                aria-label="Close menu"
+                className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400"
               >
-                <X className="w-7 h-7" />
+                <X className="w-7 h-7" aria-hidden="true" />
               </button>
             </div>
 
@@ -153,10 +156,10 @@ export default function Layout() {
 
             {/* Social Links at the bottom */}
             <div className="flex justify-center gap-8 pb-10 pt-4 text-hog-text-dim">
-              <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium">Facebook</a>
-              <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium">Instagram</a>
-              <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium">TikTok</a>
-              <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium">YouTube</a>
+              <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noopener noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-hog-black">Facebook</a>
+              <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noopener noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-hog-black">Instagram</a>
+              <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noopener noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-hog-black">TikTok</a>
+              <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noopener noreferrer" className="hover:text-hog-green-400 transition-colors text-sm font-medium rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-hog-black">YouTube</a>
             </div>
           </motion.div>
         )}
@@ -186,7 +189,7 @@ export default function Layout() {
                 <Link 
                   key={item.name} 
                   to={item.path} 
-                  className="text-hog-text-dim hover:text-hog-green-400 transition-colors w-fit underline-offset-4 hover:underline"
+                  className="text-hog-text-dim hover:text-hog-green-400 transition-colors w-fit underline-offset-4 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400 rounded-sm"
                 >
                   {item.name}
                 </Link>
@@ -200,7 +203,7 @@ export default function Layout() {
             <div className="flex flex-col gap-6">
               <h4 className="text-xl font-bold tracking-tight text-hog-green-400">Contact Us</h4>
               <div className="space-y-4">
-                <a href="mailto:rccghouseofgracemedia@gmail.com" className="text-hog-text-dim hover:text-hog-green-400 transition-colors block underline-offset-4 hover:underline">
+                <a href="mailto:rccghouseofgracemedia@gmail.com" className="text-hog-text-dim hover:text-hog-green-400 transition-colors block underline-offset-4 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400 rounded-sm w-fit">
                   rccghouseofgracemedia@gmail.com
                 </a>
                 <p className="text-hog-text-dim block whitespace-nowrap leading-relaxed">
@@ -213,17 +216,17 @@ export default function Layout() {
              <div className="flex flex-col gap-6">
               <h4 className="text-xl font-bold tracking-tight text-hog-green-400">Our Social</h4>
               <div className="flex gap-4">
-                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noreferrer" className="p-2 -ml-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
-                  <Facebook className="w-5 h-5" />
+                <a href="https://www.facebook.com/rccghoga14" target="_blank" rel="noopener noreferrer" aria-label="RCCG House of Grace on Facebook" className="p-2 -ml-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400">
+                  <Facebook className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
-                  <TikTokIcon className="w-5 h-5" />
+                <a href="https://www.tiktok.com/@rccghouseofgracelp15" target="_blank" rel="noopener noreferrer" aria-label="RCCG House of Grace on TikTok" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400">
+                  <TikTokIcon className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
-                  <Youtube className="w-5 h-5" />
+                <a href="https://www.youtube.com/@rccghouseofgrace5858" target="_blank" rel="noopener noreferrer" aria-label="RCCG House of Grace on YouTube" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400">
+                  <Youtube className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noreferrer" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all">
-                  <Instagram className="w-5 h-5" />
+                <a href="https://www.instagram.com/rccghoga14/" target="_blank" rel="noopener noreferrer" aria-label="RCCG House of Grace on Instagram" className="p-2 text-hog-text-ghost hover:text-hog-green-400 hover:bg-hog-black-card rounded-full transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-hog-green-400">
+                  <Instagram className="w-5 h-5" aria-hidden="true" />
                 </a>
               </div>
             </div>
