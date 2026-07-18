@@ -1,0 +1,3 @@
+## 2024-07-18 - Making Icon-Only Interactive Elements Accessible
+**Learning:** Custom SVG components (like a bespoke TikTok icon) used within icon-only interactive elements must explicitly accept and pass down standard accessibility props (e.g., `aria-hidden`) to their root `<svg>` tag. Without this, decorative elements within buttons/links cannot be reliably hidden from screen readers.
+**Action:** When implementing icon-only buttons or links, always: 1) Add an `aria-label` to the wrapper `<button>` or `<a>`. 2) Add `aria-hidden="true"` to the inner icon component. 3) Ensure custom icon components are written to accept and spread `...props` to their root element.
