@@ -422,7 +422,7 @@ export default function Connect() {
                 key={s.name}
                 href={s.url}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="hog-card bg-hog-black-card border-hog-black-border p-10 flex flex-col items-center justify-center gap-6 group hover:border-hog-green-400/50 transition-all duration-500"
               >
                 <div className="relative">

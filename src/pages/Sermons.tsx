@@ -144,7 +144,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video, featured = false }) => {
               <a
                 href={`https://www.youtube.com/watch?v=${video.id}`}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="hog-btn-outline-dark py-2.5 px-6 text-sm"
               >
                 Open on YouTube ↗
@@ -200,7 +200,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video, featured = false }) => {
         <a
           href={`https://www.youtube.com/watch?v=${video.id}`}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="text-hog-green-600 text-xs hover:text-hog-green-700 transition mt-1 font-bold"
         >
           Watch on YouTube ↗
@@ -277,7 +277,7 @@ export default function Sermons() {
           <a
             href="https://www.youtube.com/@rccghouseofgrace5858"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="hog-btn-primary mt-8 py-3 px-8 text-sm"
           >
             Subscribe on YouTube →
@@ -389,7 +389,7 @@ export default function Sermons() {
                 <a
                   href="https://www.youtube.com/@rccghouseofgrace5858"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="hog-btn-primary py-3 px-8 text-sm"
                 >
                   Subscribe on YouTube →
