@@ -474,7 +474,7 @@ export default function Home() {
           <span className="text-xs text-hog-text-ghost font-medium">Zonal HQ · Lagos Province 15</span>
         </div>
         <div className="flex gap-6">
-          <a href="https://www.rccg.org" target="_blank" rel="noreferrer" className="text-xs font-bold tracking-widest uppercase text-hog-text-ghost hover:text-hog-green-400 transition-colors">RCCG HQ ↗</a>
+          <a href="https://www.rccg.org" target="_blank" rel="noopener noreferrer" className="text-xs font-bold tracking-widest uppercase text-hog-text-ghost hover:text-hog-green-400 transition-colors">RCCG HQ ↗</a>
         </div>
       </div>
     </div>

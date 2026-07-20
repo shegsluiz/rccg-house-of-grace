@@ -247,7 +247,7 @@ export default function Events() {
                 key={ev.title}
                 href={ev.link}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="hog-card bg-hog-black-card border-hog-black-border p-8 md:p-10 flex flex-col gap-6 group"
               >
                 <div className="flex justify-between items-center">

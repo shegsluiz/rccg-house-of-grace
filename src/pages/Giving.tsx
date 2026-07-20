@@ -205,7 +205,7 @@ export default function Giving() {
                 <a
                   href={item.link}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="hog-btn-outline-dark py-2.5 px-6 text-xs text-center"
                 >
                   {item.label} ↗
