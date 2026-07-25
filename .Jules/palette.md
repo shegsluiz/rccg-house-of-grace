@@ -1,0 +1,3 @@
+## 2023-10-27 - Enhance Accessibility of Icon-Only Buttons
+**Learning:** Custom SVG components (e.g., icons) need to explicitly accept and pass standard accessibility props, such as `aria-hidden`, down to their underlying `<svg>` tags. Without this, screen readers may announce confusing graphic semantics for decorative elements inside interactive buttons.
+**Action:** When adding custom SVG icons, ensure they accept `React.SVGProps<SVGSVGElement>` and spread the props to the underlying `<svg>` tag. Always add `aria-hidden="true"` to decorative SVGs inside interactive elements like icon-only buttons.
