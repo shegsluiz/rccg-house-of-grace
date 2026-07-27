@@ -423,11 +423,12 @@ export default function Connect() {
                 href={s.url}
                 target="_blank"
                 rel="noreferrer"
+                aria-label={`Visit our ${s.name} page`}
                 className="hog-card bg-hog-black-card border-hog-black-border p-10 flex flex-col items-center justify-center gap-6 group hover:border-hog-green-400/50 transition-all duration-500"
               >
                 <div className="relative">
                   <div className="absolute inset-0 bg-hog-green-500 blur-2xl opacity-0 group-hover:opacity-20 transition-opacity" />
-                  <s.icon className="w-12 h-12 text-hog-text-ghost group-hover:text-hog-green-400 group-hover:scale-110 transition-all duration-500 relative z-10" />
+                  <s.icon className="w-12 h-12 text-hog-text-ghost group-hover:text-hog-green-400 group-hover:scale-110 transition-all duration-500 relative z-10" aria-hidden="true" />
                 </div>
                 <div className="text-center">
                   <p className="font-bold text-sm text-hog-text-light group-hover:text-hog-green-400 transition font-display whitespace-nowrap">
