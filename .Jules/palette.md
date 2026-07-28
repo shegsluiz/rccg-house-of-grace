@@ -1,0 +1,3 @@
+## 2024-07-28 - Custom SVG Components Props Forwarding
+**Learning:** Custom SVG components (like `TikTokIcon`) in this codebase often lack explicit prop forwarding (e.g., `...props`), which prevents standard accessibility attributes like `aria-hidden="true"` from being applied to the underlying `<svg>` element. This can cause screen readers to incorrectly announce decorative icons.
+**Action:** When adding accessibility attributes to custom SVG components, explicitly check if the component definition accepts and spreads `React.SVGProps<SVGSVGElement>`. If not, refactor the component to forward props before applying attributes like `aria-hidden`.
