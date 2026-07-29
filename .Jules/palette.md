@@ -1,0 +1,3 @@
+## 2024-05-24 - Enhance mobile navigation and footer accessibility
+**Learning:** Found multiple instances where dynamic aria-expanded attributes on toggle buttons and descriptive ARIA labels on icon-only links were missing. Additionally, multiple external links were using rel="noreferrer" instead of the more secure rel="noopener noreferrer".
+**Action:** Always ensure toggle buttons reflect their state via aria-expanded. Apply descriptive aria-labels to all icon-only links for screen reader clarity, and default to rel="noopener noreferrer" for external target="_blank" links to prevent security vulnerabilities.
