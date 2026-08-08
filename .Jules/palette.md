@@ -1,0 +1,3 @@
+## 2024-08-08 - Accessible Interactive Elements and Custom SVG Typing
+**Learning:** Custom SVG components (e.g., icons) need to explicitly accept and pass down standard accessibility props like `aria-hidden` to their underlying `<svg>` tags to ensure proper screen reader integration and avoid TypeScript errors. Focus styles on icon-only buttons often require explicit `focus-visible:ring` classes to be apparent for keyboard navigation.
+**Action:** Always type custom SVG icon components with `{ className?: string; 'aria-hidden'?: boolean | 'true' | 'false' }` and spread/pass these props to the `svg` element. Always add `aria-hidden="true"` to icons inside interactive elements, and add descriptive `aria-label`s and `focus-visible` styles to the parent interactive element.
