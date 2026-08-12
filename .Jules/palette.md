@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessible Icon Buttons and Custom SVGs
+**Learning:** Icon-only interactive elements (like the mobile menu toggle and social links) completely lack context for screen readers without `aria-label`s. Additionally, custom SVG components (like `TikTokIcon`) fail to prevent confusing redundant announcements if they don't explicitly accept and forward `aria-hidden` props to their underlying `<svg>` tags.
+**Action:** Always add descriptive `aria-label`s and clear `focus-visible` states to icon-only buttons. When creating custom SVG icons, type and forward standard accessibility attributes like `aria-hidden`.
