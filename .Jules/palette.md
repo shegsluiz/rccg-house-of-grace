@@ -1,0 +1,3 @@
+## 2024-05-18 - Improve icon-only button focus states and ARIA definitions
+**Learning:** Decorative SVGs inside interactive elements (like icon-only buttons) can cause screen readers to announce confusing graphic semantics unless explicitly hidden. Also, custom SVG components (e.g., `TikTokIcon`) must be updated to pass standard accessibility props like `aria-hidden` down to their underlying `<svg>` tag. Keyboard users strongly benefit from `focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none` on interactive elements that originally lack clear focus styles.
+**Action:** When adding accessible focus states to icon-only buttons, explicitly pass `aria-hidden="true"` to the inner SVG components to prevent redundant announcements.
