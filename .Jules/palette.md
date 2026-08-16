@@ -1,0 +1,3 @@
+## 2025-02-16 - Icon-Only Link and Button Accessibility
+**Learning:** Icon-only interactive elements (like the mobile menu toggle and footer social media links) often lack descriptive context for screen readers, while missing programmatic visibility of their states (like `aria-expanded` for toggles) degrades usability. Custom SVG icons (like TikTokIcon) must have explicit prop typing to correctly pass down `aria-hidden`.
+**Action:** Always verify that interactive icon-only elements have an `aria-label`, visible focus states (`focus-visible:ring-2`), and `aria-hidden="true"` on the underlying icons. Ensure custom SVGs propagate accessibility props. Menu toggles should also utilize `aria-expanded`.
