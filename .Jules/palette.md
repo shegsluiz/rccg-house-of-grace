@@ -1,0 +1,3 @@
+## 2024-05-24 - Interactive Icon Accessibility
+**Learning:** Icon-only buttons (like navigation toggles) and links (like social media icons) are unreadable to screen readers without descriptive text. Furthermore, custom SVG components must explicitly accept and pass down accessibility attributes like `aria-hidden` to prevent confusing screen reader announcements. Dynamic states, like open/closed menus, also require `aria-expanded` attributes for clarity.
+**Action:** Always verify that icon-only interactive elements possess `aria-label`s, their internal decorative icons have `aria-hidden="true"`, custom SVGs are correctly typed to receive standard accessibility props, and toggle buttons report their state using `aria-expanded`.
