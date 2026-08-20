@@ -1,0 +1,3 @@
+## 2024-08-20 - Accessible Icon-Only Buttons and Links
+**Learning:** Icon-only interactive elements (like menu toggles and social links) completely lack context for screen reader users without proper ARIA attributes. Furthermore, if nested SVG icons don't have `aria-hidden="true"`, screen readers may announce confusing graphic semantics. Lastly, missing visible focus rings make these elements inaccessible for keyboard navigation.
+**Action:** Always add descriptive `aria-label`s to icon-only `<button>` and `<a>` tags. Ensure inner SVGs have `aria-hidden="true"`. Finally, apply explicit focus styling using existing classes, such as `focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none`, to ensure keyboard accessibility.
