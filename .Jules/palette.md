@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility improvements for icon-only buttons
+**Learning:** Icon-only interactive elements (like social links and menu toggles) are inaccessible to screen readers without explicitly defined `aria-label` attributes. Furthermore, purely decorative SVGs inside these links should use `aria-hidden="true"` to prevent confusing announcements. Also, dynamic menu toggles should utilize `aria-expanded`. Custom SVG components, like `TikTokIcon`, must accept standard accessibility props like `aria-hidden`.
+**Action:** Always add `aria-label` to icon-only buttons and links. Apply `aria-hidden="true"` to child SVGs to ensure standard accessible interactions.
