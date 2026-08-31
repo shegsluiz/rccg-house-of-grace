@@ -1,0 +1,3 @@
+## 2024-08-31 - Mobile Menu and Icon Button Accessibility
+**Learning:** Icon-only buttons (like the mobile menu toggles and footer social links) require proper `aria-label`s, `focus-visible` styles for keyboard navigation, and nested SVGs must have `aria-hidden="true"` so screen readers don't announce them redundantly. Also custom SVG components like `TikTokIcon` need explicit prop passing to accept `aria-hidden`.
+**Action:** When creating icon-only interactive elements, always include an `aria-label`, standard `focus-visible` ring styles, and ensure all interior SVG components explicitly accept and pass down `aria-hidden="true"`.
