@@ -10,8 +10,8 @@ import {
 } from "lucide-react";
 import { OptimizedImage } from "../components/OptimizedImage";
 
-const TikTokIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+const TikTokIcon = ({ className, 'aria-hidden': ariaHidden }: { className?: string; 'aria-hidden'?: boolean | 'true' | 'false' }) => (
+  <svg className={className} aria-hidden={ariaHidden} viewBox="0 0 24 24" fill="currentColor">
     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
   </svg>
 );
@@ -422,12 +422,13 @@ export default function Connect() {
                 key={s.name}
                 href={s.url}
                 target="_blank"
-                rel="noreferrer"
-                className="hog-card bg-hog-black-card border-hog-black-border p-10 flex flex-col items-center justify-center gap-6 group hover:border-hog-green-400/50 transition-all duration-500"
+                rel="noopener noreferrer"
+                aria-label={`Visit our ${s.name} page`}
+                className="hog-card bg-hog-black-card border-hog-black-border p-10 flex flex-col items-center justify-center gap-6 group hover:border-hog-green-400/50 transition-all duration-500 focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none"
               >
                 <div className="relative">
                   <div className="absolute inset-0 bg-hog-green-500 blur-2xl opacity-0 group-hover:opacity-20 transition-opacity" />
-                  <s.icon className="w-12 h-12 text-hog-text-ghost group-hover:text-hog-green-400 group-hover:scale-110 transition-all duration-500 relative z-10" />
+                  <s.icon className="w-12 h-12 text-hog-text-ghost group-hover:text-hog-green-400 group-hover:scale-110 transition-all duration-500 relative z-10" aria-hidden="true" />
                 </div>
                 <div className="text-center">
                   <p className="font-bold text-sm text-hog-text-light group-hover:text-hog-green-400 transition font-display whitespace-nowrap">
