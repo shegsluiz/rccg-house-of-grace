@@ -87,6 +87,8 @@ export default function Layout() {
           <div className="md:hidden flex items-center z-50">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-expanded={isMobileMenuOpen}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -112,6 +114,7 @@ export default function Layout() {
               <div className="w-6 h-12 bg-hog-black-card rounded-r-full" /> 
               <button 
                 onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Close menu"
                 className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors"
               >
                 <X className="w-7 h-7" />
