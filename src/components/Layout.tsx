@@ -86,10 +86,12 @@ export default function Layout() {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center z-50">
             <button 
+              aria-label="Toggle mobile menu"
+              aria-expanded={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors"
+              className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -111,10 +113,11 @@ export default function Layout() {
               {/* Half circle logo matching mockup */}
               <div className="w-6 h-12 bg-hog-black-card rounded-r-full" /> 
               <button 
+                aria-label="Close mobile menu"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors"
+                className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors focus-visible:ring-2 focus-visible:ring-hog-green-400 focus:outline-none"
               >
-                <X className="w-7 h-7" />
+                <X className="w-7 h-7" aria-hidden="true" />
               </button>
             </div>
 
