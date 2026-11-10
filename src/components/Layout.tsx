@@ -88,8 +88,10 @@ export default function Layout() {
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-lg transition-colors"
+              aria-label="Toggle mobile menu"
+              aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -113,8 +115,9 @@ export default function Layout() {
               <button 
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="p-2 text-hog-text-light hover:bg-hog-black-card rounded-full transition-colors"
+                aria-label="Close mobile menu"
               >
-                <X className="w-7 h-7" />
+                <X className="w-7 h-7" aria-hidden="true" />
               </button>
             </div>
 
