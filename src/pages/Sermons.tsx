@@ -305,7 +305,9 @@ export default function Sermons() {
             ))}
           </div>
           {/* Search */}
+          <label htmlFor="sermons-search" className="sr-only">Search messages</label>
           <input
+            id="sermons-search"
             type="text"
             placeholder="Search messages..."
             value={search}
