@@ -447,7 +447,9 @@ export default function Home() {
             </p>
             {!subscribed ? (
               <form className="flex flex-col sm:flex-row max-w-md mx-auto gap-4" onSubmit={handleSubscribe}>
+                <label htmlFor="newsletter-email" className="sr-only">Newsletter Email</label>
                 <input
+                  id="newsletter-email"
                   type="email"
                   placeholder="Your email address"
                   value={emailInput}

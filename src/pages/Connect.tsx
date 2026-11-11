@@ -307,42 +307,58 @@ export default function Connect() {
             {!sent ? (
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label htmlFor="contact-name" className="sr-only">Name</label>
+                    <input
+                      id="contact-name"
+                      name="name"
+                      type="text"
+                      placeholder="Your full name"
+                      required
+                      value={form.name}
+                      onChange={handleChange}
+                      className="w-full bg-hog-green-100/5 border border-hog-green-100/20 rounded-2xl px-6 py-4 text-hog-text-dark placeholder-hog-text-ghost text-sm focus:outline-none focus:border-hog-green-500 focus:ring-1 focus:ring-hog-green-500 transition"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="contact-email" className="sr-only">Email</label>
+                    <input
+                      id="contact-email"
+                      name="email"
+                      type="email"
+                      placeholder="Email address"
+                      required
+                      value={form.email}
+                      onChange={handleChange}
+                      className="w-full bg-hog-green-100/5 border border-hog-green-100/20 rounded-2xl px-6 py-4 text-hog-text-dark placeholder-hog-text-ghost text-sm focus:outline-none focus:border-hog-green-500 focus:ring-1 focus:ring-hog-green-500 transition"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="contact-phone" className="sr-only">Phone</label>
                   <input
-                    name="name"
-                    type="text"
-                    placeholder="Your full name"
-                    required
-                    value={form.name}
+                    id="contact-phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="Phone number (optional)"
+                    value={form.phone}
                     onChange={handleChange}
-                    className="bg-hog-green-100/5 border border-hog-green-100/20 rounded-2xl px-6 py-4 text-hog-text-dark placeholder-hog-text-ghost text-sm focus:outline-none focus:border-hog-green-500 focus:ring-1 focus:ring-hog-green-500 transition"
-                  />
-                  <input
-                    name="email"
-                    type="email"
-                    placeholder="Email address"
-                    required
-                    value={form.email}
-                    onChange={handleChange}
-                    className="bg-hog-green-100/5 border border-hog-green-100/20 rounded-2xl px-6 py-4 text-hog-text-dark placeholder-hog-text-ghost text-sm focus:outline-none focus:border-hog-green-500 focus:ring-1 focus:ring-hog-green-500 transition"
+                    className="w-full bg-hog-green-100/5 border border-hog-green-100/20 rounded-2xl px-6 py-4 text-hog-text-dark placeholder-hog-text-ghost text-sm focus:outline-none focus:border-hog-green-500 focus:ring-1 focus:ring-hog-green-500 transition"
                   />
                 </div>
-                <input
-                  name="phone"
-                  type="tel"
-                  placeholder="Phone number (optional)"
-                  value={form.phone}
-                  onChange={handleChange}
-                  className="bg-hog-green-100/5 border border-hog-green-100/20 rounded-2xl px-6 py-4 text-hog-text-dark placeholder-hog-text-ghost text-sm focus:outline-none focus:border-hog-green-500 focus:ring-1 focus:ring-hog-green-500 transition"
-                />
-                <textarea
-                  name="message"
-                  placeholder="How can we help you?"
-                  required
-                  rows={5}
-                  value={form.message}
-                  onChange={handleChange}
-                  className="bg-hog-green-100/5 border border-hog-green-100/20 rounded-2xl px-6 py-4 text-hog-text-dark placeholder-hog-text-ghost text-sm focus:outline-none focus:border-hog-green-500 focus:ring-1 focus:ring-hog-green-500 transition resize-none"
-                />
+                <div>
+                  <label htmlFor="contact-message" className="sr-only">Message</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    placeholder="How can we help you?"
+                    required
+                    rows={5}
+                    value={form.message}
+                    onChange={handleChange}
+                    className="w-full bg-hog-green-100/5 border border-hog-green-100/20 rounded-2xl px-6 py-4 text-hog-text-dark placeholder-hog-text-ghost text-sm focus:outline-none focus:border-hog-green-500 focus:ring-1 focus:ring-hog-green-500 transition resize-none"
+                  />
+                </div>
                 <button
                   type="submit"
                   className="hog-btn-primary w-full py-4.5 text-sm mt-2"
